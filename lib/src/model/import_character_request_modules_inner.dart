@@ -4,7 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
-import 'package:karasu_lab_public_client_dart/src/model/import_character_request_modules_inner_components_inner.dart';
+import 'package:karasu_lab_public_client/src/model/import_character_request_modules_inner_components_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

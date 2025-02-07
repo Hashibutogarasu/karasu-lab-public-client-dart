@@ -1,8 +1,8 @@
-# karasu_lab_public_client_dart.api.AdminApi
+# karasu_lab_public_client.api.AdminApi
 
 ## Load the API package
 ```dart
-import 'package:karasu_lab_public_client_dart/api.dart';
+import 'package:karasu_lab_public_client/api.dart';
 ```
 
 All URIs are relative to *https://api.karasu256.com*
@@ -20,9 +20,9 @@ Import character
 
 ### Example
 ```dart
-import 'package:karasu_lab_public_client_dart/api.dart';
+import 'package:karasu_lab_public_client/api.dart';
 
-final api = KarasuLabPublicClientDart().getAdminApi();
+final api = KarasuLabPublicClient().getAdminApi();
 final ImportCharacterRequest importCharacterRequest = ; // ImportCharacterRequest | 
 
 try {
@@ -61,9 +61,9 @@ Import character from HoyoLab
 
 ### Example
 ```dart
-import 'package:karasu_lab_public_client_dart/api.dart';
+import 'package:karasu_lab_public_client/api.dart';
 
-final api = KarasuLabPublicClientDart().getAdminApi();
+final api = KarasuLabPublicClient().getAdminApi();
 final ImportFromHoyoLabQueryParameter query = ; // ImportFromHoyoLabQueryParameter | 
 
 try {

@@ -1,8 +1,8 @@
-# karasu_lab_public_client_dart.model.Weapon
+# karasu_lab_public_client.model.Weapon
 
 ## Load the model package
 ```dart
-import 'package:karasu_lab_public_client_dart/api.dart';
+import 'package:karasu_lab_public_client/api.dart';
 ```
 
 ## Properties

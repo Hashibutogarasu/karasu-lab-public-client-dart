@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:karasu_lab_public_client_dart/src/model/import_character_request_filter_values_character_property.dart';
+import 'package:karasu_lab_public_client/src/model/import_character_request_filter_values_character_property.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

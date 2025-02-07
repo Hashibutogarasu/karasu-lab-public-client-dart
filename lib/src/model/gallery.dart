@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:karasu_lab_public_client_dart/src/model/gi_character.dart';
+import 'package:karasu_lab_public_client/src/model/gi_character.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

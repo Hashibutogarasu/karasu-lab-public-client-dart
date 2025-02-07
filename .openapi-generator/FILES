@@ -45,7 +45,7 @@ doc/Weapon.md
 doc/WeaponsApi.md
 doc/WeaponsControllerCreateRequest.md
 doc/WeaponsControllerUpdateRequest.md
-lib/karasu_lab_public_client_dart.dart
+lib/karasu_lab_public_client.dart
 lib/src/api.dart
 lib/src/api/admin_api.dart
 lib/src/api/artifact_sets_api.dart

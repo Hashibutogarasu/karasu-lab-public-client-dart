@@ -1,8 +1,8 @@
-# karasu_lab_public_client_dart.model.VersionsEntity
+# karasu_lab_public_client.model.VersionsEntity
 
 ## Load the model package
 ```dart
-import 'package:karasu_lab_public_client_dart/api.dart';
+import 'package:karasu_lab_public_client/api.dart';
 ```
 
 ## Properties
