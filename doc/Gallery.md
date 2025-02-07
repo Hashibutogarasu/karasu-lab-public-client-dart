@@ -1,8 +1,8 @@
-# karasu256_api_client.model.Gallery
+# karasu256_api_public_client.model.Gallery
 
 ## Load the model package
 ```dart
-import 'package:karasu256_api_client/api.dart';
+import 'package:karasu256_api_public_client/api.dart';
 ```
 
 ## Properties

@@ -1,8 +1,8 @@
-# karasu256_api_client.model.AuthControllerSigninConfirmRequest
+# karasu256_api_public_client.model.AuthControllerSigninConfirmRequest
 
 ## Load the model package
 ```dart
-import 'package:karasu256_api_client/api.dart';
+import 'package:karasu256_api_public_client/api.dart';
 ```
 
 ## Properties

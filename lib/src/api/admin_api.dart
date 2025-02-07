@@ -8,10 +8,10 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:karasu256_api_client/src/api_util.dart';
-import 'package:karasu256_api_client/src/model/gi_character.dart';
-import 'package:karasu256_api_client/src/model/import_character_request.dart';
-import 'package:karasu256_api_client/src/model/import_from_hoyo_lab_query_parameter.dart';
+import 'package:karasu256_api_public_client/src/api_util.dart';
+import 'package:karasu256_api_public_client/src/model/gi_character.dart';
+import 'package:karasu256_api_public_client/src/model/import_character_request.dart';
+import 'package:karasu256_api_public_client/src/model/import_from_hoyo_lab_query_parameter.dart';
 
 class AdminApi {
 

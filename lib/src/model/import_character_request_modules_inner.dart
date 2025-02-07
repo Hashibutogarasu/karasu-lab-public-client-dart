@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:karasu256_api_public_client/src/model/import_character_request_modules_inner_components_inner.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:karasu256_api_client/src/model/import_character_request_modules_inner_components_inner.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

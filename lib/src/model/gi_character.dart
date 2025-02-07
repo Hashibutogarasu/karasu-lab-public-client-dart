@@ -3,12 +3,12 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:karasu256_api_client/src/model/versions_entity.dart';
+import 'package:karasu256_api_public_client/src/model/artifact_sets.dart';
+import 'package:karasu256_api_public_client/src/model/country.dart';
+import 'package:karasu256_api_public_client/src/model/gallery.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:karasu256_api_client/src/model/country.dart';
-import 'package:karasu256_api_client/src/model/gallery.dart';
-import 'package:karasu256_api_client/src/model/artifact_sets.dart';
-import 'package:karasu256_api_client/src/model/weapon.dart';
+import 'package:karasu256_api_public_client/src/model/weapon.dart';
+import 'package:karasu256_api_public_client/src/model/versions_entity.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 

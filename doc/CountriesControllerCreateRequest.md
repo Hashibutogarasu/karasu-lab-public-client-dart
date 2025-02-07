@@ -1,8 +1,8 @@
-# karasu256_api_client.model.CountriesControllerCreateRequest
+# karasu256_api_public_client.model.CountriesControllerCreateRequest
 
 ## Load the model package
 ```dart
-import 'package:karasu256_api_client/api.dart';
+import 'package:karasu256_api_public_client/api.dart';
 ```
 
 ## Properties

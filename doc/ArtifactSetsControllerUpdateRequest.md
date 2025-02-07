@@ -1,8 +1,8 @@
-# karasu256_api_client.model.ArtifactSetsControllerUpdateRequest
+# karasu256_api_public_client.model.ArtifactSetsControllerUpdateRequest
 
 ## Load the model package
 ```dart
-import 'package:karasu256_api_client/api.dart';
+import 'package:karasu256_api_public_client/api.dart';
 ```
 
 ## Properties

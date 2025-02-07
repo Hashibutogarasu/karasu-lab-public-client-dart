@@ -1,8 +1,8 @@
-# karasu256_api_client.model.ImportFromHoyoLabQueryParameter
+# karasu256_api_public_client.model.ImportFromHoyoLabQueryParameter
 
 ## Load the model package
 ```dart
-import 'package:karasu256_api_client/api.dart';
+import 'package:karasu256_api_public_client/api.dart';
 ```
 
 ## Properties

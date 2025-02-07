@@ -4,27 +4,27 @@
 
 import 'package:dio/dio.dart';
 import 'package:built_value/serializer.dart';
-import 'package:karasu256_api_client/src/serializers.dart';
-import 'package:karasu256_api_client/src/auth/api_key_auth.dart';
-import 'package:karasu256_api_client/src/auth/basic_auth.dart';
-import 'package:karasu256_api_client/src/auth/bearer_auth.dart';
-import 'package:karasu256_api_client/src/auth/oauth.dart';
-import 'package:karasu256_api_client/src/api/admin_api.dart';
-import 'package:karasu256_api_client/src/api/artifact_sets_api.dart';
-import 'package:karasu256_api_client/src/api/artifacts_api.dart';
-import 'package:karasu256_api_client/src/api/auth_api.dart';
-import 'package:karasu256_api_client/src/api/countries_api.dart';
-import 'package:karasu256_api_client/src/api/galleries_api.dart';
-import 'package:karasu256_api_client/src/api/versions_api.dart';
-import 'package:karasu256_api_client/src/api/weapons_api.dart';
+import 'package:karasu256_api_public_client/src/serializers.dart';
+import 'package:karasu256_api_public_client/src/auth/api_key_auth.dart';
+import 'package:karasu256_api_public_client/src/auth/basic_auth.dart';
+import 'package:karasu256_api_public_client/src/auth/bearer_auth.dart';
+import 'package:karasu256_api_public_client/src/auth/oauth.dart';
+import 'package:karasu256_api_public_client/src/api/admin_api.dart';
+import 'package:karasu256_api_public_client/src/api/artifact_sets_api.dart';
+import 'package:karasu256_api_public_client/src/api/artifacts_api.dart';
+import 'package:karasu256_api_public_client/src/api/auth_api.dart';
+import 'package:karasu256_api_public_client/src/api/countries_api.dart';
+import 'package:karasu256_api_public_client/src/api/galleries_api.dart';
+import 'package:karasu256_api_public_client/src/api/versions_api.dart';
+import 'package:karasu256_api_public_client/src/api/weapons_api.dart';
 
-class Karasu256ApiClient {
+class Karasu256ApiPublicClient {
   static const String basePath = r'https://api.karasu256.com';
 
   final Dio dio;
   final Serializers serializers;
 
-  Karasu256ApiClient({
+  Karasu256ApiPublicClient({
     Dio? dio,
     Serializers? serializers,
     String? basePathOverride,
