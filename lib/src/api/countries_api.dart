@@ -8,10 +8,10 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:karasu256_api_public_client/src/api_util.dart';
-import 'package:karasu256_api_public_client/src/model/countries_controller_create_request.dart';
-import 'package:karasu256_api_public_client/src/model/countries_controller_update_request.dart';
-import 'package:karasu256_api_public_client/src/model/country.dart';
+import 'package:karasu_lab_public_client_dart/src/api_util.dart';
+import 'package:karasu_lab_public_client_dart/src/model/countries_controller_create_request.dart';
+import 'package:karasu_lab_public_client_dart/src/model/countries_controller_update_request.dart';
+import 'package:karasu_lab_public_client_dart/src/model/country.dart';
 
 class CountriesApi {
 

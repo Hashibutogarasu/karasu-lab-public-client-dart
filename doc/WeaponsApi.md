@@ -1,8 +1,8 @@
-# karasu256_api_public_client.api.WeaponsApi
+# karasu_lab_public_client_dart.api.WeaponsApi
 
 ## Load the API package
 ```dart
-import 'package:karasu256_api_public_client/api.dart';
+import 'package:karasu_lab_public_client_dart/api.dart';
 ```
 
 All URIs are relative to *https://api.karasu256.com*
@@ -21,9 +21,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:karasu256_api_public_client/api.dart';
+import 'package:karasu_lab_public_client_dart/api.dart';
 
-final api = Karasu256ApiPublicClient().getWeaponsApi();
+final api = KarasuLabPublicClientDart().getWeaponsApi();
 final WeaponsControllerCreateRequest weaponsControllerCreateRequest = ; // WeaponsControllerCreateRequest | 
 
 try {
@@ -62,9 +62,9 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:karasu256_api_public_client/api.dart';
+import 'package:karasu_lab_public_client_dart/api.dart';
 
-final api = Karasu256ApiPublicClient().getWeaponsApi();
+final api = KarasuLabPublicClientDart().getWeaponsApi();
 final String id = id_example; // String | 
 
 try {
@@ -102,9 +102,9 @@ void (empty response body)
 
 ### Example
 ```dart
-import 'package:karasu256_api_public_client/api.dart';
+import 'package:karasu_lab_public_client_dart/api.dart';
 
-final api = Karasu256ApiPublicClient().getWeaponsApi();
+final api = KarasuLabPublicClientDart().getWeaponsApi();
 final WeaponsControllerUpdateRequest weaponsControllerUpdateRequest = ; // WeaponsControllerUpdateRequest | 
 
 try {

@@ -1,8 +1,8 @@
-# karasu256_api_public_client.api.ArtifactsApi
+# karasu_lab_public_client_dart.api.ArtifactsApi
 
 ## Load the API package
 ```dart
-import 'package:karasu256_api_public_client/api.dart';
+import 'package:karasu_lab_public_client_dart/api.dart';
 ```
 
 All URIs are relative to *https://api.karasu256.com*
@@ -21,9 +21,9 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:karasu256_api_public_client/api.dart';
+import 'package:karasu_lab_public_client_dart/api.dart';
 
-final api = Karasu256ApiPublicClient().getArtifactsApi();
+final api = KarasuLabPublicClientDart().getArtifactsApi();
 final ArtifactsControllerCreateRequest artifactsControllerCreateRequest = ; // ArtifactsControllerCreateRequest | 
 
 try {
@@ -62,9 +62,9 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:karasu256_api_public_client/api.dart';
+import 'package:karasu_lab_public_client_dart/api.dart';
 
-final api = Karasu256ApiPublicClient().getArtifactsApi();
+final api = KarasuLabPublicClientDart().getArtifactsApi();
 final String id = id_example; // String | 
 
 try {
@@ -102,9 +102,9 @@ void (empty response body)
 
 ### Example
 ```dart
-import 'package:karasu256_api_public_client/api.dart';
+import 'package:karasu_lab_public_client_dart/api.dart';
 
-final api = Karasu256ApiPublicClient().getArtifactsApi();
+final api = KarasuLabPublicClientDart().getArtifactsApi();
 final ArtifactsControllerUpdateRequest artifactsControllerUpdateRequest = ; // ArtifactsControllerUpdateRequest | 
 
 try {

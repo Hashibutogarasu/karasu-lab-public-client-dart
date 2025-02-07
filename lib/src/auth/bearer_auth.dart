@@ -3,7 +3,7 @@
 //
 
 import 'package:dio/dio.dart';
-import 'package:karasu256_api_public_client/src/auth/auth.dart';
+import 'package:karasu_lab_public_client_dart/src/auth/auth.dart';
 
 class BearerAuthInterceptor extends AuthInterceptor {
   final Map<String, String> tokens = {};

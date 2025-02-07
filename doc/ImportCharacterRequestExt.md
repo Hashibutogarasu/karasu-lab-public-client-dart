@@ -1,8 +1,8 @@
-# karasu256_api_public_client.model.ImportCharacterRequestExt
+# karasu_lab_public_client_dart.model.ImportCharacterRequestExt
 
 ## Load the model package
 ```dart
-import 'package:karasu256_api_public_client/api.dart';
+import 'package:karasu_lab_public_client_dart/api.dart';
 ```
 
 ## Properties
