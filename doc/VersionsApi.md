@@ -9,13 +9,13 @@ All URIs are relative to *https://api.karasu256.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**versionsControllerCreate**](VersionsApi.md#versionscontrollercreate) | **POST** /wiki/genshin/admin/versions | 
-[**versionsControllerDelete**](VersionsApi.md#versionscontrollerdelete) | **DELETE** /wiki/genshin/admin/versions/{id} | 
-[**versionsControllerUpdate**](VersionsApi.md#versionscontrollerupdate) | **PUT** /wiki/genshin/admin/versions | 
+[**versionsControllerGet**](VersionsApi.md#versionscontrollerget) | **POST** /wiki/genshin/versions/get | 
+[**versionsControllerGetAll**](VersionsApi.md#versionscontrollergetall) | **GET** /wiki/genshin/versions | 
+[**versionsControllerGetOne**](VersionsApi.md#versionscontrollergetone) | **POST** /wiki/genshin/versions/getOne | 
 
 
-# **versionsControllerCreate**
-> VersionsEntity versionsControllerCreate(versionsControllerCreateRequest)
+# **versionsControllerGet**
+> BuiltList<VersionsEntity> versionsControllerGet(versionsControllerGetRequest)
 
 
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getVersionsApi();
-final VersionsControllerCreateRequest versionsControllerCreateRequest = ; // VersionsControllerCreateRequest | 
+final VersionsControllerGetRequest versionsControllerGetRequest = ; // VersionsControllerGetRequest | 
 
 try {
-    final response = api.versionsControllerCreate(versionsControllerCreateRequest);
+    final response = api.versionsControllerGet(versionsControllerGetRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling VersionsApi->versionsControllerCreate: $e\n');
+    print('Exception when calling VersionsApi->versionsControllerGet: $e\n');
 }
 ```
 
@@ -38,15 +38,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **versionsControllerCreateRequest** | [**VersionsControllerCreateRequest**](VersionsControllerCreateRequest.md)|  | 
+ **versionsControllerGetRequest** | [**VersionsControllerGetRequest**](VersionsControllerGetRequest.md)|  | 
 
 ### Return type
 
-[**VersionsEntity**](VersionsEntity.md)
+[**BuiltList&lt;VersionsEntity&gt;**](VersionsEntity.md)
 
 ### Authorization
 
-[bearer](../README.md#bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -55,8 +55,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **versionsControllerDelete**
-> versionsControllerDelete(id)
+# **versionsControllerGetAll**
+> BuiltList<VersionsEntity> versionsControllerGetAll()
 
 
 
@@ -65,38 +65,35 @@ Name | Type | Description  | Notes
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getVersionsApi();
-final String id = id_example; // String | 
 
 try {
-    api.versionsControllerDelete(id);
+    final response = api.versionsControllerGetAll();
+    print(response);
 } catch on DioException (e) {
-    print('Exception when calling VersionsApi->versionsControllerDelete: $e\n');
+    print('Exception when calling VersionsApi->versionsControllerGetAll: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;VersionsEntity&gt;**](VersionsEntity.md)
 
 ### Authorization
 
-[bearer](../README.md#bearer)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **versionsControllerUpdate**
-> versionsControllerUpdate(versionsControllerUpdateRequest)
+# **versionsControllerGetOne**
+> VersionsEntity versionsControllerGetOne(versionsControllerGetRequest)
 
 
 
@@ -105,12 +102,13 @@ void (empty response body)
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getVersionsApi();
-final VersionsControllerUpdateRequest versionsControllerUpdateRequest = ; // VersionsControllerUpdateRequest | 
+final VersionsControllerGetRequest versionsControllerGetRequest = ; // VersionsControllerGetRequest | 
 
 try {
-    api.versionsControllerUpdate(versionsControllerUpdateRequest);
+    final response = api.versionsControllerGetOne(versionsControllerGetRequest);
+    print(response);
 } catch on DioException (e) {
-    print('Exception when calling VersionsApi->versionsControllerUpdate: $e\n');
+    print('Exception when calling VersionsApi->versionsControllerGetOne: $e\n');
 }
 ```
 
@@ -118,20 +116,20 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **versionsControllerUpdateRequest** | [**VersionsControllerUpdateRequest**](VersionsControllerUpdateRequest.md)|  | 
+ **versionsControllerGetRequest** | [**VersionsControllerGetRequest**](VersionsControllerGetRequest.md)|  | 
 
 ### Return type
 
-void (empty response body)
+[**VersionsEntity**](VersionsEntity.md)
 
 ### Authorization
 
-[bearer](../README.md#bearer)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

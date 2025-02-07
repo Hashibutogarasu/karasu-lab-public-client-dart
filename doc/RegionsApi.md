@@ -1,4 +1,4 @@
-# karasu_lab_public_client.api.WeaponsApi
+# karasu_lab_public_client.api.RegionsApi
 
 ## Load the API package
 ```dart
@@ -9,13 +9,13 @@ All URIs are relative to *https://api.karasu256.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**weaponsControllerGet**](WeaponsApi.md#weaponscontrollerget) | **POST** /wiki/genshin/weapons/get | 
-[**weaponsControllerGetAll**](WeaponsApi.md#weaponscontrollergetall) | **GET** /wiki/genshin/weapons | 
-[**weaponsControllerGetOne**](WeaponsApi.md#weaponscontrollergetone) | **POST** /wiki/genshin/weapons/getOne | 
+[**countriesControllerGet**](RegionsApi.md#countriescontrollerget) | **POST** /wiki/genshin/regions/get | 
+[**countriesControllerGetAll**](RegionsApi.md#countriescontrollergetall) | **GET** /wiki/genshin/regions | 
+[**countriesControllerGetOne**](RegionsApi.md#countriescontrollergetone) | **POST** /wiki/genshin/regions/getOne | 
 
 
-# **weaponsControllerGet**
-> BuiltList<Weapon> weaponsControllerGet(weaponsControllerGetRequest)
+# **countriesControllerGet**
+> BuiltList<Country> countriesControllerGet(countriesControllerGetRequest)
 
 
 
@@ -23,14 +23,14 @@ Method | HTTP request | Description
 ```dart
 import 'package:karasu_lab_public_client/api.dart';
 
-final api = KarasuLabPublicClient().getWeaponsApi();
-final WeaponsControllerGetRequest weaponsControllerGetRequest = ; // WeaponsControllerGetRequest | 
+final api = KarasuLabPublicClient().getRegionsApi();
+final CountriesControllerGetRequest countriesControllerGetRequest = ; // CountriesControllerGetRequest | 
 
 try {
-    final response = api.weaponsControllerGet(weaponsControllerGetRequest);
+    final response = api.countriesControllerGet(countriesControllerGetRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling WeaponsApi->weaponsControllerGet: $e\n');
+    print('Exception when calling RegionsApi->countriesControllerGet: $e\n');
 }
 ```
 
@@ -38,11 +38,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **weaponsControllerGetRequest** | [**WeaponsControllerGetRequest**](WeaponsControllerGetRequest.md)|  | 
+ **countriesControllerGetRequest** | [**CountriesControllerGetRequest**](CountriesControllerGetRequest.md)|  | 
 
 ### Return type
 
-[**BuiltList&lt;Weapon&gt;**](Weapon.md)
+[**BuiltList&lt;Country&gt;**](Country.md)
 
 ### Authorization
 
@@ -55,8 +55,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **weaponsControllerGetAll**
-> BuiltList<Weapon> weaponsControllerGetAll()
+# **countriesControllerGetAll**
+> BuiltList<Country> countriesControllerGetAll()
 
 
 
@@ -64,13 +64,13 @@ No authorization required
 ```dart
 import 'package:karasu_lab_public_client/api.dart';
 
-final api = KarasuLabPublicClient().getWeaponsApi();
+final api = KarasuLabPublicClient().getRegionsApi();
 
 try {
-    final response = api.weaponsControllerGetAll();
+    final response = api.countriesControllerGetAll();
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling WeaponsApi->weaponsControllerGetAll: $e\n');
+    print('Exception when calling RegionsApi->countriesControllerGetAll: $e\n');
 }
 ```
 
@@ -79,7 +79,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;Weapon&gt;**](Weapon.md)
+[**BuiltList&lt;Country&gt;**](Country.md)
 
 ### Authorization
 
@@ -92,8 +92,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **weaponsControllerGetOne**
-> Weapon weaponsControllerGetOne(weaponsControllerGetRequest)
+# **countriesControllerGetOne**
+> Country countriesControllerGetOne(countriesControllerGetRequest)
 
 
 
@@ -101,14 +101,14 @@ No authorization required
 ```dart
 import 'package:karasu_lab_public_client/api.dart';
 
-final api = KarasuLabPublicClient().getWeaponsApi();
-final WeaponsControllerGetRequest weaponsControllerGetRequest = ; // WeaponsControllerGetRequest | 
+final api = KarasuLabPublicClient().getRegionsApi();
+final CountriesControllerGetRequest countriesControllerGetRequest = ; // CountriesControllerGetRequest | 
 
 try {
-    final response = api.weaponsControllerGetOne(weaponsControllerGetRequest);
+    final response = api.countriesControllerGetOne(countriesControllerGetRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling WeaponsApi->weaponsControllerGetOne: $e\n');
+    print('Exception when calling RegionsApi->countriesControllerGetOne: $e\n');
 }
 ```
 
@@ -116,11 +116,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **weaponsControllerGetRequest** | [**WeaponsControllerGetRequest**](WeaponsControllerGetRequest.md)|  | 
+ **countriesControllerGetRequest** | [**CountriesControllerGetRequest**](CountriesControllerGetRequest.md)|  | 
 
 ### Return type
 
-[**Weapon**](Weapon.md)
+[**Country**](Country.md)
 
 ### Authorization
 

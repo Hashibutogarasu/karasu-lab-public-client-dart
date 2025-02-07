@@ -1,24 +1,24 @@
 import 'package:test/test.dart';
-import 'package:karasu256_api_client/karasu256_api_client.dart';
+import 'package:karasu_lab_public_client/karasu_lab_public_client.dart';
 
 
 /// tests for VersionsApi
 void main() {
-  final instance = Karasu256ApiClient().getVersionsApi();
+  final instance = KarasuLabPublicClient().getVersionsApi();
 
   group(VersionsApi, () {
-    //Future<VersionsEntity> versionsControllerCreate(VersionsControllerCreateRequest versionsControllerCreateRequest) async
-    test('test versionsControllerCreate', () async {
+    //Future<BuiltList<VersionsEntity>> versionsControllerGet(VersionsControllerGetRequest versionsControllerGetRequest) async
+    test('test versionsControllerGet', () async {
       // TODO
     });
 
-    //Future versionsControllerDelete(String id) async
-    test('test versionsControllerDelete', () async {
+    //Future<BuiltList<VersionsEntity>> versionsControllerGetAll() async
+    test('test versionsControllerGetAll', () async {
       // TODO
     });
 
-    //Future versionsControllerUpdate(VersionsControllerUpdateRequest versionsControllerUpdateRequest) async
-    test('test versionsControllerUpdate', () async {
+    //Future<VersionsEntity> versionsControllerGetOne(VersionsControllerGetRequest versionsControllerGetRequest) async
+    test('test versionsControllerGetOne', () async {
       // TODO
     });
 

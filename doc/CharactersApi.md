@@ -1,4 +1,4 @@
-# karasu_lab_public_client.api.WeaponsApi
+# karasu_lab_public_client.api.CharactersApi
 
 ## Load the API package
 ```dart
@@ -9,13 +9,13 @@ All URIs are relative to *https://api.karasu256.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**weaponsControllerGet**](WeaponsApi.md#weaponscontrollerget) | **POST** /wiki/genshin/weapons/get | 
-[**weaponsControllerGetAll**](WeaponsApi.md#weaponscontrollergetall) | **GET** /wiki/genshin/weapons | 
-[**weaponsControllerGetOne**](WeaponsApi.md#weaponscontrollergetone) | **POST** /wiki/genshin/weapons/getOne | 
+[**charactersControllerGet**](CharactersApi.md#characterscontrollerget) | **POST** /wiki/genshin/characters/get | 
+[**charactersControllerGetAll**](CharactersApi.md#characterscontrollergetall) | **GET** /wiki/genshin/characters | 
+[**charactersControllerGetOne**](CharactersApi.md#characterscontrollergetone) | **POST** /wiki/genshin/characters/getOne | 
 
 
-# **weaponsControllerGet**
-> BuiltList<Weapon> weaponsControllerGet(weaponsControllerGetRequest)
+# **charactersControllerGet**
+> BuiltList<GICharacter> charactersControllerGet(charactersControllerGetRequest)
 
 
 
@@ -23,14 +23,14 @@ Method | HTTP request | Description
 ```dart
 import 'package:karasu_lab_public_client/api.dart';
 
-final api = KarasuLabPublicClient().getWeaponsApi();
-final WeaponsControllerGetRequest weaponsControllerGetRequest = ; // WeaponsControllerGetRequest | 
+final api = KarasuLabPublicClient().getCharactersApi();
+final CharactersControllerGetRequest charactersControllerGetRequest = ; // CharactersControllerGetRequest | 
 
 try {
-    final response = api.weaponsControllerGet(weaponsControllerGetRequest);
+    final response = api.charactersControllerGet(charactersControllerGetRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling WeaponsApi->weaponsControllerGet: $e\n');
+    print('Exception when calling CharactersApi->charactersControllerGet: $e\n');
 }
 ```
 
@@ -38,11 +38,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **weaponsControllerGetRequest** | [**WeaponsControllerGetRequest**](WeaponsControllerGetRequest.md)|  | 
+ **charactersControllerGetRequest** | [**CharactersControllerGetRequest**](CharactersControllerGetRequest.md)|  | 
 
 ### Return type
 
-[**BuiltList&lt;Weapon&gt;**](Weapon.md)
+[**BuiltList&lt;GICharacter&gt;**](GICharacter.md)
 
 ### Authorization
 
@@ -55,8 +55,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **weaponsControllerGetAll**
-> BuiltList<Weapon> weaponsControllerGetAll()
+# **charactersControllerGetAll**
+> BuiltList<GICharacter> charactersControllerGetAll()
 
 
 
@@ -64,13 +64,13 @@ No authorization required
 ```dart
 import 'package:karasu_lab_public_client/api.dart';
 
-final api = KarasuLabPublicClient().getWeaponsApi();
+final api = KarasuLabPublicClient().getCharactersApi();
 
 try {
-    final response = api.weaponsControllerGetAll();
+    final response = api.charactersControllerGetAll();
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling WeaponsApi->weaponsControllerGetAll: $e\n');
+    print('Exception when calling CharactersApi->charactersControllerGetAll: $e\n');
 }
 ```
 
@@ -79,7 +79,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BuiltList&lt;Weapon&gt;**](Weapon.md)
+[**BuiltList&lt;GICharacter&gt;**](GICharacter.md)
 
 ### Authorization
 
@@ -92,8 +92,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **weaponsControllerGetOne**
-> Weapon weaponsControllerGetOne(weaponsControllerGetRequest)
+# **charactersControllerGetOne**
+> GICharacter charactersControllerGetOne(charactersControllerGetRequest)
 
 
 
@@ -101,14 +101,14 @@ No authorization required
 ```dart
 import 'package:karasu_lab_public_client/api.dart';
 
-final api = KarasuLabPublicClient().getWeaponsApi();
-final WeaponsControllerGetRequest weaponsControllerGetRequest = ; // WeaponsControllerGetRequest | 
+final api = KarasuLabPublicClient().getCharactersApi();
+final CharactersControllerGetRequest charactersControllerGetRequest = ; // CharactersControllerGetRequest | 
 
 try {
-    final response = api.weaponsControllerGetOne(weaponsControllerGetRequest);
+    final response = api.charactersControllerGetOne(charactersControllerGetRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling WeaponsApi->weaponsControllerGetOne: $e\n');
+    print('Exception when calling CharactersApi->charactersControllerGetOne: $e\n');
 }
 ```
 
@@ -116,11 +116,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **weaponsControllerGetRequest** | [**WeaponsControllerGetRequest**](WeaponsControllerGetRequest.md)|  | 
+ **charactersControllerGetRequest** | [**CharactersControllerGetRequest**](CharactersControllerGetRequest.md)|  | 
 
 ### Return type
 
-[**Weapon**](Weapon.md)
+[**GICharacter**](GICharacter.md)
 
 ### Authorization
 

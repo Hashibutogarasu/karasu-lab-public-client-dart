@@ -9,22 +9,22 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
-import 'package:karasu_lab_public_client/src/model/versions_controller_get_request.dart';
-import 'package:karasu_lab_public_client/src/model/versions_entity.dart';
+import 'package:karasu_lab_public_client/src/model/characters_controller_get_request.dart';
+import 'package:karasu_lab_public_client/src/model/gi_character.dart';
 
-class VersionsApi {
+class CharactersApi {
 
   final Dio _dio;
 
   final Serializers _serializers;
 
-  const VersionsApi(this._dio, this._serializers);
+  const CharactersApi(this._dio, this._serializers);
 
-  /// versionsControllerGet
+  /// charactersControllerGet
   /// 
   ///
   /// Parameters:
-  /// * [versionsControllerGetRequest] 
+  /// * [charactersControllerGetRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -32,10 +32,10 @@ class VersionsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<VersionsEntity>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<GICharacter>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuiltList<VersionsEntity>>> versionsControllerGet({ 
-    required VersionsControllerGetRequest versionsControllerGetRequest,
+  Future<Response<BuiltList<GICharacter>>> charactersControllerGet({ 
+    required CharactersControllerGetRequest charactersControllerGetRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -43,7 +43,7 @@ class VersionsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/wiki/genshin/versions/get';
+    final _path = r'/wiki/genshin/characters/get';
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -60,8 +60,8 @@ class VersionsApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(VersionsControllerGetRequest);
-      _bodyData = _serializers.serialize(versionsControllerGetRequest, specifiedType: _type);
+      const _type = FullType(CharactersControllerGetRequest);
+      _bodyData = _serializers.serialize(charactersControllerGetRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioException(
@@ -84,14 +84,14 @@ class VersionsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<VersionsEntity>? _responseData;
+    BuiltList<GICharacter>? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(BuiltList, [FullType(VersionsEntity)]),
-      ) as BuiltList<VersionsEntity>;
+        specifiedType: const FullType(BuiltList, [FullType(GICharacter)]),
+      ) as BuiltList<GICharacter>;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -103,7 +103,7 @@ class VersionsApi {
       );
     }
 
-    return Response<BuiltList<VersionsEntity>>(
+    return Response<BuiltList<GICharacter>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -115,7 +115,7 @@ class VersionsApi {
     );
   }
 
-  /// versionsControllerGetAll
+  /// charactersControllerGetAll
   /// 
   ///
   /// Parameters:
@@ -126,9 +126,9 @@ class VersionsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<VersionsEntity>] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<GICharacter>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuiltList<VersionsEntity>>> versionsControllerGetAll({ 
+  Future<Response<BuiltList<GICharacter>>> charactersControllerGetAll({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -136,7 +136,7 @@ class VersionsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/wiki/genshin/versions';
+    final _path = r'/wiki/genshin/characters';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -157,14 +157,14 @@ class VersionsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<VersionsEntity>? _responseData;
+    BuiltList<GICharacter>? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(BuiltList, [FullType(VersionsEntity)]),
-      ) as BuiltList<VersionsEntity>;
+        specifiedType: const FullType(BuiltList, [FullType(GICharacter)]),
+      ) as BuiltList<GICharacter>;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -176,7 +176,7 @@ class VersionsApi {
       );
     }
 
-    return Response<BuiltList<VersionsEntity>>(
+    return Response<BuiltList<GICharacter>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -188,11 +188,11 @@ class VersionsApi {
     );
   }
 
-  /// versionsControllerGetOne
+  /// charactersControllerGetOne
   /// 
   ///
   /// Parameters:
-  /// * [versionsControllerGetRequest] 
+  /// * [charactersControllerGetRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -200,10 +200,10 @@ class VersionsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [VersionsEntity] as data
+  /// Returns a [Future] containing a [Response] with a [GICharacter] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<VersionsEntity>> versionsControllerGetOne({ 
-    required VersionsControllerGetRequest versionsControllerGetRequest,
+  Future<Response<GICharacter>> charactersControllerGetOne({ 
+    required CharactersControllerGetRequest charactersControllerGetRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -211,7 +211,7 @@ class VersionsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/wiki/genshin/versions/getOne';
+    final _path = r'/wiki/genshin/characters/getOne';
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -228,8 +228,8 @@ class VersionsApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(VersionsControllerGetRequest);
-      _bodyData = _serializers.serialize(versionsControllerGetRequest, specifiedType: _type);
+      const _type = FullType(CharactersControllerGetRequest);
+      _bodyData = _serializers.serialize(charactersControllerGetRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioException(
@@ -252,14 +252,14 @@ class VersionsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    VersionsEntity? _responseData;
+    GICharacter? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(VersionsEntity),
-      ) as VersionsEntity;
+        specifiedType: const FullType(GICharacter),
+      ) as GICharacter;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -271,7 +271,7 @@ class VersionsApi {
       );
     }
 
-    return Response<VersionsEntity>(
+    return Response<GICharacter>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

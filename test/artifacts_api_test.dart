@@ -1,24 +1,24 @@
 import 'package:test/test.dart';
-import 'package:karasu256_api_client/karasu256_api_client.dart';
+import 'package:karasu_lab_public_client/karasu_lab_public_client.dart';
 
 
 /// tests for ArtifactsApi
 void main() {
-  final instance = Karasu256ApiClient().getArtifactsApi();
+  final instance = KarasuLabPublicClient().getArtifactsApi();
 
   group(ArtifactsApi, () {
-    //Future<Artifacts> artifactsControllerCreate(ArtifactsControllerCreateRequest artifactsControllerCreateRequest) async
-    test('test artifactsControllerCreate', () async {
+    //Future<BuiltList<Artifacts>> artifactsControllerGet(ArtifactsControllerGetRequest artifactsControllerGetRequest) async
+    test('test artifactsControllerGet', () async {
       // TODO
     });
 
-    //Future artifactsControllerDelete(String id) async
-    test('test artifactsControllerDelete', () async {
+    //Future<BuiltList<Artifacts>> artifactsControllerGetAll() async
+    test('test artifactsControllerGetAll', () async {
       // TODO
     });
 
-    //Future artifactsControllerUpdate(ArtifactsControllerUpdateRequest artifactsControllerUpdateRequest) async
-    test('test artifactsControllerUpdate', () async {
+    //Future<Artifacts> artifactsControllerGetOne(ArtifactsControllerGetRequest artifactsControllerGetRequest) async
+    test('test artifactsControllerGetOne', () async {
       // TODO
     });
 

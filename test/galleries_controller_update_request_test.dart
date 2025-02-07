@@ -1,19 +1,14 @@
 import 'package:test/test.dart';
 import 'package:karasu_lab_public_client/karasu_lab_public_client.dart';
 
-// tests for Gallery
+// tests for GalleriesControllerUpdateRequest
 void main() {
-  final instance = GalleryBuilder();
+  final instance = GalleriesControllerUpdateRequestBuilder();
   // TODO add properties to the builder and call build()
 
-  group(Gallery, () {
+  group(GalleriesControllerUpdateRequest, () {
     // String id
     test('to test the property `id`', () async {
-      // TODO
-    });
-
-    // String alt
-    test('to test the property `alt`', () async {
       // TODO
     });
 
@@ -22,22 +17,17 @@ void main() {
       // TODO
     });
 
+    // String alt
+    test('to test the property `alt`', () async {
+      // TODO
+    });
+
     // String key
     test('to test the property `key`', () async {
       // TODO
     });
 
-    // DateTime createdAt
-    test('to test the property `createdAt`', () async {
-      // TODO
-    });
-
-    // DateTime updatedAt
-    test('to test the property `updatedAt`', () async {
-      // TODO
-    });
-
-    // GICharacter character
+    // String character
     test('to test the property `character`', () async {
       // TODO
     });

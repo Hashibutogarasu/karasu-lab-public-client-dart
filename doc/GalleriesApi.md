@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **galleriesControllerCreate**
-> Gallery galleriesControllerCreate(artifactSetsControllerCreateRequest)
+> Gallery galleriesControllerCreate(galleriesControllerCreateRequest)
 
 
 
@@ -25,10 +25,10 @@ Method | HTTP request | Description
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getGalleriesApi();
-final ArtifactSetsControllerCreateRequest artifactSetsControllerCreateRequest = ; // ArtifactSetsControllerCreateRequest | 
+final GalleriesControllerCreateRequest galleriesControllerCreateRequest = ; // GalleriesControllerCreateRequest | 
 
 try {
-    final response = api.galleriesControllerCreate(artifactSetsControllerCreateRequest);
+    final response = api.galleriesControllerCreate(galleriesControllerCreateRequest);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling GalleriesApi->galleriesControllerCreate: $e\n');
@@ -39,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **artifactSetsControllerCreateRequest** | [**ArtifactSetsControllerCreateRequest**](ArtifactSetsControllerCreateRequest.md)|  | 
+ **galleriesControllerCreateRequest** | [**GalleriesControllerCreateRequest**](GalleriesControllerCreateRequest.md)|  | 
 
 ### Return type
 
@@ -97,7 +97,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **galleriesControllerUpdate**
-> galleriesControllerUpdate(artifactSetsControllerUpdateRequest)
+> galleriesControllerUpdate(galleriesControllerUpdateRequest)
 
 
 
@@ -106,10 +106,10 @@ void (empty response body)
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getGalleriesApi();
-final ArtifactSetsControllerUpdateRequest artifactSetsControllerUpdateRequest = ; // ArtifactSetsControllerUpdateRequest | 
+final GalleriesControllerUpdateRequest galleriesControllerUpdateRequest = ; // GalleriesControllerUpdateRequest | 
 
 try {
-    api.galleriesControllerUpdate(artifactSetsControllerUpdateRequest);
+    api.galleriesControllerUpdate(galleriesControllerUpdateRequest);
 } catch on DioException (e) {
     print('Exception when calling GalleriesApi->galleriesControllerUpdate: $e\n');
 }
@@ -119,7 +119,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **artifactSetsControllerUpdateRequest** | [**ArtifactSetsControllerUpdateRequest**](ArtifactSetsControllerUpdateRequest.md)|  | 
+ **galleriesControllerUpdateRequest** | [**GalleriesControllerUpdateRequest**](GalleriesControllerUpdateRequest.md)|  | 
 
 ### Return type
 

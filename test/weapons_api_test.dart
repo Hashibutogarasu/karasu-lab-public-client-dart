@@ -1,24 +1,24 @@
 import 'package:test/test.dart';
-import 'package:karasu256_api_client/karasu256_api_client.dart';
+import 'package:karasu_lab_public_client/karasu_lab_public_client.dart';
 
 
 /// tests for WeaponsApi
 void main() {
-  final instance = Karasu256ApiClient().getWeaponsApi();
+  final instance = KarasuLabPublicClient().getWeaponsApi();
 
   group(WeaponsApi, () {
-    //Future<Weapon> weaponsControllerCreate(WeaponsControllerCreateRequest weaponsControllerCreateRequest) async
-    test('test weaponsControllerCreate', () async {
+    //Future<BuiltList<Weapon>> weaponsControllerGet(WeaponsControllerGetRequest weaponsControllerGetRequest) async
+    test('test weaponsControllerGet', () async {
       // TODO
     });
 
-    //Future weaponsControllerDelete(String id) async
-    test('test weaponsControllerDelete', () async {
+    //Future<BuiltList<Weapon>> weaponsControllerGetAll() async
+    test('test weaponsControllerGetAll', () async {
       // TODO
     });
 
-    //Future weaponsControllerUpdate(WeaponsControllerUpdateRequest weaponsControllerUpdateRequest) async
-    test('test weaponsControllerUpdate', () async {
+    //Future<Weapon> weaponsControllerGetOne(WeaponsControllerGetRequest weaponsControllerGetRequest) async
+    test('test weaponsControllerGetOne', () async {
       // TODO
     });
 

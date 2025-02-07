@@ -1,29 +1,29 @@
 import 'package:test/test.dart';
 import 'package:karasu_lab_public_client/karasu_lab_public_client.dart';
 
-// tests for Weapon
+// tests for WeaponsControllerGetRequest
 void main() {
-  final instance = WeaponBuilder();
+  final instance = WeaponsControllerGetRequestBuilder();
   // TODO add properties to the builder and call build()
 
-  group(Weapon, () {
+  group(WeaponsControllerGetRequest, () {
     // String id
     test('to test the property `id`', () async {
       // TODO
     });
 
+    // String take (default value: '10')
+    test('to test the property `take`', () async {
+      // TODO
+    });
+
+    // String skip (default value: '0')
+    test('to test the property `skip`', () async {
+      // TODO
+    });
+
     // String name
     test('to test the property `name`', () async {
-      // TODO
-    });
-
-    // DateTime createdAt
-    test('to test the property `createdAt`', () async {
-      // TODO
-    });
-
-    // DateTime updatedAt
-    test('to test the property `updatedAt`', () async {
       // TODO
     });
 
@@ -37,6 +37,11 @@ void main() {
       // TODO
     });
 
+    // String type
+    test('to test the property `type`', () async {
+      // TODO
+    });
+
     // num rarity
     test('to test the property `rarity`', () async {
       // TODO
@@ -47,17 +52,7 @@ void main() {
       // TODO
     });
 
-    // String type
-    test('to test the property `type`', () async {
-      // TODO
-    });
-
-    // BuiltList<GICharacter> characters
-    test('to test the property `characters`', () async {
-      // TODO
-    });
-
-    // VersionsEntity version
+    // String version
     test('to test the property `version`', () async {
       // TODO
     });

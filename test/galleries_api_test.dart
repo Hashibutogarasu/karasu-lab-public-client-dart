@@ -1,13 +1,13 @@
 import 'package:test/test.dart';
-import 'package:karasu256_api_client/karasu256_api_client.dart';
+import 'package:karasu_lab_public_client/karasu_lab_public_client.dart';
 
 
 /// tests for GalleriesApi
 void main() {
-  final instance = Karasu256ApiClient().getGalleriesApi();
+  final instance = KarasuLabPublicClient().getGalleriesApi();
 
   group(GalleriesApi, () {
-    //Future<Gallery> galleriesControllerCreate(ArtifactSetsControllerCreateRequest artifactSetsControllerCreateRequest) async
+    //Future<Gallery> galleriesControllerCreate(GalleriesControllerCreateRequest galleriesControllerCreateRequest) async
     test('test galleriesControllerCreate', () async {
       // TODO
     });
@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    //Future galleriesControllerUpdate(ArtifactSetsControllerUpdateRequest artifactSetsControllerUpdateRequest) async
+    //Future galleriesControllerUpdate(GalleriesControllerUpdateRequest galleriesControllerUpdateRequest) async
     test('test galleriesControllerUpdate', () async {
       // TODO
     });

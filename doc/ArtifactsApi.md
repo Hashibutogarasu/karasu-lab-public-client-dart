@@ -9,13 +9,13 @@ All URIs are relative to *https://api.karasu256.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**artifactsControllerCreate**](ArtifactsApi.md#artifactscontrollercreate) | **POST** /wiki/genshin/admin/artifacts | 
-[**artifactsControllerDelete**](ArtifactsApi.md#artifactscontrollerdelete) | **DELETE** /wiki/genshin/admin/artifacts/{id} | 
-[**artifactsControllerUpdate**](ArtifactsApi.md#artifactscontrollerupdate) | **PUT** /wiki/genshin/admin/artifacts | 
+[**artifactsControllerGet**](ArtifactsApi.md#artifactscontrollerget) | **POST** /wiki/genshin/artifacts/get | 
+[**artifactsControllerGetAll**](ArtifactsApi.md#artifactscontrollergetall) | **GET** /wiki/genshin/artifacts | 
+[**artifactsControllerGetOne**](ArtifactsApi.md#artifactscontrollergetone) | **POST** /wiki/genshin/artifacts/getOne | 
 
 
-# **artifactsControllerCreate**
-> Artifacts artifactsControllerCreate(artifactsControllerCreateRequest)
+# **artifactsControllerGet**
+> BuiltList<Artifacts> artifactsControllerGet(artifactsControllerGetRequest)
 
 
 
@@ -24,13 +24,13 @@ Method | HTTP request | Description
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getArtifactsApi();
-final ArtifactsControllerCreateRequest artifactsControllerCreateRequest = ; // ArtifactsControllerCreateRequest | 
+final ArtifactsControllerGetRequest artifactsControllerGetRequest = ; // ArtifactsControllerGetRequest | 
 
 try {
-    final response = api.artifactsControllerCreate(artifactsControllerCreateRequest);
+    final response = api.artifactsControllerGet(artifactsControllerGetRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling ArtifactsApi->artifactsControllerCreate: $e\n');
+    print('Exception when calling ArtifactsApi->artifactsControllerGet: $e\n');
 }
 ```
 
@@ -38,15 +38,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **artifactsControllerCreateRequest** | [**ArtifactsControllerCreateRequest**](ArtifactsControllerCreateRequest.md)|  | 
+ **artifactsControllerGetRequest** | [**ArtifactsControllerGetRequest**](ArtifactsControllerGetRequest.md)|  | 
 
 ### Return type
 
-[**Artifacts**](Artifacts.md)
+[**BuiltList&lt;Artifacts&gt;**](Artifacts.md)
 
 ### Authorization
 
-[bearer](../README.md#bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -55,8 +55,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **artifactsControllerDelete**
-> artifactsControllerDelete(id)
+# **artifactsControllerGetAll**
+> BuiltList<Artifacts> artifactsControllerGetAll()
 
 
 
@@ -65,38 +65,35 @@ Name | Type | Description  | Notes
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getArtifactsApi();
-final String id = id_example; // String | 
 
 try {
-    api.artifactsControllerDelete(id);
+    final response = api.artifactsControllerGetAll();
+    print(response);
 } catch on DioException (e) {
-    print('Exception when calling ArtifactsApi->artifactsControllerDelete: $e\n');
+    print('Exception when calling ArtifactsApi->artifactsControllerGetAll: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;Artifacts&gt;**](Artifacts.md)
 
 ### Authorization
 
-[bearer](../README.md#bearer)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **artifactsControllerUpdate**
-> artifactsControllerUpdate(artifactsControllerUpdateRequest)
+# **artifactsControllerGetOne**
+> Artifacts artifactsControllerGetOne(artifactsControllerGetRequest)
 
 
 
@@ -105,12 +102,13 @@ void (empty response body)
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getArtifactsApi();
-final ArtifactsControllerUpdateRequest artifactsControllerUpdateRequest = ; // ArtifactsControllerUpdateRequest | 
+final ArtifactsControllerGetRequest artifactsControllerGetRequest = ; // ArtifactsControllerGetRequest | 
 
 try {
-    api.artifactsControllerUpdate(artifactsControllerUpdateRequest);
+    final response = api.artifactsControllerGetOne(artifactsControllerGetRequest);
+    print(response);
 } catch on DioException (e) {
-    print('Exception when calling ArtifactsApi->artifactsControllerUpdate: $e\n');
+    print('Exception when calling ArtifactsApi->artifactsControllerGetOne: $e\n');
 }
 ```
 
@@ -118,20 +116,20 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **artifactsControllerUpdateRequest** | [**ArtifactsControllerUpdateRequest**](ArtifactsControllerUpdateRequest.md)|  | 
+ **artifactsControllerGetRequest** | [**ArtifactsControllerGetRequest**](ArtifactsControllerGetRequest.md)|  | 
 
 ### Return type
 
-void (empty response body)
+[**Artifacts**](Artifacts.md)
 
 ### Authorization
 
-[bearer](../README.md#bearer)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

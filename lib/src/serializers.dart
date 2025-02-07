@@ -15,83 +15,65 @@ import 'package:karasu_lab_public_client/src/date_serializer.dart';
 import 'package:karasu_lab_public_client/src/model/date.dart';
 
 import 'package:karasu_lab_public_client/src/model/artifact_sets.dart';
-import 'package:karasu_lab_public_client/src/model/artifact_sets_controller_create_request.dart';
-import 'package:karasu_lab_public_client/src/model/artifact_sets_controller_update_request.dart';
+import 'package:karasu_lab_public_client/src/model/artifact_sets_controller_get_request.dart';
 import 'package:karasu_lab_public_client/src/model/artifacts.dart';
-import 'package:karasu_lab_public_client/src/model/artifacts_controller_create_request.dart';
-import 'package:karasu_lab_public_client/src/model/artifacts_controller_update_request.dart';
-import 'package:karasu_lab_public_client/src/model/auth_controller_change_password_request.dart';
-import 'package:karasu_lab_public_client/src/model/auth_controller_disable_mfa_request.dart';
-import 'package:karasu_lab_public_client/src/model/auth_controller_enable_mfa_request.dart';
-import 'package:karasu_lab_public_client/src/model/auth_controller_forgot_password_request.dart';
-import 'package:karasu_lab_public_client/src/model/auth_controller_refresh_token_request.dart';
-import 'package:karasu_lab_public_client/src/model/auth_controller_set_up_mfa_request.dart';
-import 'package:karasu_lab_public_client/src/model/auth_controller_signin_confirm_request.dart';
-import 'package:karasu_lab_public_client/src/model/auth_controller_signin_request.dart';
-import 'package:karasu_lab_public_client/src/model/auth_controller_signup_request.dart';
-import 'package:karasu_lab_public_client/src/model/countries_controller_create_request.dart';
-import 'package:karasu_lab_public_client/src/model/countries_controller_update_request.dart';
+import 'package:karasu_lab_public_client/src/model/artifacts_controller_get_request.dart';
+import 'package:karasu_lab_public_client/src/model/characters_controller_get_request.dart';
+import 'package:karasu_lab_public_client/src/model/countries_controller_get_request.dart';
 import 'package:karasu_lab_public_client/src/model/country.dart';
 import 'package:karasu_lab_public_client/src/model/gi_character.dart';
+import 'package:karasu_lab_public_client/src/model/galleries_controller_create_request.dart';
+import 'package:karasu_lab_public_client/src/model/galleries_controller_update_request.dart';
 import 'package:karasu_lab_public_client/src/model/gallery.dart';
-import 'package:karasu_lab_public_client/src/model/import_character_request.dart';
-import 'package:karasu_lab_public_client/src/model/import_character_request_ext.dart';
-import 'package:karasu_lab_public_client/src/model/import_character_request_ext_post_ext.dart';
-import 'package:karasu_lab_public_client/src/model/import_character_request_filter_values.dart';
-import 'package:karasu_lab_public_client/src/model/import_character_request_filter_values_character_property.dart';
-import 'package:karasu_lab_public_client/src/model/import_character_request_filter_values_character_property_key.dart';
-import 'package:karasu_lab_public_client/src/model/import_character_request_filter_values_character_property_value_types_inner.dart';
-import 'package:karasu_lab_public_client/src/model/import_character_request_modules_inner.dart';
-import 'package:karasu_lab_public_client/src/model/import_character_request_modules_inner_components_inner.dart';
-import 'package:karasu_lab_public_client/src/model/import_from_hoyo_lab_query_parameter.dart';
-import 'package:karasu_lab_public_client/src/model/versions_controller_create_request.dart';
-import 'package:karasu_lab_public_client/src/model/versions_controller_update_request.dart';
+import 'package:karasu_lab_public_client/src/model/versions_controller_get_request.dart';
 import 'package:karasu_lab_public_client/src/model/versions_entity.dart';
 import 'package:karasu_lab_public_client/src/model/weapon.dart';
-import 'package:karasu_lab_public_client/src/model/weapons_controller_create_request.dart';
-import 'package:karasu_lab_public_client/src/model/weapons_controller_update_request.dart';
+import 'package:karasu_lab_public_client/src/model/weapons_controller_get_request.dart';
 
 part 'serializers.g.dart';
 
 @SerializersFor([
   ArtifactSets,
-  ArtifactSetsControllerCreateRequest,
-  ArtifactSetsControllerUpdateRequest,
+  ArtifactSetsControllerGetRequest,
   Artifacts,
-  ArtifactsControllerCreateRequest,
-  ArtifactsControllerUpdateRequest,
-  AuthControllerChangePasswordRequest,
-  AuthControllerDisableMfaRequest,
-  AuthControllerEnableMfaRequest,
-  AuthControllerForgotPasswordRequest,
-  AuthControllerRefreshTokenRequest,
-  AuthControllerSetUpMfaRequest,
-  AuthControllerSigninConfirmRequest,
-  AuthControllerSigninRequest,
-  AuthControllerSignupRequest,
-  CountriesControllerCreateRequest,
-  CountriesControllerUpdateRequest,
+  ArtifactsControllerGetRequest,
+  CharactersControllerGetRequest,
+  CountriesControllerGetRequest,
   Country,
   GICharacter,
+  GalleriesControllerCreateRequest,
+  GalleriesControllerUpdateRequest,
   Gallery,
-  ImportCharacterRequest,
-  ImportCharacterRequestExt,
-  ImportCharacterRequestExtPostExt,
-  ImportCharacterRequestFilterValues,
-  ImportCharacterRequestFilterValuesCharacterProperty,
-  ImportCharacterRequestFilterValuesCharacterPropertyKey,
-  ImportCharacterRequestFilterValuesCharacterPropertyValueTypesInner,
-  ImportCharacterRequestModulesInner,
-  ImportCharacterRequestModulesInnerComponentsInner,
-  ImportFromHoyoLabQueryParameter,
-  VersionsControllerCreateRequest,
-  VersionsControllerUpdateRequest,
+  VersionsControllerGetRequest,
   VersionsEntity,
   Weapon,
-  WeaponsControllerCreateRequest,
-  WeaponsControllerUpdateRequest,
+  WeaponsControllerGetRequest,
 ])
 Serializers serializers = (_$serializers.toBuilder()
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Country)]),
+        () => ListBuilder<Country>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(VersionsEntity)]),
+        () => ListBuilder<VersionsEntity>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Artifacts)]),
+        () => ListBuilder<Artifacts>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(GICharacter)]),
+        () => ListBuilder<GICharacter>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(ArtifactSets)]),
+        () => ListBuilder<ArtifactSets>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Weapon)]),
+        () => ListBuilder<Weapon>(),
+      )
       ..add(const OneOfSerializer())
       ..add(const AnyOfSerializer())
       ..add(const DateSerializer())

@@ -9,12 +9,11 @@ import 'package:karasu_lab_public_client/src/auth/api_key_auth.dart';
 import 'package:karasu_lab_public_client/src/auth/basic_auth.dart';
 import 'package:karasu_lab_public_client/src/auth/bearer_auth.dart';
 import 'package:karasu_lab_public_client/src/auth/oauth.dart';
-import 'package:karasu_lab_public_client/src/api/admin_api.dart';
 import 'package:karasu_lab_public_client/src/api/artifact_sets_api.dart';
 import 'package:karasu_lab_public_client/src/api/artifacts_api.dart';
-import 'package:karasu_lab_public_client/src/api/auth_api.dart';
-import 'package:karasu_lab_public_client/src/api/countries_api.dart';
+import 'package:karasu_lab_public_client/src/api/characters_api.dart';
 import 'package:karasu_lab_public_client/src/api/galleries_api.dart';
+import 'package:karasu_lab_public_client/src/api/regions_api.dart';
 import 'package:karasu_lab_public_client/src/api/versions_api.dart';
 import 'package:karasu_lab_public_client/src/api/weapons_api.dart';
 
@@ -72,12 +71,6 @@ class KarasuLabPublicClient {
     }
   }
 
-  /// Get AdminApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  AdminApi getAdminApi() {
-    return AdminApi(dio, serializers);
-  }
-
   /// Get ArtifactSetsApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   ArtifactSetsApi getArtifactSetsApi() {
@@ -90,22 +83,22 @@ class KarasuLabPublicClient {
     return ArtifactsApi(dio, serializers);
   }
 
-  /// Get AuthApi instance, base route and serializer can be overridden by a given but be careful,
+  /// Get CharactersApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
-  AuthApi getAuthApi() {
-    return AuthApi(dio, serializers);
-  }
-
-  /// Get CountriesApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  CountriesApi getCountriesApi() {
-    return CountriesApi(dio, serializers);
+  CharactersApi getCharactersApi() {
+    return CharactersApi(dio, serializers);
   }
 
   /// Get GalleriesApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   GalleriesApi getGalleriesApi() {
     return GalleriesApi(dio, serializers);
+  }
+
+  /// Get RegionsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  RegionsApi getRegionsApi() {
+    return RegionsApi(dio, serializers);
   }
 
   /// Get VersionsApi instance, base route and serializer can be overridden by a given but be careful,
