@@ -8,7 +8,7 @@ import 'package:karasu_lab_public_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | 
+**id** | **num** |  | 
 **name** | **String** |  | [optional] 
 **versionString** | **String** |  | 
 **released** | **bool** |  | 

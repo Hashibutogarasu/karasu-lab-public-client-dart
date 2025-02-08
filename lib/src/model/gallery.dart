@@ -22,7 +22,7 @@ part 'gallery.g.dart';
 @BuiltValue()
 abstract class Gallery implements Built<Gallery, GalleryBuilder> {
   @BuiltValueField(wireName: r'id')
-  String get id;
+  num get id;
 
   @BuiltValueField(wireName: r'alt')
   String get alt;
@@ -68,7 +68,7 @@ class _$GallerySerializer implements PrimitiveSerializer<Gallery> {
     yield r'id';
     yield serializers.serialize(
       object.id,
-      specifiedType: const FullType(String),
+      specifiedType: const FullType(num),
     );
     yield r'alt';
     yield serializers.serialize(
@@ -128,8 +128,8 @@ class _$GallerySerializer implements PrimitiveSerializer<Gallery> {
         case r'id':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType(num),
+          ) as num;
           result.id = valueDes;
           break;
         case r'alt':

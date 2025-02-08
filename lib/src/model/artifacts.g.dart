@@ -8,7 +8,7 @@ part of 'artifacts.dart';
 
 class _$Artifacts extends Artifacts {
   @override
-  final String id;
+  final num id;
   @override
   final String name;
   @override
@@ -93,9 +93,9 @@ class _$Artifacts extends Artifacts {
 class ArtifactsBuilder implements Builder<Artifacts, ArtifactsBuilder> {
   _$Artifacts? _$v;
 
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
+  num? _id;
+  num? get id => _$this._id;
+  set id(num? id) => _$this._id = id;
 
   String? _name;
   String? get name => _$this._name;

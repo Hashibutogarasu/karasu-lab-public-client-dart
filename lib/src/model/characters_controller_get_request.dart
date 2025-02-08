@@ -28,7 +28,7 @@ part 'characters_controller_get_request.g.dart';
 @BuiltValue()
 abstract class CharactersControllerGetRequest implements Built<CharactersControllerGetRequest, CharactersControllerGetRequestBuilder> {
   @BuiltValueField(wireName: r'id')
-  String? get id;
+  num? get id;
 
   @BuiltValueField(wireName: r'take')
   String? get take;
@@ -98,7 +98,7 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
       yield r'id';
       yield serializers.serialize(
         object.id,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType(num),
       );
     }
     if (object.take != null) {
@@ -218,8 +218,8 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
         case r'id':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType(num),
+          ) as num;
           result.id = valueDes;
           break;
         case r'take':

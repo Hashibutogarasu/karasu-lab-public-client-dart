@@ -24,7 +24,7 @@ part 'artifacts_controller_get_request.g.dart';
 @BuiltValue()
 abstract class ArtifactsControllerGetRequest implements Built<ArtifactsControllerGetRequest, ArtifactsControllerGetRequestBuilder> {
   @BuiltValueField(wireName: r'id')
-  String? get id;
+  num? get id;
 
   @BuiltValueField(wireName: r'take')
   String? get take;
@@ -78,11 +78,13 @@ class _$ArtifactsControllerGetRequestSerializer implements PrimitiveSerializer<A
     ArtifactsControllerGetRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
-    yield object.id == null ? null : serializers.serialize(
-      object.id,
-      specifiedType: const FullType.nullable(String),
-    );
+    if (object.id != null) {
+      yield r'id';
+      yield serializers.serialize(
+        object.id,
+        specifiedType: const FullType(num),
+      );
+    }
     if (object.take != null) {
       yield r'take';
       yield serializers.serialize(
@@ -172,9 +174,8 @@ class _$ArtifactsControllerGetRequestSerializer implements PrimitiveSerializer<A
         case r'id':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(num),
+          ) as num;
           result.id = valueDes;
           break;
         case r'take':

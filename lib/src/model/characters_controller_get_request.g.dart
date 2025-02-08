@@ -8,7 +8,7 @@ part of 'characters_controller_get_request.dart';
 
 class _$CharactersControllerGetRequest extends CharactersControllerGetRequest {
   @override
-  final String? id;
+  final num? id;
   @override
   final String? take;
   @override
@@ -134,9 +134,9 @@ class CharactersControllerGetRequestBuilder
             CharactersControllerGetRequestBuilder> {
   _$CharactersControllerGetRequest? _$v;
 
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
+  num? _id;
+  num? get id => _$this._id;
+  set id(num? id) => _$this._id = id;
 
   String? _take;
   String? get take => _$this._take;

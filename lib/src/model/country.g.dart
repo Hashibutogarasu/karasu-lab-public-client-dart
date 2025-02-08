@@ -8,7 +8,7 @@ part of 'country.dart';
 
 class _$Country extends Country {
   @override
-  final String id;
+  final num id;
   @override
   final String name;
   @override
@@ -99,9 +99,9 @@ class _$Country extends Country {
 class CountryBuilder implements Builder<Country, CountryBuilder> {
   _$Country? _$v;
 
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
+  num? _id;
+  num? get id => _$this._id;
+  set id(num? id) => _$this._id = id;
 
   String? _name;
   String? get name => _$this._name;

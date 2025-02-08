@@ -8,7 +8,7 @@ part of 'artifact_sets.dart';
 
 class _$ArtifactSets extends ArtifactSets {
   @override
-  final String id;
+  final num id;
   @override
   final String name;
   @override
@@ -134,9 +134,9 @@ class ArtifactSetsBuilder
     implements Builder<ArtifactSets, ArtifactSetsBuilder> {
   _$ArtifactSets? _$v;
 
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
+  num? _id;
+  num? get id => _$this._id;
+  set id(num? id) => _$this._id = id;
 
   String? _name;
   String? get name => _$this._name;
