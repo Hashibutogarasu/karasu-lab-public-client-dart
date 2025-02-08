@@ -37,7 +37,7 @@ abstract class Country implements Built<Country, CountryBuilder> {
   String? get sumbnailUrl;
 
   @BuiltValueField(wireName: r'characters')
-  BuiltList<GICharacter> get characters;
+  BuiltList<GICharacter>? get characters;
 
   @BuiltValueField(wireName: r'createdAt')
   DateTime get createdAt;
@@ -46,7 +46,7 @@ abstract class Country implements Built<Country, CountryBuilder> {
   DateTime get updatedAt;
 
   @BuiltValueField(wireName: r'version')
-  VersionsEntity get version;
+  VersionsEntity? get version;
 
   Country._();
 
@@ -95,11 +95,13 @@ class _$CountrySerializer implements PrimitiveSerializer<Country> {
         specifiedType: const FullType.nullable(String),
       );
     }
-    yield r'characters';
-    yield serializers.serialize(
-      object.characters,
-      specifiedType: const FullType(BuiltList, [FullType(GICharacter)]),
-    );
+    if (object.characters != null) {
+      yield r'characters';
+      yield serializers.serialize(
+        object.characters,
+        specifiedType: const FullType.nullable(BuiltList, [FullType(GICharacter)]),
+      );
+    }
     yield r'createdAt';
     yield serializers.serialize(
       object.createdAt,
@@ -110,11 +112,13 @@ class _$CountrySerializer implements PrimitiveSerializer<Country> {
       object.updatedAt,
       specifiedType: const FullType(DateTime),
     );
-    yield r'version';
-    yield serializers.serialize(
-      object.version,
-      specifiedType: const FullType(VersionsEntity),
-    );
+    if (object.version != null) {
+      yield r'version';
+      yield serializers.serialize(
+        object.version,
+        specifiedType: const FullType.nullable(VersionsEntity),
+      );
+    }
   }
 
   @override
@@ -171,8 +175,9 @@ class _$CountrySerializer implements PrimitiveSerializer<Country> {
         case r'characters':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(GICharacter)]),
-          ) as BuiltList<GICharacter>;
+            specifiedType: const FullType.nullable(BuiltList, [FullType(GICharacter)]),
+          ) as BuiltList<GICharacter>?;
+          if (valueDes == null) continue;
           result.characters.replace(valueDes);
           break;
         case r'createdAt':
@@ -192,8 +197,9 @@ class _$CountrySerializer implements PrimitiveSerializer<Country> {
         case r'version':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(VersionsEntity),
-          ) as VersionsEntity;
+            specifiedType: const FullType.nullable(VersionsEntity),
+          ) as VersionsEntity?;
+          if (valueDes == null) continue;
           result.version.replace(valueDes);
           break;
         default:

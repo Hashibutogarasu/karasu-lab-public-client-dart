@@ -16,13 +16,13 @@ class _$Country extends Country {
   @override
   final String? sumbnailUrl;
   @override
-  final BuiltList<GICharacter> characters;
+  final BuiltList<GICharacter>? characters;
   @override
   final DateTime createdAt;
   @override
   final DateTime updatedAt;
   @override
-  final VersionsEntity version;
+  final VersionsEntity? version;
 
   factory _$Country([void Function(CountryBuilder)? updates]) =>
       (new CountryBuilder()..update(updates))._build();
@@ -32,17 +32,15 @@ class _$Country extends Country {
       required this.name,
       this.description,
       this.sumbnailUrl,
-      required this.characters,
+      this.characters,
       required this.createdAt,
       required this.updatedAt,
-      required this.version})
+      this.version})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(id, r'Country', 'id');
     BuiltValueNullFieldError.checkNotNull(name, r'Country', 'name');
-    BuiltValueNullFieldError.checkNotNull(characters, r'Country', 'characters');
     BuiltValueNullFieldError.checkNotNull(createdAt, r'Country', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt, r'Country', 'updatedAt');
-    BuiltValueNullFieldError.checkNotNull(version, r'Country', 'version');
   }
 
   @override
@@ -145,10 +143,10 @@ class CountryBuilder implements Builder<Country, CountryBuilder> {
       _name = $v.name;
       _description = $v.description;
       _sumbnailUrl = $v.sumbnailUrl;
-      _characters = $v.characters.toBuilder();
+      _characters = $v.characters?.toBuilder();
       _createdAt = $v.createdAt;
       _updatedAt = $v.updatedAt;
-      _version = $v.version.toBuilder();
+      _version = $v.version?.toBuilder();
       _$v = null;
     }
     return this;
@@ -178,20 +176,20 @@ class CountryBuilder implements Builder<Country, CountryBuilder> {
                   name, r'Country', 'name'),
               description: description,
               sumbnailUrl: sumbnailUrl,
-              characters: characters.build(),
+              characters: _characters?.build(),
               createdAt: BuiltValueNullFieldError.checkNotNull(
                   createdAt, r'Country', 'createdAt'),
               updatedAt: BuiltValueNullFieldError.checkNotNull(
                   updatedAt, r'Country', 'updatedAt'),
-              version: version.build());
+              version: _version?.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'characters';
-        characters.build();
+        _characters?.build();
 
         _$failedField = 'version';
-        version.build();
+        _version?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'Country', _$failedField, e.toString());
