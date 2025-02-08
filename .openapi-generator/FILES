@@ -55,4 +55,3 @@ lib/src/model/weapon.dart
 lib/src/model/weapons_controller_get_request.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/galleries_controller_get_request_test.dart
