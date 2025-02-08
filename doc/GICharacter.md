@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **updatedAt** | [**DateTime**](DateTime.md) |  | 
 **region** | [**Country**](Country.md) |  | [optional] 
 **weapon** | [**Weapon**](Weapon.md) |  | [optional] 
-**version** | [**VersionsEntity**](VersionsEntity.md) |  | 
+**version** | [**VersionsEntity**](VersionsEntity.md) |  | [optional] 
 **artifactSet** | [**BuiltList&lt;ArtifactSets&gt;**](ArtifactSets.md) |  | 
 **galleries** | [**BuiltList&lt;Gallery&gt;**](Gallery.md) |  | 
 

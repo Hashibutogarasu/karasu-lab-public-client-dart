@@ -36,7 +36,7 @@ class _$GICharacter extends GICharacter {
   @override
   final Weapon? weapon;
   @override
-  final VersionsEntity version;
+  final VersionsEntity? version;
   @override
   final BuiltList<ArtifactSets> artifactSet;
   @override
@@ -60,7 +60,7 @@ class _$GICharacter extends GICharacter {
       required this.updatedAt,
       this.region,
       this.weapon,
-      required this.version,
+      this.version,
       required this.artifactSet,
       required this.galleries})
       : super._() {
@@ -73,7 +73,6 @@ class _$GICharacter extends GICharacter {
         createdAt, r'GICharacter', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt, r'GICharacter', 'updatedAt');
-    BuiltValueNullFieldError.checkNotNull(version, r'GICharacter', 'version');
     BuiltValueNullFieldError.checkNotNull(
         artifactSet, r'GICharacter', 'artifactSet');
     BuiltValueNullFieldError.checkNotNull(
@@ -256,7 +255,7 @@ class GICharacterBuilder implements Builder<GICharacter, GICharacterBuilder> {
       _updatedAt = $v.updatedAt;
       _region = $v.region?.toBuilder();
       _weapon = $v.weapon?.toBuilder();
-      _version = $v.version.toBuilder();
+      _version = $v.version?.toBuilder();
       _artifactSet = $v.artifactSet.toBuilder();
       _galleries = $v.galleries.toBuilder();
       _$v = null;
@@ -303,7 +302,7 @@ class GICharacterBuilder implements Builder<GICharacter, GICharacterBuilder> {
                   updatedAt, r'GICharacter', 'updatedAt'),
               region: _region?.build(),
               weapon: _weapon?.build(),
-              version: version.build(),
+              version: _version?.build(),
               artifactSet: artifactSet.build(),
               galleries: galleries.build());
     } catch (_) {
@@ -314,7 +313,7 @@ class GICharacterBuilder implements Builder<GICharacter, GICharacterBuilder> {
         _$failedField = 'weapon';
         _weapon?.build();
         _$failedField = 'version';
-        version.build();
+        _version?.build();
         _$failedField = 'artifactSet';
         artifactSet.build();
         _$failedField = 'galleries';

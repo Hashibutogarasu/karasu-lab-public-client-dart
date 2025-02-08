@@ -79,7 +79,7 @@ abstract class GICharacter implements Built<GICharacter, GICharacterBuilder> {
   Weapon? get weapon;
 
   @BuiltValueField(wireName: r'version')
-  VersionsEntity get version;
+  VersionsEntity? get version;
 
   @BuiltValueField(wireName: r'artifact_set')
   BuiltList<ArtifactSets> get artifactSet;
@@ -194,11 +194,13 @@ class _$GICharacterSerializer implements PrimitiveSerializer<GICharacter> {
         specifiedType: const FullType.nullable(Weapon),
       );
     }
-    yield r'version';
-    yield serializers.serialize(
-      object.version,
-      specifiedType: const FullType(VersionsEntity),
-    );
+    if (object.version != null) {
+      yield r'version';
+      yield serializers.serialize(
+        object.version,
+        specifiedType: const FullType.nullable(VersionsEntity),
+      );
+    }
     yield r'artifact_set';
     yield serializers.serialize(
       object.artifactSet,
@@ -341,8 +343,9 @@ class _$GICharacterSerializer implements PrimitiveSerializer<GICharacter> {
         case r'version':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(VersionsEntity),
-          ) as VersionsEntity;
+            specifiedType: const FullType.nullable(VersionsEntity),
+          ) as VersionsEntity?;
+          if (valueDes == null) continue;
           result.version.replace(valueDes);
           break;
         case r'artifact_set':
