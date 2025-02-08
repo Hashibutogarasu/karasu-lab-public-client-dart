@@ -28,7 +28,7 @@ class _$CharactersControllerGetRequest extends CharactersControllerGetRequest {
   @override
   final String? headerImgUrl;
   @override
-  final num? rarity;
+  final int? rarity;
   @override
   final String? version;
   @override
@@ -174,9 +174,9 @@ class CharactersControllerGetRequestBuilder
   String? get headerImgUrl => _$this._headerImgUrl;
   set headerImgUrl(String? headerImgUrl) => _$this._headerImgUrl = headerImgUrl;
 
-  num? _rarity;
-  num? get rarity => _$this._rarity;
-  set rarity(num? rarity) => _$this._rarity = rarity;
+  int? _rarity;
+  int? get rarity => _$this._rarity;
+  set rarity(int? rarity) => _$this._rarity = rarity;
 
   String? _version;
   String? get version => _$this._version;

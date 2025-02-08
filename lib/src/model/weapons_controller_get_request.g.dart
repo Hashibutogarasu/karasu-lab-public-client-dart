@@ -22,7 +22,7 @@ class _$WeaponsControllerGetRequest extends WeaponsControllerGetRequest {
   @override
   final String? type;
   @override
-  final num? rarity;
+  final int? rarity;
   @override
   final String? effect;
   @override
@@ -138,9 +138,9 @@ class WeaponsControllerGetRequestBuilder
   String? get type => _$this._type;
   set type(String? type) => _$this._type = type;
 
-  num? _rarity;
-  num? get rarity => _$this._rarity;
-  set rarity(num? rarity) => _$this._rarity = rarity;
+  int? _rarity;
+  int? get rarity => _$this._rarity;
+  set rarity(int? rarity) => _$this._rarity = rarity;
 
   String? _effect;
   String? get effect => _$this._effect;
