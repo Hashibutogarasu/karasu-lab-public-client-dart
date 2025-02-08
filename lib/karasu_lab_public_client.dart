@@ -26,8 +26,7 @@ export 'package:karasu_lab_public_client/src/model/characters_controller_get_req
 export 'package:karasu_lab_public_client/src/model/countries_controller_get_request.dart';
 export 'package:karasu_lab_public_client/src/model/country.dart';
 export 'package:karasu_lab_public_client/src/model/gi_character.dart';
-export 'package:karasu_lab_public_client/src/model/galleries_controller_create_request.dart';
-export 'package:karasu_lab_public_client/src/model/galleries_controller_update_request.dart';
+export 'package:karasu_lab_public_client/src/model/galleries_controller_get_request.dart';
 export 'package:karasu_lab_public_client/src/model/gallery.dart';
 export 'package:karasu_lab_public_client/src/model/versions_controller_get_request.dart';
 export 'package:karasu_lab_public_client/src/model/versions_entity.dart';

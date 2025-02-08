@@ -22,8 +22,7 @@ import 'package:karasu_lab_public_client/src/model/characters_controller_get_req
 import 'package:karasu_lab_public_client/src/model/countries_controller_get_request.dart';
 import 'package:karasu_lab_public_client/src/model/country.dart';
 import 'package:karasu_lab_public_client/src/model/gi_character.dart';
-import 'package:karasu_lab_public_client/src/model/galleries_controller_create_request.dart';
-import 'package:karasu_lab_public_client/src/model/galleries_controller_update_request.dart';
+import 'package:karasu_lab_public_client/src/model/galleries_controller_get_request.dart';
 import 'package:karasu_lab_public_client/src/model/gallery.dart';
 import 'package:karasu_lab_public_client/src/model/versions_controller_get_request.dart';
 import 'package:karasu_lab_public_client/src/model/versions_entity.dart';
@@ -41,8 +40,7 @@ part 'serializers.g.dart';
   CountriesControllerGetRequest,
   Country,
   GICharacter,
-  GalleriesControllerCreateRequest,
-  GalleriesControllerUpdateRequest,
+  GalleriesControllerGetRequest,
   Gallery,
   VersionsControllerGetRequest,
   VersionsEntity,
@@ -69,6 +67,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(ArtifactSets)]),
         () => ListBuilder<ArtifactSets>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Gallery)]),
+        () => ListBuilder<Gallery>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Weapon)]),

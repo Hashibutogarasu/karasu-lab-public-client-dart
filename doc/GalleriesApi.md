@@ -9,14 +9,13 @@ All URIs are relative to *https://api.karasu256.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**galleriesControllerCreate**](GalleriesApi.md#galleriescontrollercreate) | **POST** /galleries/admin | 
-[**galleriesControllerDelete**](GalleriesApi.md#galleriescontrollerdelete) | **DELETE** /galleries/admin/{id} | 
-[**galleriesControllerUpdate**](GalleriesApi.md#galleriescontrollerupdate) | **PUT** /galleries/admin | 
-[**galleriesControllerUploadFile**](GalleriesApi.md#galleriescontrolleruploadfile) | **POST** /galleries/admin/upload | 
+[**galleriesControllerGet**](GalleriesApi.md#galleriescontrollerget) | **POST** /wiki/galleries | 
+[**galleriesControllerGetAll**](GalleriesApi.md#galleriescontrollergetall) | **GET** /wiki/galleries | 
+[**galleriesControllerGetOne**](GalleriesApi.md#galleriescontrollergetone) | **POST** /wiki/galleries/getOne | 
 
 
-# **galleriesControllerCreate**
-> Gallery galleriesControllerCreate(galleriesControllerCreateRequest)
+# **galleriesControllerGet**
+> BuiltList<Gallery> galleriesControllerGet(galleriesControllerGetRequest)
 
 
 
@@ -25,13 +24,13 @@ Method | HTTP request | Description
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getGalleriesApi();
-final GalleriesControllerCreateRequest galleriesControllerCreateRequest = ; // GalleriesControllerCreateRequest | 
+final GalleriesControllerGetRequest galleriesControllerGetRequest = ; // GalleriesControllerGetRequest | 
 
 try {
-    final response = api.galleriesControllerCreate(galleriesControllerCreateRequest);
+    final response = api.galleriesControllerGet(galleriesControllerGetRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling GalleriesApi->galleriesControllerCreate: $e\n');
+    print('Exception when calling GalleriesApi->galleriesControllerGet: $e\n');
 }
 ```
 
@@ -39,15 +38,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **galleriesControllerCreateRequest** | [**GalleriesControllerCreateRequest**](GalleriesControllerCreateRequest.md)|  | 
+ **galleriesControllerGetRequest** | [**GalleriesControllerGetRequest**](GalleriesControllerGetRequest.md)|  | 
 
 ### Return type
 
-[**Gallery**](Gallery.md)
+[**BuiltList&lt;Gallery&gt;**](Gallery.md)
 
 ### Authorization
 
-[bearer](../README.md#bearer)
+No authorization required
 
 ### HTTP request headers
 
@@ -56,8 +55,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **galleriesControllerDelete**
-> galleriesControllerDelete(id)
+# **galleriesControllerGetAll**
+> BuiltList<Gallery> galleriesControllerGetAll()
 
 
 
@@ -66,38 +65,35 @@ Name | Type | Description  | Notes
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getGalleriesApi();
-final String id = id_example; // String | 
 
 try {
-    api.galleriesControllerDelete(id);
+    final response = api.galleriesControllerGetAll();
+    print(response);
 } catch on DioException (e) {
-    print('Exception when calling GalleriesApi->galleriesControllerDelete: $e\n');
+    print('Exception when calling GalleriesApi->galleriesControllerGetAll: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**BuiltList&lt;Gallery&gt;**](Gallery.md)
 
 ### Authorization
 
-[bearer](../README.md#bearer)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **galleriesControllerUpdate**
-> galleriesControllerUpdate(galleriesControllerUpdateRequest)
+# **galleriesControllerGetOne**
+> Gallery galleriesControllerGetOne(galleriesControllerGetRequest)
 
 
 
@@ -106,12 +102,13 @@ void (empty response body)
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getGalleriesApi();
-final GalleriesControllerUpdateRequest galleriesControllerUpdateRequest = ; // GalleriesControllerUpdateRequest | 
+final GalleriesControllerGetRequest galleriesControllerGetRequest = ; // GalleriesControllerGetRequest | 
 
 try {
-    api.galleriesControllerUpdate(galleriesControllerUpdateRequest);
+    final response = api.galleriesControllerGetOne(galleriesControllerGetRequest);
+    print(response);
 } catch on DioException (e) {
-    print('Exception when calling GalleriesApi->galleriesControllerUpdate: $e\n');
+    print('Exception when calling GalleriesApi->galleriesControllerGetOne: $e\n');
 }
 ```
 
@@ -119,64 +116,20 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **galleriesControllerUpdateRequest** | [**GalleriesControllerUpdateRequest**](GalleriesControllerUpdateRequest.md)|  | 
+ **galleriesControllerGetRequest** | [**GalleriesControllerGetRequest**](GalleriesControllerGetRequest.md)|  | 
 
 ### Return type
 
-void (empty response body)
+[**Gallery**](Gallery.md)
 
 ### Authorization
 
-[bearer](../README.md#bearer)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **galleriesControllerUploadFile**
-> galleriesControllerUploadFile(comment, outletId, file)
-
-
-
-### Example
-```dart
-import 'package:karasu_lab_public_client/api.dart';
-
-final api = KarasuLabPublicClient().getGalleriesApi();
-final String comment = comment_example; // String | 
-final int outletId = 56; // int | 
-final MultipartFile file = BINARY_DATA_HERE; // MultipartFile | 
-
-try {
-    api.galleriesControllerUploadFile(comment, outletId, file);
-} catch on DioException (e) {
-    print('Exception when calling GalleriesApi->galleriesControllerUploadFile: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **comment** | **String**|  | [optional] 
- **outletId** | **int**|  | [optional] 
- **file** | **MultipartFile**|  | [optional] 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[bearer](../README.md#bearer)
-
-### HTTP request headers
-
- - **Content-Type**: multipart/form-data
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

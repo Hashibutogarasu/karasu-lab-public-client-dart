@@ -74,10 +74,9 @@ Class | Method | HTTP request | Description
 [*CharactersApi*](doc/CharactersApi.md) | [**charactersControllerGet**](doc/CharactersApi.md#characterscontrollerget) | **POST** /wiki/genshin/characters/get | 
 [*CharactersApi*](doc/CharactersApi.md) | [**charactersControllerGetAll**](doc/CharactersApi.md#characterscontrollergetall) | **GET** /wiki/genshin/characters | 
 [*CharactersApi*](doc/CharactersApi.md) | [**charactersControllerGetOne**](doc/CharactersApi.md#characterscontrollergetone) | **POST** /wiki/genshin/characters/getOne | 
-[*GalleriesApi*](doc/GalleriesApi.md) | [**galleriesControllerCreate**](doc/GalleriesApi.md#galleriescontrollercreate) | **POST** /galleries/admin | 
-[*GalleriesApi*](doc/GalleriesApi.md) | [**galleriesControllerDelete**](doc/GalleriesApi.md#galleriescontrollerdelete) | **DELETE** /galleries/admin/{id} | 
-[*GalleriesApi*](doc/GalleriesApi.md) | [**galleriesControllerUpdate**](doc/GalleriesApi.md#galleriescontrollerupdate) | **PUT** /galleries/admin | 
-[*GalleriesApi*](doc/GalleriesApi.md) | [**galleriesControllerUploadFile**](doc/GalleriesApi.md#galleriescontrolleruploadfile) | **POST** /galleries/admin/upload | 
+[*GalleriesApi*](doc/GalleriesApi.md) | [**galleriesControllerGet**](doc/GalleriesApi.md#galleriescontrollerget) | **POST** /wiki/galleries | 
+[*GalleriesApi*](doc/GalleriesApi.md) | [**galleriesControllerGetAll**](doc/GalleriesApi.md#galleriescontrollergetall) | **GET** /wiki/galleries | 
+[*GalleriesApi*](doc/GalleriesApi.md) | [**galleriesControllerGetOne**](doc/GalleriesApi.md#galleriescontrollergetone) | **POST** /wiki/galleries/getOne | 
 [*RegionsApi*](doc/RegionsApi.md) | [**countriesControllerGet**](doc/RegionsApi.md#countriescontrollerget) | **POST** /wiki/genshin/regions/get | 
 [*RegionsApi*](doc/RegionsApi.md) | [**countriesControllerGetAll**](doc/RegionsApi.md#countriescontrollergetall) | **GET** /wiki/genshin/regions | 
 [*RegionsApi*](doc/RegionsApi.md) | [**countriesControllerGetOne**](doc/RegionsApi.md#countriescontrollergetone) | **POST** /wiki/genshin/regions/getOne | 
@@ -99,8 +98,7 @@ Class | Method | HTTP request | Description
  - [CountriesControllerGetRequest](doc/CountriesControllerGetRequest.md)
  - [Country](doc/Country.md)
  - [GICharacter](doc/GICharacter.md)
- - [GalleriesControllerCreateRequest](doc/GalleriesControllerCreateRequest.md)
- - [GalleriesControllerUpdateRequest](doc/GalleriesControllerUpdateRequest.md)
+ - [GalleriesControllerGetRequest](doc/GalleriesControllerGetRequest.md)
  - [Gallery](doc/Gallery.md)
  - [VersionsControllerGetRequest](doc/VersionsControllerGetRequest.md)
  - [VersionsEntity](doc/VersionsEntity.md)
