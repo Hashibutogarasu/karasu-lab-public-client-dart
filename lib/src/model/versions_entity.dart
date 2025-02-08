@@ -49,7 +49,7 @@ abstract class VersionsEntity implements Built<VersionsEntity, VersionsEntityBui
   DateTime get updatedAt;
 
   @BuiltValueField(wireName: r'characters')
-  BuiltList<GICharacter> get characters;
+  BuiltList<GICharacter>? get characters;
 
   @BuiltValueField(wireName: r'weapons')
   BuiltList<Weapon>? get weapons;
@@ -118,11 +118,13 @@ class _$VersionsEntitySerializer implements PrimitiveSerializer<VersionsEntity> 
       object.updatedAt,
       specifiedType: const FullType(DateTime),
     );
-    yield r'characters';
-    yield serializers.serialize(
-      object.characters,
-      specifiedType: const FullType(BuiltList, [FullType(GICharacter)]),
-    );
+    if (object.characters != null) {
+      yield r'characters';
+      yield serializers.serialize(
+        object.characters,
+        specifiedType: const FullType.nullable(BuiltList, [FullType(GICharacter)]),
+      );
+    }
     if (object.weapons != null) {
       yield r'weapons';
       yield serializers.serialize(
@@ -220,8 +222,9 @@ class _$VersionsEntitySerializer implements PrimitiveSerializer<VersionsEntity> 
         case r'characters':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(GICharacter)]),
-          ) as BuiltList<GICharacter>;
+            specifiedType: const FullType.nullable(BuiltList, [FullType(GICharacter)]),
+          ) as BuiltList<GICharacter>?;
+          if (valueDes == null) continue;
           result.characters.replace(valueDes);
           break;
         case r'weapons':

@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **uninplemented** | **bool** |  | 
 **createdAt** | [**DateTime**](DateTime.md) |  | 
 **updatedAt** | [**DateTime**](DateTime.md) |  | 
+**implementedDate** | **String** |  | [optional] 
 **region** | [**Country**](Country.md) |  | [optional] 
 **weapon** | [**Weapon**](Weapon.md) |  | [optional] 
 **version** | [**VersionsEntity**](VersionsEntity.md) |  | [optional] 

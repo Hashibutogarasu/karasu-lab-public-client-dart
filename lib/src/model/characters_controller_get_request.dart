@@ -24,6 +24,7 @@ part 'characters_controller_get_request.g.dart';
 /// * [rarity] 
 /// * [version] 
 /// * [property] 
+/// * [implementedDate] 
 /// * [unimplemented] 
 @BuiltValue()
 abstract class CharactersControllerGetRequest implements Built<CharactersControllerGetRequest, CharactersControllerGetRequestBuilder> {
@@ -65,6 +66,9 @@ abstract class CharactersControllerGetRequest implements Built<CharactersControl
 
   @BuiltValueField(wireName: r'property')
   String? get property;
+
+  @BuiltValueField(wireName: r'implemented_date')
+  String? get implementedDate;
 
   @BuiltValueField(wireName: r'unimplemented')
   String? get unimplemented;
@@ -182,6 +186,13 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
       yield r'property';
       yield serializers.serialize(
         object.property,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.implementedDate != null) {
+      yield r'implemented_date';
+      yield serializers.serialize(
+        object.implementedDate,
         specifiedType: const FullType(String),
       );
     }
@@ -305,6 +316,13 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
             specifiedType: const FullType(String),
           ) as String;
           result.property = valueDes;
+          break;
+        case r'implemented_date':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.implementedDate = valueDes;
           break;
         case r'unimplemented':
           final valueDes = serializers.deserialize(

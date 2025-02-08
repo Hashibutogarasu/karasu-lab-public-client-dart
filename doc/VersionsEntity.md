@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **released** | **bool** |  | 
 **createdAt** | [**DateTime**](DateTime.md) |  | 
 **updatedAt** | [**DateTime**](DateTime.md) |  | 
-**characters** | [**BuiltList&lt;GICharacter&gt;**](GICharacter.md) |  | 
+**characters** | [**BuiltList&lt;GICharacter&gt;**](GICharacter.md) |  | [optional] 
 **weapons** | [**BuiltList&lt;Weapon&gt;**](Weapon.md) |  | [optional] 
 **artifactSets** | [**BuiltList&lt;ArtifactSets&gt;**](ArtifactSets.md) |  | [optional] 
 **countries** | [**BuiltList&lt;Country&gt;**](Country.md) |  | [optional] 

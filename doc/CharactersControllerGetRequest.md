@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **rarity** | **int** |  | [optional] 
 **version** | **String** |  | [optional] 
 **property** | **String** |  | [optional] 
+**implementedDate** | **String** |  | [optional] 
 **unimplemented** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

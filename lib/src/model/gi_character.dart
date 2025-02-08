@@ -29,6 +29,7 @@ part 'gi_character.g.dart';
 /// * [uninplemented] 
 /// * [createdAt] 
 /// * [updatedAt] 
+/// * [implementedDate] 
 /// * [region] 
 /// * [weapon] 
 /// * [version] 
@@ -71,6 +72,9 @@ abstract class GICharacter implements Built<GICharacter, GICharacterBuilder> {
 
   @BuiltValueField(wireName: r'updatedAt')
   DateTime get updatedAt;
+
+  @BuiltValueField(wireName: r'implemented_date')
+  String? get implementedDate;
 
   @BuiltValueField(wireName: r'region')
   Country? get region;
@@ -180,6 +184,13 @@ class _$GICharacterSerializer implements PrimitiveSerializer<GICharacter> {
       object.updatedAt,
       specifiedType: const FullType(DateTime),
     );
+    if (object.implementedDate != null) {
+      yield r'implemented_date';
+      yield serializers.serialize(
+        object.implementedDate,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
     if (object.region != null) {
       yield r'region';
       yield serializers.serialize(
@@ -323,6 +334,14 @@ class _$GICharacterSerializer implements PrimitiveSerializer<GICharacter> {
             specifiedType: const FullType(DateTime),
           ) as DateTime;
           result.updatedAt = valueDes;
+          break;
+        case r'implemented_date':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.implementedDate = valueDes;
           break;
         case r'region':
           final valueDes = serializers.deserialize(
