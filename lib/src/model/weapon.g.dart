@@ -26,9 +26,9 @@ class _$Weapon extends Weapon {
   @override
   final String type;
   @override
-  final BuiltList<GICharacter> characters;
+  final BuiltList<GICharacter>? characters;
   @override
-  final VersionsEntity version;
+  final VersionsEntity? version;
 
   factory _$Weapon([void Function(WeaponBuilder)? updates]) =>
       (new WeaponBuilder()..update(updates))._build();
@@ -43,8 +43,8 @@ class _$Weapon extends Weapon {
       required this.rarity,
       required this.effect,
       required this.type,
-      required this.characters,
-      required this.version})
+      this.characters,
+      this.version})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(id, r'Weapon', 'id');
     BuiltValueNullFieldError.checkNotNull(name, r'Weapon', 'name');
@@ -54,8 +54,6 @@ class _$Weapon extends Weapon {
     BuiltValueNullFieldError.checkNotNull(rarity, r'Weapon', 'rarity');
     BuiltValueNullFieldError.checkNotNull(effect, r'Weapon', 'effect');
     BuiltValueNullFieldError.checkNotNull(type, r'Weapon', 'type');
-    BuiltValueNullFieldError.checkNotNull(characters, r'Weapon', 'characters');
-    BuiltValueNullFieldError.checkNotNull(version, r'Weapon', 'version');
   }
 
   @override
@@ -184,8 +182,8 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
       _rarity = $v.rarity;
       _effect = $v.effect;
       _type = $v.type;
-      _characters = $v.characters.toBuilder();
-      _version = $v.version.toBuilder();
+      _characters = $v.characters?.toBuilder();
+      _version = $v.version?.toBuilder();
       _$v = null;
     }
     return this;
@@ -226,15 +224,15 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
                   effect, r'Weapon', 'effect'),
               type: BuiltValueNullFieldError.checkNotNull(
                   type, r'Weapon', 'type'),
-              characters: characters.build(),
-              version: version.build());
+              characters: _characters?.build(),
+              version: _version?.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'characters';
-        characters.build();
+        _characters?.build();
         _$failedField = 'version';
-        version.build();
+        _version?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'Weapon', _$failedField, e.toString());

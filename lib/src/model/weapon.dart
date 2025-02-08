@@ -55,10 +55,10 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
   String get type;
 
   @BuiltValueField(wireName: r'characters')
-  BuiltList<GICharacter> get characters;
+  BuiltList<GICharacter>? get characters;
 
   @BuiltValueField(wireName: r'version')
-  VersionsEntity get version;
+  VersionsEntity? get version;
 
   Weapon._();
 
@@ -130,16 +130,20 @@ class _$WeaponSerializer implements PrimitiveSerializer<Weapon> {
       object.type,
       specifiedType: const FullType(String),
     );
-    yield r'characters';
-    yield serializers.serialize(
-      object.characters,
-      specifiedType: const FullType(BuiltList, [FullType(GICharacter)]),
-    );
-    yield r'version';
-    yield serializers.serialize(
-      object.version,
-      specifiedType: const FullType(VersionsEntity),
-    );
+    if (object.characters != null) {
+      yield r'characters';
+      yield serializers.serialize(
+        object.characters,
+        specifiedType: const FullType.nullable(BuiltList, [FullType(GICharacter)]),
+      );
+    }
+    if (object.version != null) {
+      yield r'version';
+      yield serializers.serialize(
+        object.version,
+        specifiedType: const FullType.nullable(VersionsEntity),
+      );
+    }
   }
 
   @override
@@ -230,15 +234,17 @@ class _$WeaponSerializer implements PrimitiveSerializer<Weapon> {
         case r'characters':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(GICharacter)]),
-          ) as BuiltList<GICharacter>;
+            specifiedType: const FullType.nullable(BuiltList, [FullType(GICharacter)]),
+          ) as BuiltList<GICharacter>?;
+          if (valueDes == null) continue;
           result.characters.replace(valueDes);
           break;
         case r'version':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(VersionsEntity),
-          ) as VersionsEntity;
+            specifiedType: const FullType.nullable(VersionsEntity),
+          ) as VersionsEntity?;
+          if (valueDes == null) continue;
           result.version.replace(valueDes);
           break;
         default:

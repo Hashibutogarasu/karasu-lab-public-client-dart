@@ -17,8 +17,8 @@ Name | Type | Description | Notes
 **rarity** | **num** |  | 
 **effect** | **String** |  | 
 **type** | **String** |  | 
-**characters** | [**BuiltList&lt;GICharacter&gt;**](GICharacter.md) |  | 
-**version** | [**VersionsEntity**](VersionsEntity.md) |  | 
+**characters** | [**BuiltList&lt;GICharacter&gt;**](GICharacter.md) |  | [optional] 
+**version** | [**VersionsEntity**](VersionsEntity.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
