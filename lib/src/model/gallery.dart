@@ -25,13 +25,13 @@ abstract class Gallery implements Built<Gallery, GalleryBuilder> {
   String get id;
 
   @BuiltValueField(wireName: r'alt')
-  String get alt;
+  String? get alt;
 
   @BuiltValueField(wireName: r'url')
-  String get url;
+  String? get url;
 
   @BuiltValueField(wireName: r'key')
-  String get key;
+  String? get key;
 
   @BuiltValueField(wireName: r'createdAt')
   DateTime get createdAt;
@@ -70,21 +70,27 @@ class _$GallerySerializer implements PrimitiveSerializer<Gallery> {
       object.id,
       specifiedType: const FullType(String),
     );
-    yield r'alt';
-    yield serializers.serialize(
-      object.alt,
-      specifiedType: const FullType(String),
-    );
-    yield r'url';
-    yield serializers.serialize(
-      object.url,
-      specifiedType: const FullType(String),
-    );
-    yield r'key';
-    yield serializers.serialize(
-      object.key,
-      specifiedType: const FullType(String),
-    );
+    if (object.alt != null) {
+      yield r'alt';
+      yield serializers.serialize(
+        object.alt,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.url != null) {
+      yield r'url';
+      yield serializers.serialize(
+        object.url,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.key != null) {
+      yield r'key';
+      yield serializers.serialize(
+        object.key,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
     yield r'createdAt';
     yield serializers.serialize(
       object.createdAt,
@@ -135,22 +141,25 @@ class _$GallerySerializer implements PrimitiveSerializer<Gallery> {
         case r'alt':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.alt = valueDes;
           break;
         case r'url':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.url = valueDes;
           break;
         case r'key':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.key = valueDes;
           break;
         case r'createdAt':

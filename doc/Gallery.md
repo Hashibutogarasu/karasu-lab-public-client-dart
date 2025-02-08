@@ -9,9 +9,9 @@ import 'package:karasu_lab_public_client/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
-**alt** | **String** |  | 
-**url** | **String** |  | 
-**key** | **String** |  | 
+**alt** | **String** |  | [optional] 
+**url** | **String** |  | [optional] 
+**key** | **String** |  | [optional] 
 **createdAt** | [**DateTime**](DateTime.md) |  | 
 **updatedAt** | [**DateTime**](DateTime.md) |  | 
 **character** | [**GICharacter**](GICharacter.md) |  | [optional] 

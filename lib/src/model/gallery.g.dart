@@ -10,11 +10,11 @@ class _$Gallery extends Gallery {
   @override
   final String id;
   @override
-  final String alt;
+  final String? alt;
   @override
-  final String url;
+  final String? url;
   @override
-  final String key;
+  final String? key;
   @override
   final DateTime createdAt;
   @override
@@ -27,17 +27,14 @@ class _$Gallery extends Gallery {
 
   _$Gallery._(
       {required this.id,
-      required this.alt,
-      required this.url,
-      required this.key,
+      this.alt,
+      this.url,
+      this.key,
       required this.createdAt,
       required this.updatedAt,
       this.character})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(id, r'Gallery', 'id');
-    BuiltValueNullFieldError.checkNotNull(alt, r'Gallery', 'alt');
-    BuiltValueNullFieldError.checkNotNull(url, r'Gallery', 'url');
-    BuiltValueNullFieldError.checkNotNull(key, r'Gallery', 'key');
     BuiltValueNullFieldError.checkNotNull(createdAt, r'Gallery', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(updatedAt, r'Gallery', 'updatedAt');
   }
@@ -161,12 +158,9 @@ class GalleryBuilder implements Builder<Gallery, GalleryBuilder> {
       _$result = _$v ??
           new _$Gallery._(
               id: BuiltValueNullFieldError.checkNotNull(id, r'Gallery', 'id'),
-              alt:
-                  BuiltValueNullFieldError.checkNotNull(alt, r'Gallery', 'alt'),
-              url:
-                  BuiltValueNullFieldError.checkNotNull(url, r'Gallery', 'url'),
-              key:
-                  BuiltValueNullFieldError.checkNotNull(key, r'Gallery', 'key'),
+              alt: alt,
+              url: url,
+              key: key,
               createdAt: BuiltValueNullFieldError.checkNotNull(
                   createdAt, r'Gallery', 'createdAt'),
               updatedAt: BuiltValueNullFieldError.checkNotNull(
