@@ -16,11 +16,11 @@ class _$Country extends Country {
   @override
   final String? sumbnailUrl;
   @override
-  final BuiltList<GICharacter>? characters;
-  @override
   final DateTime createdAt;
   @override
   final DateTime updatedAt;
+  @override
+  final BuiltList<GICharacter>? characters;
   @override
   final VersionsEntity? version;
 
@@ -32,9 +32,9 @@ class _$Country extends Country {
       required this.name,
       this.description,
       this.sumbnailUrl,
-      this.characters,
       required this.createdAt,
       required this.updatedAt,
+      this.characters,
       this.version})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(id, r'Country', 'id');
@@ -58,9 +58,9 @@ class _$Country extends Country {
         name == other.name &&
         description == other.description &&
         sumbnailUrl == other.sumbnailUrl &&
-        characters == other.characters &&
         createdAt == other.createdAt &&
         updatedAt == other.updatedAt &&
+        characters == other.characters &&
         version == other.version;
   }
 
@@ -71,9 +71,9 @@ class _$Country extends Country {
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, sumbnailUrl.hashCode);
-    _$hash = $jc(_$hash, characters.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, updatedAt.hashCode);
+    _$hash = $jc(_$hash, characters.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -86,9 +86,9 @@ class _$Country extends Country {
           ..add('name', name)
           ..add('description', description)
           ..add('sumbnailUrl', sumbnailUrl)
-          ..add('characters', characters)
           ..add('createdAt', createdAt)
           ..add('updatedAt', updatedAt)
+          ..add('characters', characters)
           ..add('version', version))
         .toString();
   }
@@ -113,12 +113,6 @@ class CountryBuilder implements Builder<Country, CountryBuilder> {
   String? get sumbnailUrl => _$this._sumbnailUrl;
   set sumbnailUrl(String? sumbnailUrl) => _$this._sumbnailUrl = sumbnailUrl;
 
-  ListBuilder<GICharacter>? _characters;
-  ListBuilder<GICharacter> get characters =>
-      _$this._characters ??= new ListBuilder<GICharacter>();
-  set characters(ListBuilder<GICharacter>? characters) =>
-      _$this._characters = characters;
-
   DateTime? _createdAt;
   DateTime? get createdAt => _$this._createdAt;
   set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
@@ -126,6 +120,12 @@ class CountryBuilder implements Builder<Country, CountryBuilder> {
   DateTime? _updatedAt;
   DateTime? get updatedAt => _$this._updatedAt;
   set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
+
+  ListBuilder<GICharacter>? _characters;
+  ListBuilder<GICharacter> get characters =>
+      _$this._characters ??= new ListBuilder<GICharacter>();
+  set characters(ListBuilder<GICharacter>? characters) =>
+      _$this._characters = characters;
 
   VersionsEntityBuilder? _version;
   VersionsEntityBuilder get version =>
@@ -143,9 +143,9 @@ class CountryBuilder implements Builder<Country, CountryBuilder> {
       _name = $v.name;
       _description = $v.description;
       _sumbnailUrl = $v.sumbnailUrl;
-      _characters = $v.characters?.toBuilder();
       _createdAt = $v.createdAt;
       _updatedAt = $v.updatedAt;
+      _characters = $v.characters?.toBuilder();
       _version = $v.version?.toBuilder();
       _$v = null;
     }
@@ -176,18 +176,17 @@ class CountryBuilder implements Builder<Country, CountryBuilder> {
                   name, r'Country', 'name'),
               description: description,
               sumbnailUrl: sumbnailUrl,
-              characters: _characters?.build(),
               createdAt: BuiltValueNullFieldError.checkNotNull(
                   createdAt, r'Country', 'createdAt'),
               updatedAt: BuiltValueNullFieldError.checkNotNull(
                   updatedAt, r'Country', 'updatedAt'),
+              characters: _characters?.build(),
               version: _version?.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'characters';
         _characters?.build();
-
         _$failedField = 'version';
         _version?.build();
       } catch (e) {
