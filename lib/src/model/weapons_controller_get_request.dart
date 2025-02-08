@@ -45,7 +45,7 @@ abstract class WeaponsControllerGetRequest implements Built<WeaponsControllerGet
   String? get type;
 
   @BuiltValueField(wireName: r'rarity')
-  num? get rarity;
+  int? get rarity;
 
   @BuiltValueField(wireName: r'effect')
   String? get effect;
@@ -131,7 +131,7 @@ class _$WeaponsControllerGetRequestSerializer implements PrimitiveSerializer<Wea
       yield r'rarity';
       yield serializers.serialize(
         object.rarity,
-        specifiedType: const FullType(num),
+        specifiedType: const FullType(int),
       );
     }
     if (object.effect != null) {
@@ -223,8 +223,8 @@ class _$WeaponsControllerGetRequestSerializer implements PrimitiveSerializer<Wea
         case r'rarity':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(num),
-          ) as num;
+            specifiedType: const FullType(int),
+          ) as int;
           result.rarity = valueDes;
           break;
         case r'effect':

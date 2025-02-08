@@ -58,7 +58,7 @@ abstract class CharactersControllerGetRequest implements Built<CharactersControl
   String? get headerImgUrl;
 
   @BuiltValueField(wireName: r'rarity')
-  num? get rarity;
+  int? get rarity;
 
   @BuiltValueField(wireName: r'version')
   String? get version;
@@ -168,7 +168,7 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
       yield r'rarity';
       yield serializers.serialize(
         object.rarity,
-        specifiedType: const FullType(num),
+        specifiedType: const FullType(int),
       );
     }
     if (object.version != null) {
@@ -288,8 +288,8 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
         case r'rarity':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(num),
-          ) as num;
+            specifiedType: const FullType(int),
+          ) as int;
           result.rarity = valueDes;
           break;
         case r'version':

@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **iconUrl** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
-**rarity** | **num** |  | [optional] 
+**rarity** | **int** |  | [optional] 
 **effect** | **String** |  | [optional] 
 **version** | **String** |  | [optional] 
 

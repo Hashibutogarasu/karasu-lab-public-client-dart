@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **region** | **String** |  | [optional] 
 **weapon** | **String** |  | [optional] 
 **headerImgUrl** | **String** |  | [optional] 
-**rarity** | **num** |  | [optional] 
+**rarity** | **int** |  | [optional] 
 **version** | **String** |  | [optional] 
 **property** | **String** |  | [optional] 
 **unimplemented** | **String** |  | [optional] 
