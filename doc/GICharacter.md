@@ -24,8 +24,8 @@ Name | Type | Description | Notes
 **region** | [**Country**](Country.md) |  | [optional] 
 **weapon** | [**Weapon**](Weapon.md) |  | [optional] 
 **version** | [**VersionsEntity**](VersionsEntity.md) |  | [optional] 
-**artifactSet** | [**BuiltList&lt;ArtifactSets&gt;**](ArtifactSets.md) |  | 
-**galleries** | [**BuiltList&lt;Gallery&gt;**](Gallery.md) |  | 
+**artifactSet** | [**BuiltList&lt;ArtifactSets&gt;**](ArtifactSets.md) |  | [optional] 
+**galleries** | [**BuiltList&lt;Gallery&gt;**](Gallery.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

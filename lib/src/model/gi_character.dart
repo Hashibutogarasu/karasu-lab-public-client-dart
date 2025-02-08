@@ -86,10 +86,10 @@ abstract class GICharacter implements Built<GICharacter, GICharacterBuilder> {
   VersionsEntity? get version;
 
   @BuiltValueField(wireName: r'artifact_set')
-  BuiltList<ArtifactSets> get artifactSet;
+  BuiltList<ArtifactSets>? get artifactSet;
 
   @BuiltValueField(wireName: r'galleries')
-  BuiltList<Gallery> get galleries;
+  BuiltList<Gallery>? get galleries;
 
   GICharacter._();
 
@@ -212,16 +212,20 @@ class _$GICharacterSerializer implements PrimitiveSerializer<GICharacter> {
         specifiedType: const FullType.nullable(VersionsEntity),
       );
     }
-    yield r'artifact_set';
-    yield serializers.serialize(
-      object.artifactSet,
-      specifiedType: const FullType(BuiltList, [FullType(ArtifactSets)]),
-    );
-    yield r'galleries';
-    yield serializers.serialize(
-      object.galleries,
-      specifiedType: const FullType(BuiltList, [FullType(Gallery)]),
-    );
+    if (object.artifactSet != null) {
+      yield r'artifact_set';
+      yield serializers.serialize(
+        object.artifactSet,
+        specifiedType: const FullType.nullable(BuiltList, [FullType(ArtifactSets)]),
+      );
+    }
+    if (object.galleries != null) {
+      yield r'galleries';
+      yield serializers.serialize(
+        object.galleries,
+        specifiedType: const FullType.nullable(BuiltList, [FullType(Gallery)]),
+      );
+    }
   }
 
   @override
@@ -370,15 +374,17 @@ class _$GICharacterSerializer implements PrimitiveSerializer<GICharacter> {
         case r'artifact_set':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(ArtifactSets)]),
-          ) as BuiltList<ArtifactSets>;
+            specifiedType: const FullType.nullable(BuiltList, [FullType(ArtifactSets)]),
+          ) as BuiltList<ArtifactSets>?;
+          if (valueDes == null) continue;
           result.artifactSet.replace(valueDes);
           break;
         case r'galleries':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(Gallery)]),
-          ) as BuiltList<Gallery>;
+            specifiedType: const FullType.nullable(BuiltList, [FullType(Gallery)]),
+          ) as BuiltList<Gallery>?;
+          if (valueDes == null) continue;
           result.galleries.replace(valueDes);
           break;
         default:

@@ -40,9 +40,9 @@ class _$GICharacter extends GICharacter {
   @override
   final VersionsEntity? version;
   @override
-  final BuiltList<ArtifactSets> artifactSet;
+  final BuiltList<ArtifactSets>? artifactSet;
   @override
-  final BuiltList<Gallery> galleries;
+  final BuiltList<Gallery>? galleries;
 
   factory _$GICharacter([void Function(GICharacterBuilder)? updates]) =>
       (new GICharacterBuilder()..update(updates))._build();
@@ -64,8 +64,8 @@ class _$GICharacter extends GICharacter {
       this.region,
       this.weapon,
       this.version,
-      required this.artifactSet,
-      required this.galleries})
+      this.artifactSet,
+      this.galleries})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(id, r'GICharacter', 'id');
     BuiltValueNullFieldError.checkNotNull(name, r'GICharacter', 'name');
@@ -76,10 +76,6 @@ class _$GICharacter extends GICharacter {
         createdAt, r'GICharacter', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt, r'GICharacter', 'updatedAt');
-    BuiltValueNullFieldError.checkNotNull(
-        artifactSet, r'GICharacter', 'artifactSet');
-    BuiltValueNullFieldError.checkNotNull(
-        galleries, r'GICharacter', 'galleries');
   }
 
   @override
@@ -268,8 +264,8 @@ class GICharacterBuilder implements Builder<GICharacter, GICharacterBuilder> {
       _region = $v.region?.toBuilder();
       _weapon = $v.weapon?.toBuilder();
       _version = $v.version?.toBuilder();
-      _artifactSet = $v.artifactSet.toBuilder();
-      _galleries = $v.galleries.toBuilder();
+      _artifactSet = $v.artifactSet?.toBuilder();
+      _galleries = $v.galleries?.toBuilder();
       _$v = null;
     }
     return this;
@@ -316,8 +312,8 @@ class GICharacterBuilder implements Builder<GICharacter, GICharacterBuilder> {
               region: _region?.build(),
               weapon: _weapon?.build(),
               version: _version?.build(),
-              artifactSet: artifactSet.build(),
-              galleries: galleries.build());
+              artifactSet: _artifactSet?.build(),
+              galleries: _galleries?.build());
     } catch (_) {
       late String _$failedField;
       try {
@@ -328,9 +324,9 @@ class GICharacterBuilder implements Builder<GICharacter, GICharacterBuilder> {
         _$failedField = 'version';
         _version?.build();
         _$failedField = 'artifactSet';
-        artifactSet.build();
+        _artifactSet?.build();
         _$failedField = 'galleries';
-        galleries.build();
+        _galleries?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'GICharacter', _$failedField, e.toString());
