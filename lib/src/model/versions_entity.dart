@@ -31,7 +31,7 @@ part 'versions_entity.g.dart';
 @BuiltValue()
 abstract class VersionsEntity implements Built<VersionsEntity, VersionsEntityBuilder> {
   @BuiltValueField(wireName: r'id')
-  num get id;
+  String get id;
 
   @BuiltValueField(wireName: r'name')
   String? get name;
@@ -89,7 +89,7 @@ class _$VersionsEntitySerializer implements PrimitiveSerializer<VersionsEntity> 
     yield r'id';
     yield serializers.serialize(
       object.id,
-      specifiedType: const FullType(num),
+      specifiedType: const FullType(String),
     );
     if (object.name != null) {
       yield r'name';
@@ -177,8 +177,8 @@ class _$VersionsEntitySerializer implements PrimitiveSerializer<VersionsEntity> 
         case r'id':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(num),
-          ) as num;
+            specifiedType: const FullType(String),
+          ) as String;
           result.id = valueDes;
           break;
         case r'name':

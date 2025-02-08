@@ -25,7 +25,7 @@ part 'country.g.dart';
 @BuiltValue()
 abstract class Country implements Built<Country, CountryBuilder> {
   @BuiltValueField(wireName: r'id')
-  num get id;
+  String get id;
 
   @BuiltValueField(wireName: r'name')
   String get name;
@@ -74,7 +74,7 @@ class _$CountrySerializer implements PrimitiveSerializer<Country> {
     yield r'id';
     yield serializers.serialize(
       object.id,
-      specifiedType: const FullType(num),
+      specifiedType: const FullType(String),
     );
     yield r'name';
     yield serializers.serialize(
@@ -141,8 +141,8 @@ class _$CountrySerializer implements PrimitiveSerializer<Country> {
         case r'id':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(num),
-          ) as num;
+            specifiedType: const FullType(String),
+          ) as String;
           result.id = valueDes;
           break;
         case r'name':

@@ -8,7 +8,7 @@ part of 'versions_entity.dart';
 
 class _$VersionsEntity extends VersionsEntity {
   @override
-  final num id;
+  final String id;
   @override
   final String? name;
   @override
@@ -124,9 +124,9 @@ class VersionsEntityBuilder
     implements Builder<VersionsEntity, VersionsEntityBuilder> {
   _$VersionsEntity? _$v;
 
-  num? _id;
-  num? get id => _$this._id;
-  set id(num? id) => _$this._id = id;
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
 
   String? _name;
   String? get name => _$this._name;

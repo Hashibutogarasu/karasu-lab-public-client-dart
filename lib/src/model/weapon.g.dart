@@ -8,7 +8,7 @@ part of 'weapon.dart';
 
 class _$Weapon extends Weapon {
   @override
-  final num id;
+  final String id;
   @override
   final String name;
   @override
@@ -121,9 +121,9 @@ class _$Weapon extends Weapon {
 class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
   _$Weapon? _$v;
 
-  num? _id;
-  num? get id => _$this._id;
-  set id(num? id) => _$this._id = id;
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
 
   String? _name;
   String? get name => _$this._name;

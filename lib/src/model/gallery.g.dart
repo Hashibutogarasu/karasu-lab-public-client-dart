@@ -8,7 +8,7 @@ part of 'gallery.dart';
 
 class _$Gallery extends Gallery {
   @override
-  final num id;
+  final String id;
   @override
   final String alt;
   @override
@@ -93,9 +93,9 @@ class _$Gallery extends Gallery {
 class GalleryBuilder implements Builder<Gallery, GalleryBuilder> {
   _$Gallery? _$v;
 
-  num? _id;
-  num? get id => _$this._id;
-  set id(num? id) => _$this._id = id;
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
 
   String? _alt;
   String? get alt => _$this._alt;

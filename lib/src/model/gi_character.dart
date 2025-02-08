@@ -37,7 +37,7 @@ part 'gi_character.g.dart';
 @BuiltValue()
 abstract class GICharacter implements Built<GICharacter, GICharacterBuilder> {
   @BuiltValueField(wireName: r'id')
-  num get id;
+  String get id;
 
   @BuiltValueField(wireName: r'name')
   String get name;
@@ -113,7 +113,7 @@ class _$GICharacterSerializer implements PrimitiveSerializer<GICharacter> {
     yield r'id';
     yield serializers.serialize(
       object.id,
-      specifiedType: const FullType(num),
+      specifiedType: const FullType(String),
     );
     yield r'name';
     yield serializers.serialize(
@@ -235,8 +235,8 @@ class _$GICharacterSerializer implements PrimitiveSerializer<GICharacter> {
         case r'id':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(num),
-          ) as num;
+            specifiedType: const FullType(String),
+          ) as String;
           result.id = valueDes;
           break;
         case r'name':

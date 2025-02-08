@@ -21,7 +21,7 @@ part 'countries_controller_get_request.g.dart';
 @BuiltValue()
 abstract class CountriesControllerGetRequest implements Built<CountriesControllerGetRequest, CountriesControllerGetRequestBuilder> {
   @BuiltValueField(wireName: r'id')
-  num? get id;
+  String? get id;
 
   @BuiltValueField(wireName: r'take')
   String? get take;
@@ -70,7 +70,7 @@ class _$CountriesControllerGetRequestSerializer implements PrimitiveSerializer<C
       yield r'id';
       yield serializers.serialize(
         object.id,
-        specifiedType: const FullType(num),
+        specifiedType: const FullType(String),
       );
     }
     if (object.take != null) {
@@ -141,8 +141,8 @@ class _$CountriesControllerGetRequestSerializer implements PrimitiveSerializer<C
         case r'id':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(num),
-          ) as num;
+            specifiedType: const FullType(String),
+          ) as String;
           result.id = valueDes;
           break;
         case r'take':

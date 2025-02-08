@@ -8,7 +8,7 @@ import 'package:karasu_lab_public_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **num** |  | 
+**id** | **String** |  | 
 **name** | **String** |  | 
 **iconUrl** | **String** |  | 
 **artifactSets** | [**BuiltList&lt;ArtifactSets&gt;**](ArtifactSets.md) |  | [optional] 

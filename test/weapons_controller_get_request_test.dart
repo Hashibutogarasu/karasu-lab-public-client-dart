@@ -42,7 +42,7 @@ void main() {
       // TODO
     });
 
-    // num rarity
+    // int rarity
     test('to test the property `rarity`', () async {
       // TODO
     });
