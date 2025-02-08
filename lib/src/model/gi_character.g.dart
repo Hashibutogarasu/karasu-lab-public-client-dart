@@ -32,6 +32,8 @@ class _$GICharacter extends GICharacter {
   @override
   final DateTime updatedAt;
   @override
+  final String? implementedDate;
+  @override
   final Country? region;
   @override
   final Weapon? weapon;
@@ -58,6 +60,7 @@ class _$GICharacter extends GICharacter {
       required this.uninplemented,
       required this.createdAt,
       required this.updatedAt,
+      this.implementedDate,
       this.region,
       this.weapon,
       this.version,
@@ -102,6 +105,7 @@ class _$GICharacter extends GICharacter {
         uninplemented == other.uninplemented &&
         createdAt == other.createdAt &&
         updatedAt == other.updatedAt &&
+        implementedDate == other.implementedDate &&
         region == other.region &&
         weapon == other.weapon &&
         version == other.version &&
@@ -124,6 +128,7 @@ class _$GICharacter extends GICharacter {
     _$hash = $jc(_$hash, uninplemented.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, updatedAt.hashCode);
+    _$hash = $jc(_$hash, implementedDate.hashCode);
     _$hash = $jc(_$hash, region.hashCode);
     _$hash = $jc(_$hash, weapon.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
@@ -148,6 +153,7 @@ class _$GICharacter extends GICharacter {
           ..add('uninplemented', uninplemented)
           ..add('createdAt', createdAt)
           ..add('updatedAt', updatedAt)
+          ..add('implementedDate', implementedDate)
           ..add('region', region)
           ..add('weapon', weapon)
           ..add('version', version)
@@ -209,6 +215,11 @@ class GICharacterBuilder implements Builder<GICharacter, GICharacterBuilder> {
   DateTime? get updatedAt => _$this._updatedAt;
   set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
 
+  String? _implementedDate;
+  String? get implementedDate => _$this._implementedDate;
+  set implementedDate(String? implementedDate) =>
+      _$this._implementedDate = implementedDate;
+
   CountryBuilder? _region;
   CountryBuilder get region => _$this._region ??= new CountryBuilder();
   set region(CountryBuilder? region) => _$this._region = region;
@@ -253,6 +264,7 @@ class GICharacterBuilder implements Builder<GICharacter, GICharacterBuilder> {
       _uninplemented = $v.uninplemented;
       _createdAt = $v.createdAt;
       _updatedAt = $v.updatedAt;
+      _implementedDate = $v.implementedDate;
       _region = $v.region?.toBuilder();
       _weapon = $v.weapon?.toBuilder();
       _version = $v.version?.toBuilder();
@@ -300,6 +312,7 @@ class GICharacterBuilder implements Builder<GICharacter, GICharacterBuilder> {
                   createdAt, r'GICharacter', 'createdAt'),
               updatedAt: BuiltValueNullFieldError.checkNotNull(
                   updatedAt, r'GICharacter', 'updatedAt'),
+              implementedDate: implementedDate,
               region: _region?.build(),
               weapon: _weapon?.build(),
               version: _version?.build(),

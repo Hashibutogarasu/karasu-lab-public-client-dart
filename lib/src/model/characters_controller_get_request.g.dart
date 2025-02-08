@@ -34,6 +34,8 @@ class _$CharactersControllerGetRequest extends CharactersControllerGetRequest {
   @override
   final String? property;
   @override
+  final String? implementedDate;
+  @override
   final String? unimplemented;
 
   factory _$CharactersControllerGetRequest(
@@ -54,6 +56,7 @@ class _$CharactersControllerGetRequest extends CharactersControllerGetRequest {
       this.rarity,
       this.version,
       this.property,
+      this.implementedDate,
       this.unimplemented})
       : super._();
 
@@ -83,6 +86,7 @@ class _$CharactersControllerGetRequest extends CharactersControllerGetRequest {
         rarity == other.rarity &&
         version == other.version &&
         property == other.property &&
+        implementedDate == other.implementedDate &&
         unimplemented == other.unimplemented;
   }
 
@@ -102,6 +106,7 @@ class _$CharactersControllerGetRequest extends CharactersControllerGetRequest {
     _$hash = $jc(_$hash, rarity.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jc(_$hash, property.hashCode);
+    _$hash = $jc(_$hash, implementedDate.hashCode);
     _$hash = $jc(_$hash, unimplemented.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -123,6 +128,7 @@ class _$CharactersControllerGetRequest extends CharactersControllerGetRequest {
           ..add('rarity', rarity)
           ..add('version', version)
           ..add('property', property)
+          ..add('implementedDate', implementedDate)
           ..add('unimplemented', unimplemented))
         .toString();
   }
@@ -186,6 +192,11 @@ class CharactersControllerGetRequestBuilder
   String? get property => _$this._property;
   set property(String? property) => _$this._property = property;
 
+  String? _implementedDate;
+  String? get implementedDate => _$this._implementedDate;
+  set implementedDate(String? implementedDate) =>
+      _$this._implementedDate = implementedDate;
+
   String? _unimplemented;
   String? get unimplemented => _$this._unimplemented;
   set unimplemented(String? unimplemented) =>
@@ -211,6 +222,7 @@ class CharactersControllerGetRequestBuilder
       _rarity = $v.rarity;
       _version = $v.version;
       _property = $v.property;
+      _implementedDate = $v.implementedDate;
       _unimplemented = $v.unimplemented;
       _$v = null;
     }
@@ -247,6 +259,7 @@ class CharactersControllerGetRequestBuilder
             rarity: rarity,
             version: version,
             property: property,
+            implementedDate: implementedDate,
             unimplemented: unimplemented);
     replace(_$result);
     return _$result;

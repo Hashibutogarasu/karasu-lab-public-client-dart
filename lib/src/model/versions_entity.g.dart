@@ -20,7 +20,7 @@ class _$VersionsEntity extends VersionsEntity {
   @override
   final DateTime updatedAt;
   @override
-  final BuiltList<GICharacter> characters;
+  final BuiltList<GICharacter>? characters;
   @override
   final BuiltList<Weapon>? weapons;
   @override
@@ -40,7 +40,7 @@ class _$VersionsEntity extends VersionsEntity {
       required this.released,
       required this.createdAt,
       required this.updatedAt,
-      required this.characters,
+      this.characters,
       this.weapons,
       this.artifactSets,
       this.countries,
@@ -55,8 +55,6 @@ class _$VersionsEntity extends VersionsEntity {
         createdAt, r'VersionsEntity', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
         updatedAt, r'VersionsEntity', 'updatedAt');
-    BuiltValueNullFieldError.checkNotNull(
-        characters, r'VersionsEntity', 'characters');
   }
 
   @override
@@ -191,7 +189,7 @@ class VersionsEntityBuilder
       _released = $v.released;
       _createdAt = $v.createdAt;
       _updatedAt = $v.updatedAt;
-      _characters = $v.characters.toBuilder();
+      _characters = $v.characters?.toBuilder();
       _weapons = $v.weapons?.toBuilder();
       _artifactSets = $v.artifactSets?.toBuilder();
       _countries = $v.countries?.toBuilder();
@@ -231,7 +229,7 @@ class VersionsEntityBuilder
                   createdAt, r'VersionsEntity', 'createdAt'),
               updatedAt: BuiltValueNullFieldError.checkNotNull(
                   updatedAt, r'VersionsEntity', 'updatedAt'),
-              characters: characters.build(),
+              characters: _characters?.build(),
               weapons: _weapons?.build(),
               artifactSets: _artifactSets?.build(),
               countries: _countries?.build(),
@@ -240,7 +238,7 @@ class VersionsEntityBuilder
       late String _$failedField;
       try {
         _$failedField = 'characters';
-        characters.build();
+        _characters?.build();
         _$failedField = 'weapons';
         _weapons?.build();
         _$failedField = 'artifactSets';
