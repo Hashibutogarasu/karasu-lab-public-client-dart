@@ -24,6 +24,11 @@ import 'package:karasu_lab_public_client/src/model/country.dart';
 import 'package:karasu_lab_public_client/src/model/gi_character.dart';
 import 'package:karasu_lab_public_client/src/model/galleries_controller_get_request.dart';
 import 'package:karasu_lab_public_client/src/model/gallery.dart';
+import 'package:karasu_lab_public_client/src/model/hi3_characters.dart';
+import 'package:karasu_lab_public_client/src/model/hi3_skills_entity.dart';
+import 'package:karasu_lab_public_client/src/model/hi3_stigmatas_entity.dart';
+import 'package:karasu_lab_public_client/src/model/hi3_weapons_entity.dart';
+import 'package:karasu_lab_public_client/src/model/hi3_characters_controller_get_request.dart';
 import 'package:karasu_lab_public_client/src/model/versions_controller_get_request.dart';
 import 'package:karasu_lab_public_client/src/model/versions_entity.dart';
 import 'package:karasu_lab_public_client/src/model/weapon.dart';
@@ -42,6 +47,11 @@ part 'serializers.g.dart';
   GICharacter,
   GalleriesControllerGetRequest,
   Gallery,
+  HI3Characters,
+  HI3SkillsEntity,
+  HI3StigmatasEntity,
+  HI3WeaponsEntity,
+  Hi3CharactersControllerGetRequest,
   VersionsControllerGetRequest,
   VersionsEntity,
   Weapon,
@@ -63,6 +73,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(GICharacter)]),
         () => ListBuilder<GICharacter>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(HI3Characters)]),
+        () => ListBuilder<HI3Characters>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(ArtifactSets)]),

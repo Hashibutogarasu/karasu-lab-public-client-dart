@@ -13,6 +13,7 @@ import 'package:karasu_lab_public_client/src/api/artifact_sets_api.dart';
 import 'package:karasu_lab_public_client/src/api/artifacts_api.dart';
 import 'package:karasu_lab_public_client/src/api/characters_api.dart';
 import 'package:karasu_lab_public_client/src/api/galleries_api.dart';
+import 'package:karasu_lab_public_client/src/api/hi3_characters_api.dart';
 import 'package:karasu_lab_public_client/src/api/regions_api.dart';
 import 'package:karasu_lab_public_client/src/api/versions_api.dart';
 import 'package:karasu_lab_public_client/src/api/weapons_api.dart';
@@ -93,6 +94,12 @@ class KarasuLabPublicClient {
   /// by doing that all interceptors will not be executed
   GalleriesApi getGalleriesApi() {
     return GalleriesApi(dio, serializers);
+  }
+
+  /// Get Hi3CharactersApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  Hi3CharactersApi getHi3CharactersApi() {
+    return Hi3CharactersApi(dio, serializers);
   }
 
   /// Get RegionsApi instance, base route and serializer can be overridden by a given but be careful,
