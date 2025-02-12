@@ -17,6 +17,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GICharacter.serializer)
       ..add(GalleriesControllerGetRequest.serializer)
       ..add(Gallery.serializer)
+      ..add(HI3Characters.serializer)
+      ..add(HI3SkillsEntity.serializer)
+      ..add(HI3StigmatasEntity.serializer)
+      ..add(HI3WeaponsEntity.serializer)
+      ..add(Hi3CharactersControllerGetRequest.serializer)
       ..add(VersionsControllerGetRequest.serializer)
       ..add(VersionsEntity.serializer)
       ..add(Weapon.serializer)
@@ -56,7 +61,16 @@ Serializers _$serializers = (new Serializers().toBuilder()
           () => new ListBuilder<Country>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Artifacts)]),
-          () => new ListBuilder<Artifacts>()))
+          () => new ListBuilder<Artifacts>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(HI3SkillsEntity)]),
+          () => new ListBuilder<HI3SkillsEntity>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(HI3StigmatasEntity)]),
+          () => new ListBuilder<HI3StigmatasEntity>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(HI3WeaponsEntity)]),
+          () => new ListBuilder<HI3WeaponsEntity>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint

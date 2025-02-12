@@ -67,9 +67,3 @@ lib/src/model/weapon.dart
 lib/src/model/weapons_controller_get_request.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/hi3_characters_api_test.dart
-test/hi3_characters_controller_get_request_test.dart
-test/hi3_characters_test.dart
-test/hi3_skills_entity_test.dart
-test/hi3_stigmatas_entity_test.dart
-test/hi3_weapons_entity_test.dart
