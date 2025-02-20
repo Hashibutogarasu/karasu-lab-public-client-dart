@@ -93,7 +93,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **hi3CharactersControllerGetOne**
-> HI3Characters hi3CharactersControllerGetOne(hi3CharactersControllerGetRequest)
+> HI3Characters hi3CharactersControllerGetOne(hi3CharactersControllerGetOneRequest)
 
 
 
@@ -102,10 +102,10 @@ No authorization required
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getHi3CharactersApi();
-final Hi3CharactersControllerGetRequest hi3CharactersControllerGetRequest = ; // Hi3CharactersControllerGetRequest | 
+final Hi3CharactersControllerGetOneRequest hi3CharactersControllerGetOneRequest = ; // Hi3CharactersControllerGetOneRequest | 
 
 try {
-    final response = api.hi3CharactersControllerGetOne(hi3CharactersControllerGetRequest);
+    final response = api.hi3CharactersControllerGetOne(hi3CharactersControllerGetOneRequest);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling Hi3CharactersApi->hi3CharactersControllerGetOne: $e\n');
@@ -116,7 +116,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hi3CharactersControllerGetRequest** | [**Hi3CharactersControllerGetRequest**](Hi3CharactersControllerGetRequest.md)|  | 
+ **hi3CharactersControllerGetOneRequest** | [**Hi3CharactersControllerGetOneRequest**](Hi3CharactersControllerGetOneRequest.md)|  | 
 
 ### Return type
 

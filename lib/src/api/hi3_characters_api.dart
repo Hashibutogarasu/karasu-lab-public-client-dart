@@ -10,6 +10,7 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:karasu_lab_public_client/src/model/hi3_characters.dart';
+import 'package:karasu_lab_public_client/src/model/hi3_characters_controller_get_one_request.dart';
 import 'package:karasu_lab_public_client/src/model/hi3_characters_controller_get_request.dart';
 
 class Hi3CharactersApi {
@@ -192,7 +193,7 @@ class Hi3CharactersApi {
   /// 
   ///
   /// Parameters:
-  /// * [hi3CharactersControllerGetRequest] 
+  /// * [hi3CharactersControllerGetOneRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -203,7 +204,7 @@ class Hi3CharactersApi {
   /// Returns a [Future] containing a [Response] with a [HI3Characters] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<HI3Characters>> hi3CharactersControllerGetOne({ 
-    required Hi3CharactersControllerGetRequest hi3CharactersControllerGetRequest,
+    required Hi3CharactersControllerGetOneRequest hi3CharactersControllerGetOneRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -228,8 +229,8 @@ class Hi3CharactersApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(Hi3CharactersControllerGetRequest);
-      _bodyData = _serializers.serialize(hi3CharactersControllerGetRequest, specifiedType: _type);
+      const _type = FullType(Hi3CharactersControllerGetOneRequest);
+      _bodyData = _serializers.serialize(hi3CharactersControllerGetOneRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioException(

@@ -33,6 +33,7 @@ export 'package:karasu_lab_public_client/src/model/hi3_characters.dart';
 export 'package:karasu_lab_public_client/src/model/hi3_skills_entity.dart';
 export 'package:karasu_lab_public_client/src/model/hi3_stigmatas_entity.dart';
 export 'package:karasu_lab_public_client/src/model/hi3_weapons_entity.dart';
+export 'package:karasu_lab_public_client/src/model/hi3_characters_controller_get_one_request.dart';
 export 'package:karasu_lab_public_client/src/model/hi3_characters_controller_get_request.dart';
 export 'package:karasu_lab_public_client/src/model/versions_controller_get_request.dart';
 export 'package:karasu_lab_public_client/src/model/versions_entity.dart';
