@@ -109,14 +109,14 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
       yield r'take';
       yield serializers.serialize(
         object.take,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType.nullable(String),
       );
     }
     if (object.skip != null) {
       yield r'skip';
       yield serializers.serialize(
         object.skip,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType.nullable(String),
       );
     }
     if (object.name != null) {
@@ -236,15 +236,17 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
         case r'take':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.take = valueDes;
           break;
         case r'skip':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.skip = valueDes;
           break;
         case r'name':
