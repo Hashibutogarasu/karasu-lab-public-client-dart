@@ -7,23 +7,18 @@ void main() {
   final instance = KarasuLabPublicClient().getGalleriesApi();
 
   group(GalleriesApi, () {
-    //Future<Gallery> galleriesControllerCreate(GalleriesControllerCreateRequest galleriesControllerCreateRequest) async
-    test('test galleriesControllerCreate', () async {
+    //Future<BuiltList<Gallery>> galleriesControllerGet(GalleriesControllerGetRequest galleriesControllerGetRequest) async
+    test('test galleriesControllerGet', () async {
       // TODO
     });
 
-    //Future galleriesControllerDelete(String id) async
-    test('test galleriesControllerDelete', () async {
+    //Future<BuiltList<Gallery>> galleriesControllerGetAll() async
+    test('test galleriesControllerGetAll', () async {
       // TODO
     });
 
-    //Future galleriesControllerUpdate(GalleriesControllerUpdateRequest galleriesControllerUpdateRequest) async
-    test('test galleriesControllerUpdate', () async {
-      // TODO
-    });
-
-    //Future galleriesControllerUploadFile({ String comment, int outletId, MultipartFile file }) async
-    test('test galleriesControllerUploadFile', () async {
+    //Future<Gallery> galleriesControllerGetOne(GalleriesControllerGetRequest galleriesControllerGetRequest) async
+    test('test galleriesControllerGetOne', () async {
       // TODO
     });
 

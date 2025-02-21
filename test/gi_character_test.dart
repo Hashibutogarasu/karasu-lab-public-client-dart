@@ -67,6 +67,11 @@ void main() {
       // TODO
     });
 
+    // String implementedDate
+    test('to test the property `implementedDate`', () async {
+      // TODO
+    });
+
     // Country region
     test('to test the property `region`', () async {
       // TODO

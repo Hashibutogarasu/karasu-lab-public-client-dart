@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    //Future<HI3Characters> hi3CharactersControllerGetOne(Hi3CharactersControllerGetRequest hi3CharactersControllerGetRequest) async
+    //Future<HI3Characters> hi3CharactersControllerGetOne(Hi3CharactersControllerGetOneRequest hi3CharactersControllerGetOneRequest) async
     test('test hi3CharactersControllerGetOne', () async {
       // TODO
     });

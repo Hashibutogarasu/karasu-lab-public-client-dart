@@ -27,11 +27,6 @@ void main() {
       // TODO
     });
 
-    // BuiltList<GICharacter> characters
-    test('to test the property `characters`', () async {
-      // TODO
-    });
-
     // DateTime createdAt
     test('to test the property `createdAt`', () async {
       // TODO
@@ -39,6 +34,11 @@ void main() {
 
     // DateTime updatedAt
     test('to test the property `updatedAt`', () async {
+      // TODO
+    });
+
+    // BuiltList<GICharacter> characters
+    test('to test the property `characters`', () async {
       // TODO
     });
 

@@ -72,6 +72,11 @@ void main() {
       // TODO
     });
 
+    // String implementedDate
+    test('to test the property `implementedDate`', () async {
+      // TODO
+    });
+
     // String unimplemented
     test('to test the property `unimplemented`', () async {
       // TODO
