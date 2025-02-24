@@ -15,7 +15,7 @@ class _$CharactersControllerGetRequestWeaponVersionRegionsInner
   @override
   final String? description;
   @override
-  final String iconUrl;
+  final String? thumbnailUrl;
   @override
   final String createdAt;
   @override
@@ -33,7 +33,7 @@ class _$CharactersControllerGetRequestWeaponVersionRegionsInner
       {required this.id,
       required this.name,
       this.description,
-      required this.iconUrl,
+      this.thumbnailUrl,
       required this.createdAt,
       required this.updatedAt})
       : super._() {
@@ -41,8 +41,6 @@ class _$CharactersControllerGetRequestWeaponVersionRegionsInner
         id, r'CharactersControllerGetRequestWeaponVersionRegionsInner', 'id');
     BuiltValueNullFieldError.checkNotNull(name,
         r'CharactersControllerGetRequestWeaponVersionRegionsInner', 'name');
-    BuiltValueNullFieldError.checkNotNull(iconUrl,
-        r'CharactersControllerGetRequestWeaponVersionRegionsInner', 'iconUrl');
     BuiltValueNullFieldError.checkNotNull(
         createdAt,
         r'CharactersControllerGetRequestWeaponVersionRegionsInner',
@@ -72,7 +70,7 @@ class _$CharactersControllerGetRequestWeaponVersionRegionsInner
         id == other.id &&
         name == other.name &&
         description == other.description &&
-        iconUrl == other.iconUrl &&
+        thumbnailUrl == other.thumbnailUrl &&
         createdAt == other.createdAt &&
         updatedAt == other.updatedAt;
   }
@@ -83,7 +81,7 @@ class _$CharactersControllerGetRequestWeaponVersionRegionsInner
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
-    _$hash = $jc(_$hash, iconUrl.hashCode);
+    _$hash = $jc(_$hash, thumbnailUrl.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, updatedAt.hashCode);
     _$hash = $jf(_$hash);
@@ -97,7 +95,7 @@ class _$CharactersControllerGetRequestWeaponVersionRegionsInner
           ..add('id', id)
           ..add('name', name)
           ..add('description', description)
-          ..add('iconUrl', iconUrl)
+          ..add('thumbnailUrl', thumbnailUrl)
           ..add('createdAt', createdAt)
           ..add('updatedAt', updatedAt))
         .toString();
@@ -122,9 +120,9 @@ class CharactersControllerGetRequestWeaponVersionRegionsInnerBuilder
   String? get description => _$this._description;
   set description(String? description) => _$this._description = description;
 
-  String? _iconUrl;
-  String? get iconUrl => _$this._iconUrl;
-  set iconUrl(String? iconUrl) => _$this._iconUrl = iconUrl;
+  String? _thumbnailUrl;
+  String? get thumbnailUrl => _$this._thumbnailUrl;
+  set thumbnailUrl(String? thumbnailUrl) => _$this._thumbnailUrl = thumbnailUrl;
 
   String? _createdAt;
   String? get createdAt => _$this._createdAt;
@@ -144,7 +142,7 @@ class CharactersControllerGetRequestWeaponVersionRegionsInnerBuilder
       _id = $v.id;
       _name = $v.name;
       _description = $v.description;
-      _iconUrl = $v.iconUrl;
+      _thumbnailUrl = $v.thumbnailUrl;
       _createdAt = $v.createdAt;
       _updatedAt = $v.updatedAt;
       _$v = null;
@@ -173,14 +171,15 @@ class CharactersControllerGetRequestWeaponVersionRegionsInnerBuilder
     final _$result = _$v ??
         new _$CharactersControllerGetRequestWeaponVersionRegionsInner._(
             id: BuiltValueNullFieldError.checkNotNull(
-                id, r'CharactersControllerGetRequestWeaponVersionRegionsInner', 'id'),
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'CharactersControllerGetRequestWeaponVersionRegionsInner', 'name'),
-            description: description,
-            iconUrl: BuiltValueNullFieldError.checkNotNull(
-                iconUrl,
+                id,
                 r'CharactersControllerGetRequestWeaponVersionRegionsInner',
-                'iconUrl'),
+                'id'),
+            name: BuiltValueNullFieldError.checkNotNull(
+                name,
+                r'CharactersControllerGetRequestWeaponVersionRegionsInner',
+                'name'),
+            description: description,
+            thumbnailUrl: thumbnailUrl,
             createdAt: BuiltValueNullFieldError.checkNotNull(
                 createdAt,
                 r'CharactersControllerGetRequestWeaponVersionRegionsInner',

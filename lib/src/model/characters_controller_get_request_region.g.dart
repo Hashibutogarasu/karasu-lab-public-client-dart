@@ -15,7 +15,7 @@ class _$CharactersControllerGetRequestRegion
   @override
   final String? description;
   @override
-  final String iconUrl;
+  final String? thumbnailUrl;
   @override
   final String createdAt;
   @override
@@ -31,7 +31,7 @@ class _$CharactersControllerGetRequestRegion
       {required this.id,
       required this.name,
       this.description,
-      required this.iconUrl,
+      this.thumbnailUrl,
       required this.createdAt,
       required this.updatedAt})
       : super._() {
@@ -39,8 +39,6 @@ class _$CharactersControllerGetRequestRegion
         id, r'CharactersControllerGetRequestRegion', 'id');
     BuiltValueNullFieldError.checkNotNull(
         name, r'CharactersControllerGetRequestRegion', 'name');
-    BuiltValueNullFieldError.checkNotNull(
-        iconUrl, r'CharactersControllerGetRequestRegion', 'iconUrl');
     BuiltValueNullFieldError.checkNotNull(
         createdAt, r'CharactersControllerGetRequestRegion', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
@@ -63,7 +61,7 @@ class _$CharactersControllerGetRequestRegion
         id == other.id &&
         name == other.name &&
         description == other.description &&
-        iconUrl == other.iconUrl &&
+        thumbnailUrl == other.thumbnailUrl &&
         createdAt == other.createdAt &&
         updatedAt == other.updatedAt;
   }
@@ -74,7 +72,7 @@ class _$CharactersControllerGetRequestRegion
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
-    _$hash = $jc(_$hash, iconUrl.hashCode);
+    _$hash = $jc(_$hash, thumbnailUrl.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, updatedAt.hashCode);
     _$hash = $jf(_$hash);
@@ -87,7 +85,7 @@ class _$CharactersControllerGetRequestRegion
           ..add('id', id)
           ..add('name', name)
           ..add('description', description)
-          ..add('iconUrl', iconUrl)
+          ..add('thumbnailUrl', thumbnailUrl)
           ..add('createdAt', createdAt)
           ..add('updatedAt', updatedAt))
         .toString();
@@ -112,9 +110,9 @@ class CharactersControllerGetRequestRegionBuilder
   String? get description => _$this._description;
   set description(String? description) => _$this._description = description;
 
-  String? _iconUrl;
-  String? get iconUrl => _$this._iconUrl;
-  set iconUrl(String? iconUrl) => _$this._iconUrl = iconUrl;
+  String? _thumbnailUrl;
+  String? get thumbnailUrl => _$this._thumbnailUrl;
+  set thumbnailUrl(String? thumbnailUrl) => _$this._thumbnailUrl = thumbnailUrl;
 
   String? _createdAt;
   String? get createdAt => _$this._createdAt;
@@ -134,7 +132,7 @@ class CharactersControllerGetRequestRegionBuilder
       _id = $v.id;
       _name = $v.name;
       _description = $v.description;
-      _iconUrl = $v.iconUrl;
+      _thumbnailUrl = $v.thumbnailUrl;
       _createdAt = $v.createdAt;
       _updatedAt = $v.updatedAt;
       _$v = null;
@@ -165,8 +163,7 @@ class CharactersControllerGetRequestRegionBuilder
             name: BuiltValueNullFieldError.checkNotNull(
                 name, r'CharactersControllerGetRequestRegion', 'name'),
             description: description,
-            iconUrl: BuiltValueNullFieldError.checkNotNull(
-                iconUrl, r'CharactersControllerGetRequestRegion', 'iconUrl'),
+            thumbnailUrl: thumbnailUrl,
             createdAt: BuiltValueNullFieldError.checkNotNull(createdAt,
                 r'CharactersControllerGetRequestRegion', 'createdAt'),
             updatedAt: BuiltValueNullFieldError.checkNotNull(updatedAt,

@@ -14,7 +14,7 @@ class _$CountriesControllerGetRequest extends CountriesControllerGetRequest {
   @override
   final String? description;
   @override
-  final String? iconUrl;
+  final String? thumbnailUrl;
   @override
   final ArtifactsControllerGetRequestVersion? version;
   @override
@@ -28,7 +28,7 @@ class _$CountriesControllerGetRequest extends CountriesControllerGetRequest {
       {this.id,
       this.name,
       this.description,
-      this.iconUrl,
+      this.thumbnailUrl,
       this.version,
       this.characters})
       : super._();
@@ -49,7 +49,7 @@ class _$CountriesControllerGetRequest extends CountriesControllerGetRequest {
         id == other.id &&
         name == other.name &&
         description == other.description &&
-        iconUrl == other.iconUrl &&
+        thumbnailUrl == other.thumbnailUrl &&
         version == other.version &&
         characters == other.characters;
   }
@@ -60,7 +60,7 @@ class _$CountriesControllerGetRequest extends CountriesControllerGetRequest {
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
-    _$hash = $jc(_$hash, iconUrl.hashCode);
+    _$hash = $jc(_$hash, thumbnailUrl.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jc(_$hash, characters.hashCode);
     _$hash = $jf(_$hash);
@@ -73,7 +73,7 @@ class _$CountriesControllerGetRequest extends CountriesControllerGetRequest {
           ..add('id', id)
           ..add('name', name)
           ..add('description', description)
-          ..add('iconUrl', iconUrl)
+          ..add('thumbnailUrl', thumbnailUrl)
           ..add('version', version)
           ..add('characters', characters))
         .toString();
@@ -98,9 +98,9 @@ class CountriesControllerGetRequestBuilder
   String? get description => _$this._description;
   set description(String? description) => _$this._description = description;
 
-  String? _iconUrl;
-  String? get iconUrl => _$this._iconUrl;
-  set iconUrl(String? iconUrl) => _$this._iconUrl = iconUrl;
+  String? _thumbnailUrl;
+  String? get thumbnailUrl => _$this._thumbnailUrl;
+  set thumbnailUrl(String? thumbnailUrl) => _$this._thumbnailUrl = thumbnailUrl;
 
   ArtifactsControllerGetRequestVersionBuilder? _version;
   ArtifactsControllerGetRequestVersionBuilder get version =>
@@ -127,7 +127,7 @@ class CountriesControllerGetRequestBuilder
       _id = $v.id;
       _name = $v.name;
       _description = $v.description;
-      _iconUrl = $v.iconUrl;
+      _thumbnailUrl = $v.thumbnailUrl;
       _version = $v.version?.toBuilder();
       _characters = $v.characters?.toBuilder();
       _$v = null;
@@ -157,7 +157,7 @@ class CountriesControllerGetRequestBuilder
               id: id,
               name: name,
               description: description,
-              iconUrl: iconUrl,
+              thumbnailUrl: thumbnailUrl,
               version: _version?.build(),
               characters: _characters?.build());
     } catch (_) {

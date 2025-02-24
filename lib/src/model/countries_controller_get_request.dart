@@ -17,7 +17,7 @@ part 'countries_controller_get_request.g.dart';
 /// * [id] 
 /// * [name] 
 /// * [description] 
-/// * [iconUrl] 
+/// * [thumbnailUrl] 
 /// * [version] 
 /// * [characters] 
 @BuiltValue()
@@ -31,8 +31,8 @@ abstract class CountriesControllerGetRequest implements Built<CountriesControlle
   @BuiltValueField(wireName: r'description')
   String? get description;
 
-  @BuiltValueField(wireName: r'icon_url')
-  String? get iconUrl;
+  @BuiltValueField(wireName: r'thumbnail_url')
+  String? get thumbnailUrl;
 
   @BuiltValueField(wireName: r'version')
   ArtifactsControllerGetRequestVersion? get version;
@@ -84,11 +84,11 @@ class _$CountriesControllerGetRequestSerializer implements PrimitiveSerializer<C
         specifiedType: const FullType.nullable(String),
       );
     }
-    if (object.iconUrl != null) {
-      yield r'icon_url';
+    if (object.thumbnailUrl != null) {
+      yield r'thumbnail_url';
       yield serializers.serialize(
-        object.iconUrl,
-        specifiedType: const FullType(String),
+        object.thumbnailUrl,
+        specifiedType: const FullType.nullable(String),
       );
     }
     if (object.version != null) {
@@ -150,12 +150,13 @@ class _$CountriesControllerGetRequestSerializer implements PrimitiveSerializer<C
           if (valueDes == null) continue;
           result.description = valueDes;
           break;
-        case r'icon_url':
+        case r'thumbnail_url':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.iconUrl = valueDes;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.thumbnailUrl = valueDes;
           break;
         case r'version':
           final valueDes = serializers.deserialize(

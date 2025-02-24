@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
-**iconUrl** | **String** |  | [optional] 
+**thumbnailUrl** | **String** |  | [optional] 
 **version** | [**ArtifactsControllerGetRequestVersion**](ArtifactsControllerGetRequestVersion.md) |  | [optional] 
 **characters** | [**BuiltList&lt;CountriesControllerGetRequestCharactersInner&gt;**](CountriesControllerGetRequestCharactersInner.md) |  | [optional] 
 
