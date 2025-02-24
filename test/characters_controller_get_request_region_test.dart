@@ -1,24 +1,14 @@
 import 'package:test/test.dart';
 import 'package:karasu_lab_public_client/karasu_lab_public_client.dart';
 
-// tests for VersionsControllerGetRequest
+// tests for CharactersControllerGetRequestRegion
 void main() {
-  final instance = VersionsControllerGetRequestBuilder();
+  final instance = CharactersControllerGetRequestRegionBuilder();
   // TODO add properties to the builder and call build()
 
-  group(VersionsControllerGetRequest, () {
+  group(CharactersControllerGetRequestRegion, () {
     // String id
     test('to test the property `id`', () async {
-      // TODO
-    });
-
-    // String take (default value: '10')
-    test('to test the property `take`', () async {
-      // TODO
-    });
-
-    // String skip (default value: '0')
-    test('to test the property `skip`', () async {
       // TODO
     });
 
@@ -27,13 +17,13 @@ void main() {
       // TODO
     });
 
-    // String versionString
-    test('to test the property `versionString`', () async {
+    // String description
+    test('to test the property `description`', () async {
       // TODO
     });
 
-    // bool released
-    test('to test the property `released`', () async {
+    // String iconUrl
+    test('to test the property `iconUrl`', () async {
       // TODO
     });
 

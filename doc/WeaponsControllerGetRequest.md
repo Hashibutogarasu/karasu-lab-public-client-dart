@@ -8,16 +8,14 @@ import 'package:karasu_lab_public_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
-**take** | **String** |  | [optional] [default to '10']
-**skip** | **String** |  | [optional] [default to '0']
-**name** | **String** |  | [optional] 
+**id** | **String** |  | 
+**name** | **String** |  | 
 **description** | **String** |  | [optional] 
-**iconUrl** | **String** |  | [optional] 
-**type** | **String** |  | [optional] 
-**rarity** | **int** |  | [optional] 
-**effect** | **String** |  | [optional] 
-**version** | **String** |  | [optional] 
+**iconUrl** | **String** |  | 
+**rarity** | **int** |  | 
+**effect** | **String** |  | 
+**type** | **String** |  | 
+**version** | [**CharactersControllerGetRequestWeaponVersion**](CharactersControllerGetRequestWeaponVersion.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

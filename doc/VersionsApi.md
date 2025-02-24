@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **versionsControllerGet**
-> BuiltList<VersionsEntity> versionsControllerGet(versionsControllerGetRequest)
+> BuiltList<VersionsEntity> versionsControllerGet(artifactsControllerGetRequestVersion)
 
 
 
@@ -24,10 +24,10 @@ Method | HTTP request | Description
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getVersionsApi();
-final VersionsControllerGetRequest versionsControllerGetRequest = ; // VersionsControllerGetRequest | 
+final ArtifactsControllerGetRequestVersion artifactsControllerGetRequestVersion = ; // ArtifactsControllerGetRequestVersion | 
 
 try {
-    final response = api.versionsControllerGet(versionsControllerGetRequest);
+    final response = api.versionsControllerGet(artifactsControllerGetRequestVersion);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling VersionsApi->versionsControllerGet: $e\n');
@@ -38,7 +38,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **versionsControllerGetRequest** | [**VersionsControllerGetRequest**](VersionsControllerGetRequest.md)|  | 
+ **artifactsControllerGetRequestVersion** | [**ArtifactsControllerGetRequestVersion**](ArtifactsControllerGetRequestVersion.md)|  | 
 
 ### Return type
 
@@ -56,7 +56,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **versionsControllerGetAll**
-> BuiltList<VersionsEntity> versionsControllerGetAll()
+> BuiltList<VersionsEntity> versionsControllerGetAll(skip, take)
 
 
 
@@ -65,9 +65,11 @@ No authorization required
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getVersionsApi();
+final num skip = 8.14; // num | 
+final num take = 8.14; // num | 
 
 try {
-    final response = api.versionsControllerGetAll();
+    final response = api.versionsControllerGetAll(skip, take);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling VersionsApi->versionsControllerGetAll: $e\n');
@@ -75,7 +77,11 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **skip** | **num**|  | [optional] 
+ **take** | **num**|  | [optional] 
 
 ### Return type
 
@@ -93,7 +99,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **versionsControllerGetOne**
-> VersionsEntity versionsControllerGetOne(versionsControllerGetRequest)
+> VersionsEntity versionsControllerGetOne(artifactsControllerGetRequestVersion)
 
 
 
@@ -102,10 +108,10 @@ No authorization required
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getVersionsApi();
-final VersionsControllerGetRequest versionsControllerGetRequest = ; // VersionsControllerGetRequest | 
+final ArtifactsControllerGetRequestVersion artifactsControllerGetRequestVersion = ; // ArtifactsControllerGetRequestVersion | 
 
 try {
-    final response = api.versionsControllerGetOne(versionsControllerGetRequest);
+    final response = api.versionsControllerGetOne(artifactsControllerGetRequestVersion);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling VersionsApi->versionsControllerGetOne: $e\n');
@@ -116,7 +122,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **versionsControllerGetRequest** | [**VersionsControllerGetRequest**](VersionsControllerGetRequest.md)|  | 
+ **artifactsControllerGetRequestVersion** | [**ArtifactsControllerGetRequestVersion**](ArtifactsControllerGetRequestVersion.md)|  | 
 
 ### Return type
 

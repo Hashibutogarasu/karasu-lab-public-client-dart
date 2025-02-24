@@ -7,17 +7,17 @@ void main() {
   final instance = KarasuLabPublicClient().getVersionsApi();
 
   group(VersionsApi, () {
-    //Future<BuiltList<VersionsEntity>> versionsControllerGet(VersionsControllerGetRequest versionsControllerGetRequest) async
+    //Future<BuiltList<VersionsEntity>> versionsControllerGet(ArtifactsControllerGetRequestVersion artifactsControllerGetRequestVersion) async
     test('test versionsControllerGet', () async {
       // TODO
     });
 
-    //Future<BuiltList<VersionsEntity>> versionsControllerGetAll() async
+    //Future<BuiltList<VersionsEntity>> versionsControllerGetAll({ num skip, num take }) async
     test('test versionsControllerGetAll', () async {
       // TODO
     });
 
-    //Future<VersionsEntity> versionsControllerGetOne(VersionsControllerGetRequest versionsControllerGetRequest) async
+    //Future<VersionsEntity> versionsControllerGetOne(ArtifactsControllerGetRequestVersion artifactsControllerGetRequestVersion) async
     test('test versionsControllerGetOne', () async {
       // TODO
     });

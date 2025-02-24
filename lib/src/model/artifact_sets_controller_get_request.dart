@@ -12,25 +12,17 @@ part 'artifact_sets_controller_get_request.g.dart';
 ///
 /// Properties:
 /// * [id] 
-/// * [take] 
-/// * [skip] 
 /// * [name] 
 /// * [description] 
 /// * [iconUrl] 
+/// * [rarity] 
 /// * [oneSetEffect] 
 /// * [twoSetEffect] 
 /// * [fourSetEffect] 
-/// * [version] 
 @BuiltValue()
 abstract class ArtifactSetsControllerGetRequest implements Built<ArtifactSetsControllerGetRequest, ArtifactSetsControllerGetRequestBuilder> {
   @BuiltValueField(wireName: r'id')
-  String? get id;
-
-  @BuiltValueField(wireName: r'take')
-  String? get take;
-
-  @BuiltValueField(wireName: r'skip')
-  String? get skip;
+  String get id;
 
   @BuiltValueField(wireName: r'name')
   String get name;
@@ -39,28 +31,26 @@ abstract class ArtifactSetsControllerGetRequest implements Built<ArtifactSetsCon
   String get description;
 
   @BuiltValueField(wireName: r'icon_url')
-  String? get iconUrl;
+  String get iconUrl;
+
+  @BuiltValueField(wireName: r'rarity')
+  int get rarity;
 
   @BuiltValueField(wireName: r'one_set_effect')
-  String? get oneSetEffect;
+  String get oneSetEffect;
 
   @BuiltValueField(wireName: r'two_set_effect')
-  String? get twoSetEffect;
+  String get twoSetEffect;
 
   @BuiltValueField(wireName: r'four_set_effect')
-  String? get fourSetEffect;
-
-  @BuiltValueField(wireName: r'version')
-  String? get version;
+  String get fourSetEffect;
 
   ArtifactSetsControllerGetRequest._();
 
   factory ArtifactSetsControllerGetRequest([void updates(ArtifactSetsControllerGetRequestBuilder b)]) = _$ArtifactSetsControllerGetRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(ArtifactSetsControllerGetRequestBuilder b) => b
-      ..take = '10'
-      ..skip = '0';
+  static void _defaults(ArtifactSetsControllerGetRequestBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
   static Serializer<ArtifactSetsControllerGetRequest> get serializer => _$ArtifactSetsControllerGetRequestSerializer();
@@ -78,27 +68,11 @@ class _$ArtifactSetsControllerGetRequestSerializer implements PrimitiveSerialize
     ArtifactSetsControllerGetRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.id != null) {
-      yield r'id';
-      yield serializers.serialize(
-        object.id,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.take != null) {
-      yield r'take';
-      yield serializers.serialize(
-        object.take,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
-    if (object.skip != null) {
-      yield r'skip';
-      yield serializers.serialize(
-        object.skip,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
+    yield r'id';
+    yield serializers.serialize(
+      object.id,
+      specifiedType: const FullType(String),
+    );
     yield r'name';
     yield serializers.serialize(
       object.name,
@@ -109,41 +83,31 @@ class _$ArtifactSetsControllerGetRequestSerializer implements PrimitiveSerialize
       object.description,
       specifiedType: const FullType(String),
     );
-    if (object.iconUrl != null) {
-      yield r'icon_url';
-      yield serializers.serialize(
-        object.iconUrl,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.oneSetEffect != null) {
-      yield r'one_set_effect';
-      yield serializers.serialize(
-        object.oneSetEffect,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.twoSetEffect != null) {
-      yield r'two_set_effect';
-      yield serializers.serialize(
-        object.twoSetEffect,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.fourSetEffect != null) {
-      yield r'four_set_effect';
-      yield serializers.serialize(
-        object.fourSetEffect,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.version != null) {
-      yield r'version';
-      yield serializers.serialize(
-        object.version,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'icon_url';
+    yield serializers.serialize(
+      object.iconUrl,
+      specifiedType: const FullType(String),
+    );
+    yield r'rarity';
+    yield serializers.serialize(
+      object.rarity,
+      specifiedType: const FullType(int),
+    );
+    yield r'one_set_effect';
+    yield serializers.serialize(
+      object.oneSetEffect,
+      specifiedType: const FullType(String),
+    );
+    yield r'two_set_effect';
+    yield serializers.serialize(
+      object.twoSetEffect,
+      specifiedType: const FullType(String),
+    );
+    yield r'four_set_effect';
+    yield serializers.serialize(
+      object.fourSetEffect,
+      specifiedType: const FullType(String),
+    );
   }
 
   @override
@@ -174,22 +138,6 @@ class _$ArtifactSetsControllerGetRequestSerializer implements PrimitiveSerialize
           ) as String;
           result.id = valueDes;
           break;
-        case r'take':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.take = valueDes;
-          break;
-        case r'skip':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.skip = valueDes;
-          break;
         case r'name':
           final valueDes = serializers.deserialize(
             value,
@@ -211,6 +159,13 @@ class _$ArtifactSetsControllerGetRequestSerializer implements PrimitiveSerialize
           ) as String;
           result.iconUrl = valueDes;
           break;
+        case r'rarity':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(int),
+          ) as int;
+          result.rarity = valueDes;
+          break;
         case r'one_set_effect':
           final valueDes = serializers.deserialize(
             value,
@@ -231,13 +186,6 @@ class _$ArtifactSetsControllerGetRequestSerializer implements PrimitiveSerialize
             specifiedType: const FullType(String),
           ) as String;
           result.fourSetEffect = valueDes;
-          break;
-        case r'version':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.version = valueDes;
           break;
         default:
           unhandled.add(key);

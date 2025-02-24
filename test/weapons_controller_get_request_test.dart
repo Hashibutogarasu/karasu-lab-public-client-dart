@@ -12,16 +12,6 @@ void main() {
       // TODO
     });
 
-    // String take (default value: '10')
-    test('to test the property `take`', () async {
-      // TODO
-    });
-
-    // String skip (default value: '0')
-    test('to test the property `skip`', () async {
-      // TODO
-    });
-
     // String name
     test('to test the property `name`', () async {
       // TODO
@@ -37,11 +27,6 @@ void main() {
       // TODO
     });
 
-    // String type
-    test('to test the property `type`', () async {
-      // TODO
-    });
-
     // int rarity
     test('to test the property `rarity`', () async {
       // TODO
@@ -52,7 +37,12 @@ void main() {
       // TODO
     });
 
-    // String version
+    // String type
+    test('to test the property `type`', () async {
+      // TODO
+    });
+
+    // CharactersControllerGetRequestWeaponVersion version
     test('to test the property `version`', () async {
       // TODO
     });

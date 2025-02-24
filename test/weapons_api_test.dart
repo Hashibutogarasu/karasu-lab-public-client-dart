@@ -12,7 +12,7 @@ void main() {
       // TODO
     });
 
-    //Future<BuiltList<Weapon>> weaponsControllerGetAll() async
+    //Future<BuiltList<Weapon>> weaponsControllerGetAll({ num skip, num take }) async
     test('test weaponsControllerGetAll', () async {
       // TODO
     });

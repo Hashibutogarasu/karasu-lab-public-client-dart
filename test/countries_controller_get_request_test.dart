@@ -12,16 +12,6 @@ void main() {
       // TODO
     });
 
-    // String take (default value: '10')
-    test('to test the property `take`', () async {
-      // TODO
-    });
-
-    // String skip (default value: '0')
-    test('to test the property `skip`', () async {
-      // TODO
-    });
-
     // String name
     test('to test the property `name`', () async {
       // TODO
@@ -37,8 +27,13 @@ void main() {
       // TODO
     });
 
-    // String version
+    // ArtifactsControllerGetRequestVersion version
     test('to test the property `version`', () async {
+      // TODO
+    });
+
+    // BuiltList<CharactersControllerGetRequest> characters
+    test('to test the property `characters`', () async {
       // TODO
     });
 

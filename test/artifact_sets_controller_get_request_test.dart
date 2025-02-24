@@ -12,16 +12,6 @@ void main() {
       // TODO
     });
 
-    // String take (default value: '10')
-    test('to test the property `take`', () async {
-      // TODO
-    });
-
-    // String skip (default value: '0')
-    test('to test the property `skip`', () async {
-      // TODO
-    });
-
     // String name
     test('to test the property `name`', () async {
       // TODO
@@ -37,6 +27,11 @@ void main() {
       // TODO
     });
 
+    // int rarity
+    test('to test the property `rarity`', () async {
+      // TODO
+    });
+
     // String oneSetEffect
     test('to test the property `oneSetEffect`', () async {
       // TODO
@@ -49,11 +44,6 @@ void main() {
 
     // String fourSetEffect
     test('to test the property `fourSetEffect`', () async {
-      // TODO
-    });
-
-    // String version
-    test('to test the property `version`', () async {
       // TODO
     });
 

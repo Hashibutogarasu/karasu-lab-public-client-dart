@@ -12,7 +12,7 @@ void main() {
       // TODO
     });
 
-    //Future<BuiltList<GICharacter>> charactersControllerGetAll() async
+    //Future<BuiltList<GICharacter>> charactersControllerGetAll({ num skip, num take }) async
     test('test charactersControllerGetAll', () async {
       // TODO
     });

@@ -12,7 +12,7 @@ void main() {
       // TODO
     });
 
-    //Future<BuiltList<ArtifactSets>> artifactSetsControllerGetAll() async
+    //Future<BuiltList<ArtifactSets>> artifactSetsControllerGetAll({ num skip, num take }) async
     test('test artifactSetsControllerGetAll', () async {
       // TODO
     });

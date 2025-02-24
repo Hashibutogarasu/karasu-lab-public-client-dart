@@ -56,7 +56,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **weaponsControllerGetAll**
-> BuiltList<Weapon> weaponsControllerGetAll()
+> BuiltList<Weapon> weaponsControllerGetAll(skip, take)
 
 
 
@@ -65,9 +65,11 @@ No authorization required
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getWeaponsApi();
+final num skip = 8.14; // num | 
+final num take = 8.14; // num | 
 
 try {
-    final response = api.weaponsControllerGetAll();
+    final response = api.weaponsControllerGetAll(skip, take);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling WeaponsApi->weaponsControllerGetAll: $e\n');
@@ -75,7 +77,11 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **skip** | **num**|  | [optional] 
+ **take** | **num**|  | [optional] 
 
 ### Return type
 

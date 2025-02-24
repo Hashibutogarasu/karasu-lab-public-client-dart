@@ -8,33 +8,41 @@ part of 'countries_controller_get_request.dart';
 
 class _$CountriesControllerGetRequest extends CountriesControllerGetRequest {
   @override
-  final String? id;
+  final String id;
   @override
-  final String? take;
-  @override
-  final String? skip;
-  @override
-  final String? name;
+  final String name;
   @override
   final String? description;
   @override
-  final String? iconUrl;
+  final String iconUrl;
   @override
-  final String? version;
+  final ArtifactsControllerGetRequestVersion version;
+  @override
+  final BuiltList<CharactersControllerGetRequest> characters;
 
   factory _$CountriesControllerGetRequest(
           [void Function(CountriesControllerGetRequestBuilder)? updates]) =>
       (new CountriesControllerGetRequestBuilder()..update(updates))._build();
 
   _$CountriesControllerGetRequest._(
-      {this.id,
-      this.take,
-      this.skip,
-      this.name,
+      {required this.id,
+      required this.name,
       this.description,
-      this.iconUrl,
-      this.version})
-      : super._();
+      required this.iconUrl,
+      required this.version,
+      required this.characters})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'CountriesControllerGetRequest', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        name, r'CountriesControllerGetRequest', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        iconUrl, r'CountriesControllerGetRequest', 'iconUrl');
+    BuiltValueNullFieldError.checkNotNull(
+        version, r'CountriesControllerGetRequest', 'version');
+    BuiltValueNullFieldError.checkNotNull(
+        characters, r'CountriesControllerGetRequest', 'characters');
+  }
 
   @override
   CountriesControllerGetRequest rebuild(
@@ -50,24 +58,22 @@ class _$CountriesControllerGetRequest extends CountriesControllerGetRequest {
     if (identical(other, this)) return true;
     return other is CountriesControllerGetRequest &&
         id == other.id &&
-        take == other.take &&
-        skip == other.skip &&
         name == other.name &&
         description == other.description &&
         iconUrl == other.iconUrl &&
-        version == other.version;
+        version == other.version &&
+        characters == other.characters;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, take.hashCode);
-    _$hash = $jc(_$hash, skip.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, iconUrl.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
+    _$hash = $jc(_$hash, characters.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -76,12 +82,11 @@ class _$CountriesControllerGetRequest extends CountriesControllerGetRequest {
   String toString() {
     return (newBuiltValueToStringHelper(r'CountriesControllerGetRequest')
           ..add('id', id)
-          ..add('take', take)
-          ..add('skip', skip)
           ..add('name', name)
           ..add('description', description)
           ..add('iconUrl', iconUrl)
-          ..add('version', version))
+          ..add('version', version)
+          ..add('characters', characters))
         .toString();
   }
 }
@@ -96,14 +101,6 @@ class CountriesControllerGetRequestBuilder
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
-  String? _take;
-  String? get take => _$this._take;
-  set take(String? take) => _$this._take = take;
-
-  String? _skip;
-  String? get skip => _$this._skip;
-  set skip(String? skip) => _$this._skip = skip;
-
   String? _name;
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
@@ -116,9 +113,17 @@ class CountriesControllerGetRequestBuilder
   String? get iconUrl => _$this._iconUrl;
   set iconUrl(String? iconUrl) => _$this._iconUrl = iconUrl;
 
-  String? _version;
-  String? get version => _$this._version;
-  set version(String? version) => _$this._version = version;
+  ArtifactsControllerGetRequestVersionBuilder? _version;
+  ArtifactsControllerGetRequestVersionBuilder get version =>
+      _$this._version ??= new ArtifactsControllerGetRequestVersionBuilder();
+  set version(ArtifactsControllerGetRequestVersionBuilder? version) =>
+      _$this._version = version;
+
+  ListBuilder<CharactersControllerGetRequest>? _characters;
+  ListBuilder<CharactersControllerGetRequest> get characters =>
+      _$this._characters ??= new ListBuilder<CharactersControllerGetRequest>();
+  set characters(ListBuilder<CharactersControllerGetRequest>? characters) =>
+      _$this._characters = characters;
 
   CountriesControllerGetRequestBuilder() {
     CountriesControllerGetRequest._defaults(this);
@@ -128,12 +133,11 @@ class CountriesControllerGetRequestBuilder
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
-      _take = $v.take;
-      _skip = $v.skip;
       _name = $v.name;
       _description = $v.description;
       _iconUrl = $v.iconUrl;
-      _version = $v.version;
+      _version = $v.version.toBuilder();
+      _characters = $v.characters.toBuilder();
       _$v = null;
     }
     return this;
@@ -154,15 +158,32 @@ class CountriesControllerGetRequestBuilder
   CountriesControllerGetRequest build() => _build();
 
   _$CountriesControllerGetRequest _build() {
-    final _$result = _$v ??
-        new _$CountriesControllerGetRequest._(
-            id: id,
-            take: take,
-            skip: skip,
-            name: name,
-            description: description,
-            iconUrl: iconUrl,
-            version: version);
+    _$CountriesControllerGetRequest _$result;
+    try {
+      _$result = _$v ??
+          new _$CountriesControllerGetRequest._(
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'CountriesControllerGetRequest', 'id'),
+              name: BuiltValueNullFieldError.checkNotNull(
+                  name, r'CountriesControllerGetRequest', 'name'),
+              description: description,
+              iconUrl: BuiltValueNullFieldError.checkNotNull(
+                  iconUrl, r'CountriesControllerGetRequest', 'iconUrl'),
+              version: version.build(),
+              characters: characters.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'version';
+        version.build();
+        _$failedField = 'characters';
+        characters.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'CountriesControllerGetRequest', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

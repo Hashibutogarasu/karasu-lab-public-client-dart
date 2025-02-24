@@ -8,21 +8,22 @@ import 'package:karasu_lab_public_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
-**take** | **String** |  | [optional] [default to '10']
-**skip** | **String** |  | [optional] [default to '0']
-**name** | **String** |  | [optional] 
+**id** | **String** |  | 
+**name** | **String** |  | 
 **description** | **String** |  | [optional] 
-**iconUrl** | **String** |  | [optional] 
+**iconUrl** | **String** |  | 
 **element** | **String** |  | [optional] 
-**region** | **String** |  | [optional] 
-**weapon** | **String** |  | [optional] 
-**headerImgUrl** | **String** |  | [optional] 
 **rarity** | **int** |  | [optional] 
-**version** | **String** |  | [optional] 
+**headerImgUrl** | **String** |  | [optional] 
+**weaponType** | **String** |  | [optional] 
 **property** | **String** |  | [optional] 
+**unimplemented** | **bool** |  | [optional] [default to false]
 **implementedDate** | **String** |  | [optional] 
-**unimplemented** | **String** |  | [optional] 
+**region** | [**CharactersControllerGetRequestRegion**](CharactersControllerGetRequestRegion.md) |  | [optional] 
+**weapon** | [**CharactersControllerGetRequestWeapon**](CharactersControllerGetRequestWeapon.md) |  | [optional] 
+**version** | [**CharactersControllerGetRequestVersion**](CharactersControllerGetRequestVersion.md) |  | [optional] 
+**galleries** | [**BuiltList&lt;CharactersControllerGetRequestGalleriesInner&gt;**](CharactersControllerGetRequestGalleriesInner.md) |  | [optional] 
+**artifactSet** | [**BuiltList&lt;CharactersControllerGetRequestArtifactSetInner&gt;**](CharactersControllerGetRequestArtifactSetInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

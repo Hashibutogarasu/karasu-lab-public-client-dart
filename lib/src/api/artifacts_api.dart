@@ -9,6 +9,7 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
+import 'package:karasu_lab_public_client/src/api_util.dart';
 import 'package:karasu_lab_public_client/src/model/artifacts.dart';
 import 'package:karasu_lab_public_client/src/model/artifacts_controller_get_request.dart';
 
@@ -119,6 +120,8 @@ class ArtifactsApi {
   /// 
   ///
   /// Parameters:
+  /// * [skip] 
+  /// * [take] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -129,6 +132,8 @@ class ArtifactsApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<Artifacts>] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<BuiltList<Artifacts>>> artifactsControllerGetAll({ 
+    num? skip,
+    num? take,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -149,9 +154,15 @@ class ArtifactsApi {
       validateStatus: validateStatus,
     );
 
+    final _queryParameters = <String, dynamic>{
+      if (skip != null) r'skip': encodeQueryParameter(_serializers, skip, const FullType(num)),
+      if (take != null) r'take': encodeQueryParameter(_serializers, take, const FullType(num)),
+    };
+
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
+      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,

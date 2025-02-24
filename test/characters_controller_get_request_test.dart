@@ -12,16 +12,6 @@ void main() {
       // TODO
     });
 
-    // String take (default value: '10')
-    test('to test the property `take`', () async {
-      // TODO
-    });
-
-    // String skip (default value: '0')
-    test('to test the property `skip`', () async {
-      // TODO
-    });
-
     // String name
     test('to test the property `name`', () async {
       // TODO
@@ -42,13 +32,8 @@ void main() {
       // TODO
     });
 
-    // String region
-    test('to test the property `region`', () async {
-      // TODO
-    });
-
-    // String weapon
-    test('to test the property `weapon`', () async {
+    // int rarity
+    test('to test the property `rarity`', () async {
       // TODO
     });
 
@@ -57,13 +42,8 @@ void main() {
       // TODO
     });
 
-    // int rarity
-    test('to test the property `rarity`', () async {
-      // TODO
-    });
-
-    // String version
-    test('to test the property `version`', () async {
+    // String weaponType
+    test('to test the property `weaponType`', () async {
       // TODO
     });
 
@@ -72,13 +52,38 @@ void main() {
       // TODO
     });
 
+    // bool unimplemented (default value: false)
+    test('to test the property `unimplemented`', () async {
+      // TODO
+    });
+
     // String implementedDate
     test('to test the property `implementedDate`', () async {
       // TODO
     });
 
-    // String unimplemented
-    test('to test the property `unimplemented`', () async {
+    // CharactersControllerGetRequestRegion region
+    test('to test the property `region`', () async {
+      // TODO
+    });
+
+    // CharactersControllerGetRequestWeapon weapon
+    test('to test the property `weapon`', () async {
+      // TODO
+    });
+
+    // CharactersControllerGetRequestVersion version
+    test('to test the property `version`', () async {
+      // TODO
+    });
+
+    // BuiltList<CharactersControllerGetRequestGalleriesInner> galleries
+    test('to test the property `galleries`', () async {
+      // TODO
+    });
+
+    // BuiltList<CharactersControllerGetRequestArtifactSetInner> artifactSet
+    test('to test the property `artifactSet`', () async {
       // TODO
     });
 

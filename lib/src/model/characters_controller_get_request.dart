@@ -3,6 +3,12 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:built_collection/built_collection.dart';
+import 'package:karasu_lab_public_client/src/model/characters_controller_get_request_weapon.dart';
+import 'package:karasu_lab_public_client/src/model/characters_controller_get_request_artifact_set_inner.dart';
+import 'package:karasu_lab_public_client/src/model/characters_controller_get_request_region.dart';
+import 'package:karasu_lab_public_client/src/model/characters_controller_get_request_galleries_inner.dart';
+import 'package:karasu_lab_public_client/src/model/characters_controller_get_request_version.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,66 +18,70 @@ part 'characters_controller_get_request.g.dart';
 ///
 /// Properties:
 /// * [id] 
-/// * [take] 
-/// * [skip] 
 /// * [name] 
 /// * [description] 
 /// * [iconUrl] 
 /// * [element] 
+/// * [rarity] 
+/// * [headerImgUrl] 
+/// * [weaponType] 
+/// * [property] 
+/// * [unimplemented] 
+/// * [implementedDate] 
 /// * [region] 
 /// * [weapon] 
-/// * [headerImgUrl] 
-/// * [rarity] 
 /// * [version] 
-/// * [property] 
-/// * [implementedDate] 
-/// * [unimplemented] 
+/// * [galleries] 
+/// * [artifactSet] 
 @BuiltValue()
 abstract class CharactersControllerGetRequest implements Built<CharactersControllerGetRequest, CharactersControllerGetRequestBuilder> {
   @BuiltValueField(wireName: r'id')
-  String? get id;
-
-  @BuiltValueField(wireName: r'take')
-  String? get take;
-
-  @BuiltValueField(wireName: r'skip')
-  String? get skip;
+  String get id;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String get name;
 
   @BuiltValueField(wireName: r'description')
   String? get description;
 
   @BuiltValueField(wireName: r'icon_url')
-  String? get iconUrl;
+  String get iconUrl;
 
   @BuiltValueField(wireName: r'element')
   String? get element;
 
-  @BuiltValueField(wireName: r'region')
-  String? get region;
-
-  @BuiltValueField(wireName: r'weapon')
-  String? get weapon;
+  @BuiltValueField(wireName: r'rarity')
+  int? get rarity;
 
   @BuiltValueField(wireName: r'header_img_url')
   String? get headerImgUrl;
 
-  @BuiltValueField(wireName: r'rarity')
-  int? get rarity;
-
-  @BuiltValueField(wireName: r'version')
-  String? get version;
+  @BuiltValueField(wireName: r'weapon_type')
+  String? get weaponType;
 
   @BuiltValueField(wireName: r'property')
   String? get property;
 
+  @BuiltValueField(wireName: r'unimplemented')
+  bool? get unimplemented;
+
   @BuiltValueField(wireName: r'implemented_date')
   String? get implementedDate;
 
-  @BuiltValueField(wireName: r'unimplemented')
-  String? get unimplemented;
+  @BuiltValueField(wireName: r'region')
+  CharactersControllerGetRequestRegion? get region;
+
+  @BuiltValueField(wireName: r'weapon')
+  CharactersControllerGetRequestWeapon? get weapon;
+
+  @BuiltValueField(wireName: r'version')
+  CharactersControllerGetRequestVersion? get version;
+
+  @BuiltValueField(wireName: r'galleries')
+  BuiltList<CharactersControllerGetRequestGalleriesInner?>? get galleries;
+
+  @BuiltValueField(wireName: r'artifact_set')
+  BuiltList<CharactersControllerGetRequestArtifactSetInner?>? get artifactSet;
 
   CharactersControllerGetRequest._();
 
@@ -79,8 +89,7 @@ abstract class CharactersControllerGetRequest implements Built<CharactersControl
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(CharactersControllerGetRequestBuilder b) => b
-      ..take = '10'
-      ..skip = '0';
+      ..unimplemented = false;
 
   @BuiltValueSerializer(custom: true)
   static Serializer<CharactersControllerGetRequest> get serializer => _$CharactersControllerGetRequestSerializer();
@@ -98,109 +107,110 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
     CharactersControllerGetRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.id != null) {
-      yield r'id';
-      yield serializers.serialize(
-        object.id,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.take != null) {
-      yield r'take';
-      yield serializers.serialize(
-        object.take,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
-    if (object.skip != null) {
-      yield r'skip';
-      yield serializers.serialize(
-        object.skip,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
-    if (object.name != null) {
-      yield r'name';
-      yield serializers.serialize(
-        object.name,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'id';
+    yield serializers.serialize(
+      object.id,
+      specifiedType: const FullType(String),
+    );
+    yield r'name';
+    yield serializers.serialize(
+      object.name,
+      specifiedType: const FullType(String),
+    );
     if (object.description != null) {
       yield r'description';
       yield serializers.serialize(
         object.description,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType.nullable(String),
       );
     }
-    if (object.iconUrl != null) {
-      yield r'icon_url';
-      yield serializers.serialize(
-        object.iconUrl,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'icon_url';
+    yield serializers.serialize(
+      object.iconUrl,
+      specifiedType: const FullType(String),
+    );
     if (object.element != null) {
       yield r'element';
       yield serializers.serialize(
         object.element,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.region != null) {
-      yield r'region';
-      yield serializers.serialize(
-        object.region,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.weapon != null) {
-      yield r'weapon';
-      yield serializers.serialize(
-        object.weapon,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.headerImgUrl != null) {
-      yield r'header_img_url';
-      yield serializers.serialize(
-        object.headerImgUrl,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType.nullable(String),
       );
     }
     if (object.rarity != null) {
       yield r'rarity';
       yield serializers.serialize(
         object.rarity,
-        specifiedType: const FullType(int),
+        specifiedType: const FullType.nullable(int),
       );
     }
-    if (object.version != null) {
-      yield r'version';
+    if (object.headerImgUrl != null) {
+      yield r'header_img_url';
       yield serializers.serialize(
-        object.version,
-        specifiedType: const FullType(String),
+        object.headerImgUrl,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.weaponType != null) {
+      yield r'weapon_type';
+      yield serializers.serialize(
+        object.weaponType,
+        specifiedType: const FullType.nullable(String),
       );
     }
     if (object.property != null) {
       yield r'property';
       yield serializers.serialize(
         object.property,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.implementedDate != null) {
-      yield r'implemented_date';
-      yield serializers.serialize(
-        object.implementedDate,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType.nullable(String),
       );
     }
     if (object.unimplemented != null) {
       yield r'unimplemented';
       yield serializers.serialize(
         object.unimplemented,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType(bool),
+      );
+    }
+    if (object.implementedDate != null) {
+      yield r'implemented_date';
+      yield serializers.serialize(
+        object.implementedDate,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.region != null) {
+      yield r'region';
+      yield serializers.serialize(
+        object.region,
+        specifiedType: const FullType.nullable(CharactersControllerGetRequestRegion),
+      );
+    }
+    if (object.weapon != null) {
+      yield r'weapon';
+      yield serializers.serialize(
+        object.weapon,
+        specifiedType: const FullType.nullable(CharactersControllerGetRequestWeapon),
+      );
+    }
+    if (object.version != null) {
+      yield r'version';
+      yield serializers.serialize(
+        object.version,
+        specifiedType: const FullType.nullable(CharactersControllerGetRequestVersion),
+      );
+    }
+    if (object.galleries != null) {
+      yield r'galleries';
+      yield serializers.serialize(
+        object.galleries,
+        specifiedType: const FullType.nullable(BuiltList, [FullType.nullable(CharactersControllerGetRequestGalleriesInner)]),
+      );
+    }
+    if (object.artifactSet != null) {
+      yield r'artifact_set';
+      yield serializers.serialize(
+        object.artifactSet,
+        specifiedType: const FullType.nullable(BuiltList, [FullType.nullable(CharactersControllerGetRequestArtifactSetInner)]),
       );
     }
   }
@@ -233,22 +243,6 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
           ) as String;
           result.id = valueDes;
           break;
-        case r'take':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.take = valueDes;
-          break;
-        case r'skip':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.skip = valueDes;
-          break;
         case r'name':
           final valueDes = serializers.deserialize(
             value,
@@ -259,8 +253,9 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
         case r'description':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.description = valueDes;
           break;
         case r'icon_url':
@@ -273,65 +268,97 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
         case r'element':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.element = valueDes;
-          break;
-        case r'region':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.region = valueDes;
-          break;
-        case r'weapon':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.weapon = valueDes;
-          break;
-        case r'header_img_url':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.headerImgUrl = valueDes;
           break;
         case r'rarity':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(int),
-          ) as int;
+            specifiedType: const FullType.nullable(int),
+          ) as int?;
+          if (valueDes == null) continue;
           result.rarity = valueDes;
           break;
-        case r'version':
+        case r'header_img_url':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.version = valueDes;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.headerImgUrl = valueDes;
+          break;
+        case r'weapon_type':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.weaponType = valueDes;
           break;
         case r'property':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.property = valueDes;
-          break;
-        case r'implemented_date':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.implementedDate = valueDes;
           break;
         case r'unimplemented':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType(bool),
+          ) as bool;
           result.unimplemented = valueDes;
+          break;
+        case r'implemented_date':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.implementedDate = valueDes;
+          break;
+        case r'region':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(CharactersControllerGetRequestRegion),
+          ) as CharactersControllerGetRequestRegion?;
+          if (valueDes == null) continue;
+          result.region.replace(valueDes);
+          break;
+        case r'weapon':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(CharactersControllerGetRequestWeapon),
+          ) as CharactersControllerGetRequestWeapon?;
+          if (valueDes == null) continue;
+          result.weapon.replace(valueDes);
+          break;
+        case r'version':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(CharactersControllerGetRequestVersion),
+          ) as CharactersControllerGetRequestVersion?;
+          if (valueDes == null) continue;
+          result.version.replace(valueDes);
+          break;
+        case r'galleries':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(BuiltList, [FullType.nullable(CharactersControllerGetRequestGalleriesInner)]),
+          ) as BuiltList<CharactersControllerGetRequestGalleriesInner?>?;
+          if (valueDes == null) continue;
+          result.galleries.replace(valueDes);
+          break;
+        case r'artifact_set':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(BuiltList, [FullType.nullable(CharactersControllerGetRequestArtifactSetInner)]),
+          ) as BuiltList<CharactersControllerGetRequestArtifactSetInner?>?;
+          if (valueDes == null) continue;
+          result.artifactSet.replace(valueDes);
           break;
         default:
           unhandled.add(key);

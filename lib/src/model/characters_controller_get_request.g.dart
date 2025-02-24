@@ -8,57 +8,67 @@ part of 'characters_controller_get_request.dart';
 
 class _$CharactersControllerGetRequest extends CharactersControllerGetRequest {
   @override
-  final String? id;
+  final String id;
   @override
-  final String? take;
-  @override
-  final String? skip;
-  @override
-  final String? name;
+  final String name;
   @override
   final String? description;
   @override
-  final String? iconUrl;
+  final String iconUrl;
   @override
   final String? element;
   @override
-  final String? region;
-  @override
-  final String? weapon;
+  final int? rarity;
   @override
   final String? headerImgUrl;
   @override
-  final int? rarity;
-  @override
-  final String? version;
+  final String? weaponType;
   @override
   final String? property;
   @override
+  final bool? unimplemented;
+  @override
   final String? implementedDate;
   @override
-  final String? unimplemented;
+  final CharactersControllerGetRequestRegion? region;
+  @override
+  final CharactersControllerGetRequestWeapon? weapon;
+  @override
+  final CharactersControllerGetRequestVersion? version;
+  @override
+  final BuiltList<CharactersControllerGetRequestGalleriesInner?>? galleries;
+  @override
+  final BuiltList<CharactersControllerGetRequestArtifactSetInner?>? artifactSet;
 
   factory _$CharactersControllerGetRequest(
           [void Function(CharactersControllerGetRequestBuilder)? updates]) =>
       (new CharactersControllerGetRequestBuilder()..update(updates))._build();
 
   _$CharactersControllerGetRequest._(
-      {this.id,
-      this.take,
-      this.skip,
-      this.name,
+      {required this.id,
+      required this.name,
       this.description,
-      this.iconUrl,
+      required this.iconUrl,
       this.element,
+      this.rarity,
+      this.headerImgUrl,
+      this.weaponType,
+      this.property,
+      this.unimplemented,
+      this.implementedDate,
       this.region,
       this.weapon,
-      this.headerImgUrl,
-      this.rarity,
       this.version,
-      this.property,
-      this.implementedDate,
-      this.unimplemented})
-      : super._();
+      this.galleries,
+      this.artifactSet})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'CharactersControllerGetRequest', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        name, r'CharactersControllerGetRequest', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        iconUrl, r'CharactersControllerGetRequest', 'iconUrl');
+  }
 
   @override
   CharactersControllerGetRequest rebuild(
@@ -74,40 +84,42 @@ class _$CharactersControllerGetRequest extends CharactersControllerGetRequest {
     if (identical(other, this)) return true;
     return other is CharactersControllerGetRequest &&
         id == other.id &&
-        take == other.take &&
-        skip == other.skip &&
         name == other.name &&
         description == other.description &&
         iconUrl == other.iconUrl &&
         element == other.element &&
+        rarity == other.rarity &&
+        headerImgUrl == other.headerImgUrl &&
+        weaponType == other.weaponType &&
+        property == other.property &&
+        unimplemented == other.unimplemented &&
+        implementedDate == other.implementedDate &&
         region == other.region &&
         weapon == other.weapon &&
-        headerImgUrl == other.headerImgUrl &&
-        rarity == other.rarity &&
         version == other.version &&
-        property == other.property &&
-        implementedDate == other.implementedDate &&
-        unimplemented == other.unimplemented;
+        galleries == other.galleries &&
+        artifactSet == other.artifactSet;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, take.hashCode);
-    _$hash = $jc(_$hash, skip.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, iconUrl.hashCode);
     _$hash = $jc(_$hash, element.hashCode);
+    _$hash = $jc(_$hash, rarity.hashCode);
+    _$hash = $jc(_$hash, headerImgUrl.hashCode);
+    _$hash = $jc(_$hash, weaponType.hashCode);
+    _$hash = $jc(_$hash, property.hashCode);
+    _$hash = $jc(_$hash, unimplemented.hashCode);
+    _$hash = $jc(_$hash, implementedDate.hashCode);
     _$hash = $jc(_$hash, region.hashCode);
     _$hash = $jc(_$hash, weapon.hashCode);
-    _$hash = $jc(_$hash, headerImgUrl.hashCode);
-    _$hash = $jc(_$hash, rarity.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
-    _$hash = $jc(_$hash, property.hashCode);
-    _$hash = $jc(_$hash, implementedDate.hashCode);
-    _$hash = $jc(_$hash, unimplemented.hashCode);
+    _$hash = $jc(_$hash, galleries.hashCode);
+    _$hash = $jc(_$hash, artifactSet.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -116,20 +128,21 @@ class _$CharactersControllerGetRequest extends CharactersControllerGetRequest {
   String toString() {
     return (newBuiltValueToStringHelper(r'CharactersControllerGetRequest')
           ..add('id', id)
-          ..add('take', take)
-          ..add('skip', skip)
           ..add('name', name)
           ..add('description', description)
           ..add('iconUrl', iconUrl)
           ..add('element', element)
+          ..add('rarity', rarity)
+          ..add('headerImgUrl', headerImgUrl)
+          ..add('weaponType', weaponType)
+          ..add('property', property)
+          ..add('unimplemented', unimplemented)
+          ..add('implementedDate', implementedDate)
           ..add('region', region)
           ..add('weapon', weapon)
-          ..add('headerImgUrl', headerImgUrl)
-          ..add('rarity', rarity)
           ..add('version', version)
-          ..add('property', property)
-          ..add('implementedDate', implementedDate)
-          ..add('unimplemented', unimplemented))
+          ..add('galleries', galleries)
+          ..add('artifactSet', artifactSet))
         .toString();
   }
 }
@@ -143,14 +156,6 @@ class CharactersControllerGetRequestBuilder
   String? _id;
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
-
-  String? _take;
-  String? get take => _$this._take;
-  set take(String? take) => _$this._take = take;
-
-  String? _skip;
-  String? get skip => _$this._skip;
-  set skip(String? skip) => _$this._skip = skip;
 
   String? _name;
   String? get name => _$this._name;
@@ -168,39 +173,67 @@ class CharactersControllerGetRequestBuilder
   String? get element => _$this._element;
   set element(String? element) => _$this._element = element;
 
-  String? _region;
-  String? get region => _$this._region;
-  set region(String? region) => _$this._region = region;
-
-  String? _weapon;
-  String? get weapon => _$this._weapon;
-  set weapon(String? weapon) => _$this._weapon = weapon;
+  int? _rarity;
+  int? get rarity => _$this._rarity;
+  set rarity(int? rarity) => _$this._rarity = rarity;
 
   String? _headerImgUrl;
   String? get headerImgUrl => _$this._headerImgUrl;
   set headerImgUrl(String? headerImgUrl) => _$this._headerImgUrl = headerImgUrl;
 
-  int? _rarity;
-  int? get rarity => _$this._rarity;
-  set rarity(int? rarity) => _$this._rarity = rarity;
-
-  String? _version;
-  String? get version => _$this._version;
-  set version(String? version) => _$this._version = version;
+  String? _weaponType;
+  String? get weaponType => _$this._weaponType;
+  set weaponType(String? weaponType) => _$this._weaponType = weaponType;
 
   String? _property;
   String? get property => _$this._property;
   set property(String? property) => _$this._property = property;
+
+  bool? _unimplemented;
+  bool? get unimplemented => _$this._unimplemented;
+  set unimplemented(bool? unimplemented) =>
+      _$this._unimplemented = unimplemented;
 
   String? _implementedDate;
   String? get implementedDate => _$this._implementedDate;
   set implementedDate(String? implementedDate) =>
       _$this._implementedDate = implementedDate;
 
-  String? _unimplemented;
-  String? get unimplemented => _$this._unimplemented;
-  set unimplemented(String? unimplemented) =>
-      _$this._unimplemented = unimplemented;
+  CharactersControllerGetRequestRegionBuilder? _region;
+  CharactersControllerGetRequestRegionBuilder get region =>
+      _$this._region ??= new CharactersControllerGetRequestRegionBuilder();
+  set region(CharactersControllerGetRequestRegionBuilder? region) =>
+      _$this._region = region;
+
+  CharactersControllerGetRequestWeaponBuilder? _weapon;
+  CharactersControllerGetRequestWeaponBuilder get weapon =>
+      _$this._weapon ??= new CharactersControllerGetRequestWeaponBuilder();
+  set weapon(CharactersControllerGetRequestWeaponBuilder? weapon) =>
+      _$this._weapon = weapon;
+
+  CharactersControllerGetRequestVersionBuilder? _version;
+  CharactersControllerGetRequestVersionBuilder get version =>
+      _$this._version ??= new CharactersControllerGetRequestVersionBuilder();
+  set version(CharactersControllerGetRequestVersionBuilder? version) =>
+      _$this._version = version;
+
+  ListBuilder<CharactersControllerGetRequestGalleriesInner?>? _galleries;
+  ListBuilder<CharactersControllerGetRequestGalleriesInner?> get galleries =>
+      _$this._galleries ??=
+          new ListBuilder<CharactersControllerGetRequestGalleriesInner?>();
+  set galleries(
+          ListBuilder<CharactersControllerGetRequestGalleriesInner?>?
+              galleries) =>
+      _$this._galleries = galleries;
+
+  ListBuilder<CharactersControllerGetRequestArtifactSetInner?>? _artifactSet;
+  ListBuilder<CharactersControllerGetRequestArtifactSetInner?>
+      get artifactSet => _$this._artifactSet ??=
+          new ListBuilder<CharactersControllerGetRequestArtifactSetInner?>();
+  set artifactSet(
+          ListBuilder<CharactersControllerGetRequestArtifactSetInner?>?
+              artifactSet) =>
+      _$this._artifactSet = artifactSet;
 
   CharactersControllerGetRequestBuilder() {
     CharactersControllerGetRequest._defaults(this);
@@ -210,20 +243,21 @@ class CharactersControllerGetRequestBuilder
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
-      _take = $v.take;
-      _skip = $v.skip;
       _name = $v.name;
       _description = $v.description;
       _iconUrl = $v.iconUrl;
       _element = $v.element;
-      _region = $v.region;
-      _weapon = $v.weapon;
-      _headerImgUrl = $v.headerImgUrl;
       _rarity = $v.rarity;
-      _version = $v.version;
+      _headerImgUrl = $v.headerImgUrl;
+      _weaponType = $v.weaponType;
       _property = $v.property;
-      _implementedDate = $v.implementedDate;
       _unimplemented = $v.unimplemented;
+      _implementedDate = $v.implementedDate;
+      _region = $v.region?.toBuilder();
+      _weapon = $v.weapon?.toBuilder();
+      _version = $v.version?.toBuilder();
+      _galleries = $v.galleries?.toBuilder();
+      _artifactSet = $v.artifactSet?.toBuilder();
       _$v = null;
     }
     return this;
@@ -244,23 +278,48 @@ class CharactersControllerGetRequestBuilder
   CharactersControllerGetRequest build() => _build();
 
   _$CharactersControllerGetRequest _build() {
-    final _$result = _$v ??
-        new _$CharactersControllerGetRequest._(
-            id: id,
-            take: take,
-            skip: skip,
-            name: name,
-            description: description,
-            iconUrl: iconUrl,
-            element: element,
-            region: region,
-            weapon: weapon,
-            headerImgUrl: headerImgUrl,
-            rarity: rarity,
-            version: version,
-            property: property,
-            implementedDate: implementedDate,
-            unimplemented: unimplemented);
+    _$CharactersControllerGetRequest _$result;
+    try {
+      _$result = _$v ??
+          new _$CharactersControllerGetRequest._(
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'CharactersControllerGetRequest', 'id'),
+              name: BuiltValueNullFieldError.checkNotNull(
+                  name, r'CharactersControllerGetRequest', 'name'),
+              description: description,
+              iconUrl: BuiltValueNullFieldError.checkNotNull(
+                  iconUrl, r'CharactersControllerGetRequest', 'iconUrl'),
+              element: element,
+              rarity: rarity,
+              headerImgUrl: headerImgUrl,
+              weaponType: weaponType,
+              property: property,
+              unimplemented: unimplemented,
+              implementedDate: implementedDate,
+              region: _region?.build(),
+              weapon: _weapon?.build(),
+              version: _version?.build(),
+              galleries: _galleries?.build(),
+              artifactSet: _artifactSet?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'region';
+        _region?.build();
+        _$failedField = 'weapon';
+        _weapon?.build();
+        _$failedField = 'version';
+        _version?.build();
+        _$failedField = 'galleries';
+        _galleries?.build();
+        _$failedField = 'artifactSet';
+        _artifactSet?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'CharactersControllerGetRequest', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

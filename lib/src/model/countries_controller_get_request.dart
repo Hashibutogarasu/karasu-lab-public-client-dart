@@ -3,6 +3,9 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:built_collection/built_collection.dart';
+import 'package:karasu_lab_public_client/src/model/characters_controller_get_request.dart';
+import 'package:karasu_lab_public_client/src/model/artifacts_controller_get_request_version.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,43 +15,37 @@ part 'countries_controller_get_request.g.dart';
 ///
 /// Properties:
 /// * [id] 
-/// * [take] 
-/// * [skip] 
 /// * [name] 
 /// * [description] 
 /// * [iconUrl] 
 /// * [version] 
+/// * [characters] 
 @BuiltValue()
 abstract class CountriesControllerGetRequest implements Built<CountriesControllerGetRequest, CountriesControllerGetRequestBuilder> {
   @BuiltValueField(wireName: r'id')
-  String? get id;
-
-  @BuiltValueField(wireName: r'take')
-  String? get take;
-
-  @BuiltValueField(wireName: r'skip')
-  String? get skip;
+  String get id;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String get name;
 
   @BuiltValueField(wireName: r'description')
   String? get description;
 
   @BuiltValueField(wireName: r'icon_url')
-  String? get iconUrl;
+  String get iconUrl;
 
   @BuiltValueField(wireName: r'version')
-  String? get version;
+  ArtifactsControllerGetRequestVersion get version;
+
+  @BuiltValueField(wireName: r'characters')
+  BuiltList<CharactersControllerGetRequest> get characters;
 
   CountriesControllerGetRequest._();
 
   factory CountriesControllerGetRequest([void updates(CountriesControllerGetRequestBuilder b)]) = _$CountriesControllerGetRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(CountriesControllerGetRequestBuilder b) => b
-      ..take = '10'
-      ..skip = '0';
+  static void _defaults(CountriesControllerGetRequestBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
   static Serializer<CountriesControllerGetRequest> get serializer => _$CountriesControllerGetRequestSerializer();
@@ -66,55 +63,38 @@ class _$CountriesControllerGetRequestSerializer implements PrimitiveSerializer<C
     CountriesControllerGetRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.id != null) {
-      yield r'id';
-      yield serializers.serialize(
-        object.id,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.take != null) {
-      yield r'take';
-      yield serializers.serialize(
-        object.take,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
-    if (object.skip != null) {
-      yield r'skip';
-      yield serializers.serialize(
-        object.skip,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
-    if (object.name != null) {
-      yield r'name';
-      yield serializers.serialize(
-        object.name,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'id';
+    yield serializers.serialize(
+      object.id,
+      specifiedType: const FullType(String),
+    );
+    yield r'name';
+    yield serializers.serialize(
+      object.name,
+      specifiedType: const FullType(String),
+    );
     if (object.description != null) {
       yield r'description';
       yield serializers.serialize(
         object.description,
-        specifiedType: const FullType(String),
+        specifiedType: const FullType.nullable(String),
       );
     }
-    if (object.iconUrl != null) {
-      yield r'icon_url';
-      yield serializers.serialize(
-        object.iconUrl,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.version != null) {
-      yield r'version';
-      yield serializers.serialize(
-        object.version,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'icon_url';
+    yield serializers.serialize(
+      object.iconUrl,
+      specifiedType: const FullType(String),
+    );
+    yield r'version';
+    yield serializers.serialize(
+      object.version,
+      specifiedType: const FullType(ArtifactsControllerGetRequestVersion),
+    );
+    yield r'characters';
+    yield serializers.serialize(
+      object.characters,
+      specifiedType: const FullType(BuiltList, [FullType(CharactersControllerGetRequest)]),
+    );
   }
 
   @override
@@ -145,22 +125,6 @@ class _$CountriesControllerGetRequestSerializer implements PrimitiveSerializer<C
           ) as String;
           result.id = valueDes;
           break;
-        case r'take':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.take = valueDes;
-          break;
-        case r'skip':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.skip = valueDes;
-          break;
         case r'name':
           final valueDes = serializers.deserialize(
             value,
@@ -171,8 +135,9 @@ class _$CountriesControllerGetRequestSerializer implements PrimitiveSerializer<C
         case r'description':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.description = valueDes;
           break;
         case r'icon_url':
@@ -185,9 +150,16 @@ class _$CountriesControllerGetRequestSerializer implements PrimitiveSerializer<C
         case r'version':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.version = valueDes;
+            specifiedType: const FullType(ArtifactsControllerGetRequestVersion),
+          ) as ArtifactsControllerGetRequestVersion;
+          result.version.replace(valueDes);
+          break;
+        case r'characters':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(BuiltList, [FullType(CharactersControllerGetRequest)]),
+          ) as BuiltList<CharactersControllerGetRequest>;
+          result.characters.replace(valueDes);
           break;
         default:
           unhandled.add(key);
