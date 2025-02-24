@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **versionsControllerGet**
-> BuiltList<VersionsEntity> versionsControllerGet(artifactsControllerGetRequestVersion)
+> BuiltList<VersionsEntity> versionsControllerGet(versionsControllerGetRequest)
 
 
 
@@ -24,10 +24,10 @@ Method | HTTP request | Description
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getVersionsApi();
-final ArtifactsControllerGetRequestVersion artifactsControllerGetRequestVersion = ; // ArtifactsControllerGetRequestVersion | 
+final VersionsControllerGetRequest versionsControllerGetRequest = ; // VersionsControllerGetRequest | 
 
 try {
-    final response = api.versionsControllerGet(artifactsControllerGetRequestVersion);
+    final response = api.versionsControllerGet(versionsControllerGetRequest);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling VersionsApi->versionsControllerGet: $e\n');
@@ -38,7 +38,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **artifactsControllerGetRequestVersion** | [**ArtifactsControllerGetRequestVersion**](ArtifactsControllerGetRequestVersion.md)|  | 
+ **versionsControllerGetRequest** | [**VersionsControllerGetRequest**](VersionsControllerGetRequest.md)|  | 
 
 ### Return type
 
@@ -99,7 +99,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **versionsControllerGetOne**
-> VersionsEntity versionsControllerGetOne(artifactsControllerGetRequestVersion)
+> VersionsEntity versionsControllerGetOne(versionsControllerGetRequest)
 
 
 
@@ -108,10 +108,10 @@ No authorization required
 import 'package:karasu_lab_public_client/api.dart';
 
 final api = KarasuLabPublicClient().getVersionsApi();
-final ArtifactsControllerGetRequestVersion artifactsControllerGetRequestVersion = ; // ArtifactsControllerGetRequestVersion | 
+final VersionsControllerGetRequest versionsControllerGetRequest = ; // VersionsControllerGetRequest | 
 
 try {
-    final response = api.versionsControllerGetOne(artifactsControllerGetRequestVersion);
+    final response = api.versionsControllerGetOne(versionsControllerGetRequest);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling VersionsApi->versionsControllerGetOne: $e\n');
@@ -122,7 +122,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **artifactsControllerGetRequestVersion** | [**ArtifactsControllerGetRequestVersion**](ArtifactsControllerGetRequestVersion.md)|  | 
+ **versionsControllerGetRequest** | [**VersionsControllerGetRequest**](VersionsControllerGetRequest.md)|  | 
 
 ### Return type
 

@@ -29,6 +29,7 @@ import 'package:karasu_lab_public_client/src/model/characters_controller_get_req
 import 'package:karasu_lab_public_client/src/model/characters_controller_get_request_weapon_version_artifact_sets_inner.dart';
 import 'package:karasu_lab_public_client/src/model/characters_controller_get_request_weapon_version_regions_inner.dart';
 import 'package:karasu_lab_public_client/src/model/countries_controller_get_request.dart';
+import 'package:karasu_lab_public_client/src/model/countries_controller_get_request_characters_inner.dart';
 import 'package:karasu_lab_public_client/src/model/country.dart';
 import 'package:karasu_lab_public_client/src/model/gi_character.dart';
 import 'package:karasu_lab_public_client/src/model/galleries_controller_get_request.dart';
@@ -39,6 +40,7 @@ import 'package:karasu_lab_public_client/src/model/hi3_stigmatas_entity.dart';
 import 'package:karasu_lab_public_client/src/model/hi3_weapons_entity.dart';
 import 'package:karasu_lab_public_client/src/model/hi3_characters_controller_get_one_request.dart';
 import 'package:karasu_lab_public_client/src/model/hi3_characters_controller_get_request.dart';
+import 'package:karasu_lab_public_client/src/model/versions_controller_get_request.dart';
 import 'package:karasu_lab_public_client/src/model/versions_entity.dart';
 import 'package:karasu_lab_public_client/src/model/weapon.dart';
 import 'package:karasu_lab_public_client/src/model/weapons_controller_get_request.dart';
@@ -61,6 +63,7 @@ part 'serializers.g.dart';
   CharactersControllerGetRequestWeaponVersionArtifactSetsInner,
   CharactersControllerGetRequestWeaponVersionRegionsInner,
   CountriesControllerGetRequest,
+  CountriesControllerGetRequestCharactersInner,
   Country,
   GICharacter,
   GalleriesControllerGetRequest,
@@ -71,6 +74,7 @@ part 'serializers.g.dart';
   HI3WeaponsEntity,
   Hi3CharactersControllerGetOneRequest,
   Hi3CharactersControllerGetRequest,
+  VersionsControllerGetRequest,
   VersionsEntity,
   Weapon,
   WeaponsControllerGetRequest,

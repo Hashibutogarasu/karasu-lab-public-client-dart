@@ -23,28 +23,28 @@ part 'weapons_controller_get_request.g.dart';
 @BuiltValue()
 abstract class WeaponsControllerGetRequest implements Built<WeaponsControllerGetRequest, WeaponsControllerGetRequestBuilder> {
   @BuiltValueField(wireName: r'id')
-  String get id;
+  String? get id;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String? get name;
 
   @BuiltValueField(wireName: r'description')
   String? get description;
 
   @BuiltValueField(wireName: r'icon_url')
-  String get iconUrl;
+  String? get iconUrl;
 
   @BuiltValueField(wireName: r'rarity')
-  int get rarity;
+  int? get rarity;
 
   @BuiltValueField(wireName: r'effect')
-  String get effect;
+  String? get effect;
 
   @BuiltValueField(wireName: r'type')
-  String get type;
+  String? get type;
 
   @BuiltValueField(wireName: r'version')
-  CharactersControllerGetRequestWeaponVersion get version;
+  CharactersControllerGetRequestWeaponVersion? get version;
 
   WeaponsControllerGetRequest._();
 
@@ -69,16 +69,20 @@ class _$WeaponsControllerGetRequestSerializer implements PrimitiveSerializer<Wea
     WeaponsControllerGetRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
-    yield serializers.serialize(
-      object.id,
-      specifiedType: const FullType(String),
-    );
-    yield r'name';
-    yield serializers.serialize(
-      object.name,
-      specifiedType: const FullType(String),
-    );
+    if (object.id != null) {
+      yield r'id';
+      yield serializers.serialize(
+        object.id,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.name != null) {
+      yield r'name';
+      yield serializers.serialize(
+        object.name,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.description != null) {
       yield r'description';
       yield serializers.serialize(
@@ -86,31 +90,41 @@ class _$WeaponsControllerGetRequestSerializer implements PrimitiveSerializer<Wea
         specifiedType: const FullType.nullable(String),
       );
     }
-    yield r'icon_url';
-    yield serializers.serialize(
-      object.iconUrl,
-      specifiedType: const FullType(String),
-    );
-    yield r'rarity';
-    yield serializers.serialize(
-      object.rarity,
-      specifiedType: const FullType(int),
-    );
-    yield r'effect';
-    yield serializers.serialize(
-      object.effect,
-      specifiedType: const FullType(String),
-    );
-    yield r'type';
-    yield serializers.serialize(
-      object.type,
-      specifiedType: const FullType(String),
-    );
-    yield r'version';
-    yield serializers.serialize(
-      object.version,
-      specifiedType: const FullType(CharactersControllerGetRequestWeaponVersion),
-    );
+    if (object.iconUrl != null) {
+      yield r'icon_url';
+      yield serializers.serialize(
+        object.iconUrl,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.rarity != null) {
+      yield r'rarity';
+      yield serializers.serialize(
+        object.rarity,
+        specifiedType: const FullType(int),
+      );
+    }
+    if (object.effect != null) {
+      yield r'effect';
+      yield serializers.serialize(
+        object.effect,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.type != null) {
+      yield r'type';
+      yield serializers.serialize(
+        object.type,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.version != null) {
+      yield r'version';
+      yield serializers.serialize(
+        object.version,
+        specifiedType: const FullType(CharactersControllerGetRequestWeaponVersion),
+      );
+    }
   }
 
   @override

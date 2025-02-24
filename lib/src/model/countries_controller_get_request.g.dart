@@ -8,41 +8,30 @@ part of 'countries_controller_get_request.dart';
 
 class _$CountriesControllerGetRequest extends CountriesControllerGetRequest {
   @override
-  final String id;
+  final String? id;
   @override
-  final String name;
+  final String? name;
   @override
   final String? description;
   @override
-  final String iconUrl;
+  final String? iconUrl;
   @override
-  final ArtifactsControllerGetRequestVersion version;
+  final ArtifactsControllerGetRequestVersion? version;
   @override
-  final BuiltList<CharactersControllerGetRequest> characters;
+  final BuiltList<CountriesControllerGetRequestCharactersInner>? characters;
 
   factory _$CountriesControllerGetRequest(
           [void Function(CountriesControllerGetRequestBuilder)? updates]) =>
       (new CountriesControllerGetRequestBuilder()..update(updates))._build();
 
   _$CountriesControllerGetRequest._(
-      {required this.id,
-      required this.name,
+      {this.id,
+      this.name,
       this.description,
-      required this.iconUrl,
-      required this.version,
-      required this.characters})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        id, r'CountriesControllerGetRequest', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        name, r'CountriesControllerGetRequest', 'name');
-    BuiltValueNullFieldError.checkNotNull(
-        iconUrl, r'CountriesControllerGetRequest', 'iconUrl');
-    BuiltValueNullFieldError.checkNotNull(
-        version, r'CountriesControllerGetRequest', 'version');
-    BuiltValueNullFieldError.checkNotNull(
-        characters, r'CountriesControllerGetRequest', 'characters');
-  }
+      this.iconUrl,
+      this.version,
+      this.characters})
+      : super._();
 
   @override
   CountriesControllerGetRequest rebuild(
@@ -119,10 +108,13 @@ class CountriesControllerGetRequestBuilder
   set version(ArtifactsControllerGetRequestVersionBuilder? version) =>
       _$this._version = version;
 
-  ListBuilder<CharactersControllerGetRequest>? _characters;
-  ListBuilder<CharactersControllerGetRequest> get characters =>
-      _$this._characters ??= new ListBuilder<CharactersControllerGetRequest>();
-  set characters(ListBuilder<CharactersControllerGetRequest>? characters) =>
+  ListBuilder<CountriesControllerGetRequestCharactersInner>? _characters;
+  ListBuilder<CountriesControllerGetRequestCharactersInner> get characters =>
+      _$this._characters ??=
+          new ListBuilder<CountriesControllerGetRequestCharactersInner>();
+  set characters(
+          ListBuilder<CountriesControllerGetRequestCharactersInner>?
+              characters) =>
       _$this._characters = characters;
 
   CountriesControllerGetRequestBuilder() {
@@ -136,8 +128,8 @@ class CountriesControllerGetRequestBuilder
       _name = $v.name;
       _description = $v.description;
       _iconUrl = $v.iconUrl;
-      _version = $v.version.toBuilder();
-      _characters = $v.characters.toBuilder();
+      _version = $v.version?.toBuilder();
+      _characters = $v.characters?.toBuilder();
       _$v = null;
     }
     return this;
@@ -162,22 +154,19 @@ class CountriesControllerGetRequestBuilder
     try {
       _$result = _$v ??
           new _$CountriesControllerGetRequest._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'CountriesControllerGetRequest', 'id'),
-              name: BuiltValueNullFieldError.checkNotNull(
-                  name, r'CountriesControllerGetRequest', 'name'),
+              id: id,
+              name: name,
               description: description,
-              iconUrl: BuiltValueNullFieldError.checkNotNull(
-                  iconUrl, r'CountriesControllerGetRequest', 'iconUrl'),
-              version: version.build(),
-              characters: characters.build());
+              iconUrl: iconUrl,
+              version: _version?.build(),
+              characters: _characters?.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'version';
-        version.build();
+        _version?.build();
         _$failedField = 'characters';
-        characters.build();
+        _characters?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'CountriesControllerGetRequest', _$failedField, e.toString());

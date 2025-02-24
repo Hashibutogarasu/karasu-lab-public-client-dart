@@ -20,19 +20,19 @@ part 'artifacts_controller_get_request.g.dart';
 @BuiltValue()
 abstract class ArtifactsControllerGetRequest implements Built<ArtifactsControllerGetRequest, ArtifactsControllerGetRequestBuilder> {
   @BuiltValueField(wireName: r'id')
-  String get id;
+  String? get id;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String? get name;
 
   @BuiltValueField(wireName: r'description')
-  String get description;
+  String? get description;
 
   @BuiltValueField(wireName: r'icon_url')
-  String get iconUrl;
+  String? get iconUrl;
 
   @BuiltValueField(wireName: r'version')
-  ArtifactsControllerGetRequestVersion get version;
+  ArtifactsControllerGetRequestVersion? get version;
 
   ArtifactsControllerGetRequest._();
 
@@ -57,31 +57,41 @@ class _$ArtifactsControllerGetRequestSerializer implements PrimitiveSerializer<A
     ArtifactsControllerGetRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
-    yield serializers.serialize(
-      object.id,
-      specifiedType: const FullType(String),
-    );
-    yield r'name';
-    yield serializers.serialize(
-      object.name,
-      specifiedType: const FullType(String),
-    );
-    yield r'description';
-    yield serializers.serialize(
-      object.description,
-      specifiedType: const FullType(String),
-    );
-    yield r'icon_url';
-    yield serializers.serialize(
-      object.iconUrl,
-      specifiedType: const FullType(String),
-    );
-    yield r'version';
-    yield serializers.serialize(
-      object.version,
-      specifiedType: const FullType(ArtifactsControllerGetRequestVersion),
-    );
+    if (object.id != null) {
+      yield r'id';
+      yield serializers.serialize(
+        object.id,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.name != null) {
+      yield r'name';
+      yield serializers.serialize(
+        object.name,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.description != null) {
+      yield r'description';
+      yield serializers.serialize(
+        object.description,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.iconUrl != null) {
+      yield r'icon_url';
+      yield serializers.serialize(
+        object.iconUrl,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.version != null) {
+      yield r'version';
+      yield serializers.serialize(
+        object.version,
+        specifiedType: const FullType(ArtifactsControllerGetRequestVersion),
+      );
+    }
   }
 
   @override

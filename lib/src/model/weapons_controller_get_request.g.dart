@@ -8,51 +8,36 @@ part of 'weapons_controller_get_request.dart';
 
 class _$WeaponsControllerGetRequest extends WeaponsControllerGetRequest {
   @override
-  final String id;
+  final String? id;
   @override
-  final String name;
+  final String? name;
   @override
   final String? description;
   @override
-  final String iconUrl;
+  final String? iconUrl;
   @override
-  final int rarity;
+  final int? rarity;
   @override
-  final String effect;
+  final String? effect;
   @override
-  final String type;
+  final String? type;
   @override
-  final CharactersControllerGetRequestWeaponVersion version;
+  final CharactersControllerGetRequestWeaponVersion? version;
 
   factory _$WeaponsControllerGetRequest(
           [void Function(WeaponsControllerGetRequestBuilder)? updates]) =>
       (new WeaponsControllerGetRequestBuilder()..update(updates))._build();
 
   _$WeaponsControllerGetRequest._(
-      {required this.id,
-      required this.name,
+      {this.id,
+      this.name,
       this.description,
-      required this.iconUrl,
-      required this.rarity,
-      required this.effect,
-      required this.type,
-      required this.version})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        id, r'WeaponsControllerGetRequest', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        name, r'WeaponsControllerGetRequest', 'name');
-    BuiltValueNullFieldError.checkNotNull(
-        iconUrl, r'WeaponsControllerGetRequest', 'iconUrl');
-    BuiltValueNullFieldError.checkNotNull(
-        rarity, r'WeaponsControllerGetRequest', 'rarity');
-    BuiltValueNullFieldError.checkNotNull(
-        effect, r'WeaponsControllerGetRequest', 'effect');
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'WeaponsControllerGetRequest', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        version, r'WeaponsControllerGetRequest', 'version');
-  }
+      this.iconUrl,
+      this.rarity,
+      this.effect,
+      this.type,
+      this.version})
+      : super._();
 
   @override
   WeaponsControllerGetRequest rebuild(
@@ -162,7 +147,7 @@ class WeaponsControllerGetRequestBuilder
       _rarity = $v.rarity;
       _effect = $v.effect;
       _type = $v.type;
-      _version = $v.version.toBuilder();
+      _version = $v.version?.toBuilder();
       _$v = null;
     }
     return this;
@@ -187,25 +172,19 @@ class WeaponsControllerGetRequestBuilder
     try {
       _$result = _$v ??
           new _$WeaponsControllerGetRequest._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'WeaponsControllerGetRequest', 'id'),
-              name: BuiltValueNullFieldError.checkNotNull(
-                  name, r'WeaponsControllerGetRequest', 'name'),
+              id: id,
+              name: name,
               description: description,
-              iconUrl: BuiltValueNullFieldError.checkNotNull(
-                  iconUrl, r'WeaponsControllerGetRequest', 'iconUrl'),
-              rarity: BuiltValueNullFieldError.checkNotNull(
-                  rarity, r'WeaponsControllerGetRequest', 'rarity'),
-              effect: BuiltValueNullFieldError.checkNotNull(
-                  effect, r'WeaponsControllerGetRequest', 'effect'),
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'WeaponsControllerGetRequest', 'type'),
-              version: version.build());
+              iconUrl: iconUrl,
+              rarity: rarity,
+              effect: effect,
+              type: type,
+              version: _version?.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'version';
-        version.build();
+        _version?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'WeaponsControllerGetRequest', _$failedField, e.toString());

@@ -8,12 +8,12 @@ import 'package:karasu_lab_public_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | 
-**name** | **String** |  | 
+**id** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
-**iconUrl** | **String** |  | 
-**version** | [**ArtifactsControllerGetRequestVersion**](ArtifactsControllerGetRequestVersion.md) |  | 
-**characters** | [**BuiltList&lt;CharactersControllerGetRequest&gt;**](CharactersControllerGetRequest.md) |  | 
+**iconUrl** | **String** |  | [optional] 
+**version** | [**ArtifactsControllerGetRequestVersion**](ArtifactsControllerGetRequestVersion.md) |  | [optional] 
+**characters** | [**BuiltList&lt;CountriesControllerGetRequestCharactersInner&gt;**](CountriesControllerGetRequestCharactersInner.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

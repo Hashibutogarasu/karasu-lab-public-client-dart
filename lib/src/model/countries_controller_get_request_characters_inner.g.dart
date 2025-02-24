@@ -1,20 +1,21 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'characters_controller_get_request.dart';
+part of 'countries_controller_get_request_characters_inner.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$CharactersControllerGetRequest extends CharactersControllerGetRequest {
+class _$CountriesControllerGetRequestCharactersInner
+    extends CountriesControllerGetRequestCharactersInner {
   @override
-  final String? id;
+  final String id;
   @override
-  final String? name;
+  final String name;
   @override
   final String? description;
   @override
-  final String? iconUrl;
+  final String iconUrl;
   @override
   final String? element;
   @override
@@ -40,15 +41,18 @@ class _$CharactersControllerGetRequest extends CharactersControllerGetRequest {
   @override
   final BuiltList<CharactersControllerGetRequestArtifactSetInner?>? artifactSet;
 
-  factory _$CharactersControllerGetRequest(
-          [void Function(CharactersControllerGetRequestBuilder)? updates]) =>
-      (new CharactersControllerGetRequestBuilder()..update(updates))._build();
+  factory _$CountriesControllerGetRequestCharactersInner(
+          [void Function(CountriesControllerGetRequestCharactersInnerBuilder)?
+              updates]) =>
+      (new CountriesControllerGetRequestCharactersInnerBuilder()
+            ..update(updates))
+          ._build();
 
-  _$CharactersControllerGetRequest._(
-      {this.id,
-      this.name,
+  _$CountriesControllerGetRequestCharactersInner._(
+      {required this.id,
+      required this.name,
       this.description,
-      this.iconUrl,
+      required this.iconUrl,
       this.element,
       this.rarity,
       this.headerImgUrl,
@@ -61,21 +65,29 @@ class _$CharactersControllerGetRequest extends CharactersControllerGetRequest {
       this.version,
       this.galleries,
       this.artifactSet})
-      : super._();
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        id, r'CountriesControllerGetRequestCharactersInner', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        name, r'CountriesControllerGetRequestCharactersInner', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        iconUrl, r'CountriesControllerGetRequestCharactersInner', 'iconUrl');
+  }
 
   @override
-  CharactersControllerGetRequest rebuild(
-          void Function(CharactersControllerGetRequestBuilder) updates) =>
+  CountriesControllerGetRequestCharactersInner rebuild(
+          void Function(CountriesControllerGetRequestCharactersInnerBuilder)
+              updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  CharactersControllerGetRequestBuilder toBuilder() =>
-      new CharactersControllerGetRequestBuilder()..replace(this);
+  CountriesControllerGetRequestCharactersInnerBuilder toBuilder() =>
+      new CountriesControllerGetRequestCharactersInnerBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is CharactersControllerGetRequest &&
+    return other is CountriesControllerGetRequestCharactersInner &&
         id == other.id &&
         name == other.name &&
         description == other.description &&
@@ -119,7 +131,8 @@ class _$CharactersControllerGetRequest extends CharactersControllerGetRequest {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'CharactersControllerGetRequest')
+    return (newBuiltValueToStringHelper(
+            r'CountriesControllerGetRequestCharactersInner')
           ..add('id', id)
           ..add('name', name)
           ..add('description', description)
@@ -140,11 +153,11 @@ class _$CharactersControllerGetRequest extends CharactersControllerGetRequest {
   }
 }
 
-class CharactersControllerGetRequestBuilder
+class CountriesControllerGetRequestCharactersInnerBuilder
     implements
-        Builder<CharactersControllerGetRequest,
-            CharactersControllerGetRequestBuilder> {
-  _$CharactersControllerGetRequest? _$v;
+        Builder<CountriesControllerGetRequestCharactersInner,
+            CountriesControllerGetRequestCharactersInnerBuilder> {
+  _$CountriesControllerGetRequestCharactersInner? _$v;
 
   String? _id;
   String? get id => _$this._id;
@@ -228,11 +241,11 @@ class CharactersControllerGetRequestBuilder
               artifactSet) =>
       _$this._artifactSet = artifactSet;
 
-  CharactersControllerGetRequestBuilder() {
-    CharactersControllerGetRequest._defaults(this);
+  CountriesControllerGetRequestCharactersInnerBuilder() {
+    CountriesControllerGetRequestCharactersInner._defaults(this);
   }
 
-  CharactersControllerGetRequestBuilder get _$this {
+  CountriesControllerGetRequestCharactersInnerBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
@@ -257,28 +270,33 @@ class CharactersControllerGetRequestBuilder
   }
 
   @override
-  void replace(CharactersControllerGetRequest other) {
+  void replace(CountriesControllerGetRequestCharactersInner other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$CharactersControllerGetRequest;
+    _$v = other as _$CountriesControllerGetRequestCharactersInner;
   }
 
   @override
-  void update(void Function(CharactersControllerGetRequestBuilder)? updates) {
+  void update(
+      void Function(CountriesControllerGetRequestCharactersInnerBuilder)?
+          updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  CharactersControllerGetRequest build() => _build();
+  CountriesControllerGetRequestCharactersInner build() => _build();
 
-  _$CharactersControllerGetRequest _build() {
-    _$CharactersControllerGetRequest _$result;
+  _$CountriesControllerGetRequestCharactersInner _build() {
+    _$CountriesControllerGetRequestCharactersInner _$result;
     try {
       _$result = _$v ??
-          new _$CharactersControllerGetRequest._(
-              id: id,
-              name: name,
+          new _$CountriesControllerGetRequestCharactersInner._(
+              id: BuiltValueNullFieldError.checkNotNull(
+                  id, r'CountriesControllerGetRequestCharactersInner', 'id'),
+              name: BuiltValueNullFieldError.checkNotNull(name,
+                  r'CountriesControllerGetRequestCharactersInner', 'name'),
               description: description,
-              iconUrl: iconUrl,
+              iconUrl: BuiltValueNullFieldError.checkNotNull(iconUrl,
+                  r'CountriesControllerGetRequestCharactersInner', 'iconUrl'),
               element: element,
               rarity: rarity,
               headerImgUrl: headerImgUrl,
@@ -306,7 +324,9 @@ class CharactersControllerGetRequestBuilder
         _artifactSet?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
-            r'CharactersControllerGetRequest', _$failedField, e.toString());
+            r'CountriesControllerGetRequestCharactersInner',
+            _$failedField,
+            e.toString());
       }
       rethrow;
     }

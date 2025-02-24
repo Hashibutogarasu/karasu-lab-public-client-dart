@@ -10,7 +10,7 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:karasu_lab_public_client/src/api_util.dart';
-import 'package:karasu_lab_public_client/src/model/artifacts_controller_get_request_version.dart';
+import 'package:karasu_lab_public_client/src/model/versions_controller_get_request.dart';
 import 'package:karasu_lab_public_client/src/model/versions_entity.dart';
 
 class VersionsApi {
@@ -25,7 +25,7 @@ class VersionsApi {
   /// 
   ///
   /// Parameters:
-  /// * [artifactsControllerGetRequestVersion] 
+  /// * [versionsControllerGetRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -36,7 +36,7 @@ class VersionsApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<VersionsEntity>] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<BuiltList<VersionsEntity>>> versionsControllerGet({ 
-    required ArtifactsControllerGetRequestVersion artifactsControllerGetRequestVersion,
+    required VersionsControllerGetRequest versionsControllerGetRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -61,8 +61,8 @@ class VersionsApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(ArtifactsControllerGetRequestVersion);
-      _bodyData = _serializers.serialize(artifactsControllerGetRequestVersion, specifiedType: _type);
+      const _type = FullType(VersionsControllerGetRequest);
+      _bodyData = _serializers.serialize(versionsControllerGetRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioException(
@@ -203,7 +203,7 @@ class VersionsApi {
   /// 
   ///
   /// Parameters:
-  /// * [artifactsControllerGetRequestVersion] 
+  /// * [versionsControllerGetRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -214,7 +214,7 @@ class VersionsApi {
   /// Returns a [Future] containing a [Response] with a [VersionsEntity] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<VersionsEntity>> versionsControllerGetOne({ 
-    required ArtifactsControllerGetRequestVersion artifactsControllerGetRequestVersion,
+    required VersionsControllerGetRequest versionsControllerGetRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -239,8 +239,8 @@ class VersionsApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(ArtifactsControllerGetRequestVersion);
-      _bodyData = _serializers.serialize(artifactsControllerGetRequestVersion, specifiedType: _type);
+      const _type = FullType(VersionsControllerGetRequest);
+      _bodyData = _serializers.serialize(versionsControllerGetRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioException(

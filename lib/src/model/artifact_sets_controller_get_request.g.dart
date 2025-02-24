@@ -9,53 +9,36 @@ part of 'artifact_sets_controller_get_request.dart';
 class _$ArtifactSetsControllerGetRequest
     extends ArtifactSetsControllerGetRequest {
   @override
-  final String id;
+  final String? id;
   @override
-  final String name;
+  final String? name;
   @override
-  final String description;
+  final String? description;
   @override
-  final String iconUrl;
+  final String? iconUrl;
   @override
-  final int rarity;
+  final int? rarity;
   @override
-  final String oneSetEffect;
+  final String? oneSetEffect;
   @override
-  final String twoSetEffect;
+  final String? twoSetEffect;
   @override
-  final String fourSetEffect;
+  final String? fourSetEffect;
 
   factory _$ArtifactSetsControllerGetRequest(
           [void Function(ArtifactSetsControllerGetRequestBuilder)? updates]) =>
       (new ArtifactSetsControllerGetRequestBuilder()..update(updates))._build();
 
   _$ArtifactSetsControllerGetRequest._(
-      {required this.id,
-      required this.name,
-      required this.description,
-      required this.iconUrl,
-      required this.rarity,
-      required this.oneSetEffect,
-      required this.twoSetEffect,
-      required this.fourSetEffect})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        id, r'ArtifactSetsControllerGetRequest', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        name, r'ArtifactSetsControllerGetRequest', 'name');
-    BuiltValueNullFieldError.checkNotNull(
-        description, r'ArtifactSetsControllerGetRequest', 'description');
-    BuiltValueNullFieldError.checkNotNull(
-        iconUrl, r'ArtifactSetsControllerGetRequest', 'iconUrl');
-    BuiltValueNullFieldError.checkNotNull(
-        rarity, r'ArtifactSetsControllerGetRequest', 'rarity');
-    BuiltValueNullFieldError.checkNotNull(
-        oneSetEffect, r'ArtifactSetsControllerGetRequest', 'oneSetEffect');
-    BuiltValueNullFieldError.checkNotNull(
-        twoSetEffect, r'ArtifactSetsControllerGetRequest', 'twoSetEffect');
-    BuiltValueNullFieldError.checkNotNull(
-        fourSetEffect, r'ArtifactSetsControllerGetRequest', 'fourSetEffect');
-  }
+      {this.id,
+      this.name,
+      this.description,
+      this.iconUrl,
+      this.rarity,
+      this.oneSetEffect,
+      this.twoSetEffect,
+      this.fourSetEffect})
+      : super._();
 
   @override
   ArtifactSetsControllerGetRequest rebuild(
@@ -186,22 +169,14 @@ class ArtifactSetsControllerGetRequestBuilder
   _$ArtifactSetsControllerGetRequest _build() {
     final _$result = _$v ??
         new _$ArtifactSetsControllerGetRequest._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'ArtifactSetsControllerGetRequest', 'id'),
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'ArtifactSetsControllerGetRequest', 'name'),
-            description: BuiltValueNullFieldError.checkNotNull(
-                description, r'ArtifactSetsControllerGetRequest', 'description'),
-            iconUrl: BuiltValueNullFieldError.checkNotNull(
-                iconUrl, r'ArtifactSetsControllerGetRequest', 'iconUrl'),
-            rarity: BuiltValueNullFieldError.checkNotNull(
-                rarity, r'ArtifactSetsControllerGetRequest', 'rarity'),
-            oneSetEffect: BuiltValueNullFieldError.checkNotNull(
-                oneSetEffect, r'ArtifactSetsControllerGetRequest', 'oneSetEffect'),
-            twoSetEffect: BuiltValueNullFieldError.checkNotNull(
-                twoSetEffect, r'ArtifactSetsControllerGetRequest', 'twoSetEffect'),
-            fourSetEffect: BuiltValueNullFieldError.checkNotNull(
-                fourSetEffect, r'ArtifactSetsControllerGetRequest', 'fourSetEffect'));
+            id: id,
+            name: name,
+            description: description,
+            iconUrl: iconUrl,
+            rarity: rarity,
+            oneSetEffect: oneSetEffect,
+            twoSetEffect: twoSetEffect,
+            fourSetEffect: fourSetEffect);
     replace(_$result);
     return _$result;
   }

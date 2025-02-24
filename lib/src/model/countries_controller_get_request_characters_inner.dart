@@ -12,9 +12,9 @@ import 'package:karasu_lab_public_client/src/model/characters_controller_get_req
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'characters_controller_get_request.g.dart';
+part 'countries_controller_get_request_characters_inner.g.dart';
 
-/// CharactersControllerGetRequest
+/// CountriesControllerGetRequestCharactersInner
 ///
 /// Properties:
 /// * [id] 
@@ -34,18 +34,18 @@ part 'characters_controller_get_request.g.dart';
 /// * [galleries] 
 /// * [artifactSet] 
 @BuiltValue()
-abstract class CharactersControllerGetRequest implements Built<CharactersControllerGetRequest, CharactersControllerGetRequestBuilder> {
+abstract class CountriesControllerGetRequestCharactersInner implements Built<CountriesControllerGetRequestCharactersInner, CountriesControllerGetRequestCharactersInnerBuilder> {
   @BuiltValueField(wireName: r'id')
-  String? get id;
+  String get id;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String get name;
 
   @BuiltValueField(wireName: r'description')
   String? get description;
 
   @BuiltValueField(wireName: r'icon_url')
-  String? get iconUrl;
+  String get iconUrl;
 
   @BuiltValueField(wireName: r'element')
   String? get element;
@@ -83,44 +83,40 @@ abstract class CharactersControllerGetRequest implements Built<CharactersControl
   @BuiltValueField(wireName: r'artifact_set')
   BuiltList<CharactersControllerGetRequestArtifactSetInner?>? get artifactSet;
 
-  CharactersControllerGetRequest._();
+  CountriesControllerGetRequestCharactersInner._();
 
-  factory CharactersControllerGetRequest([void updates(CharactersControllerGetRequestBuilder b)]) = _$CharactersControllerGetRequest;
+  factory CountriesControllerGetRequestCharactersInner([void updates(CountriesControllerGetRequestCharactersInnerBuilder b)]) = _$CountriesControllerGetRequestCharactersInner;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(CharactersControllerGetRequestBuilder b) => b
+  static void _defaults(CountriesControllerGetRequestCharactersInnerBuilder b) => b
       ..unimplemented = false;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<CharactersControllerGetRequest> get serializer => _$CharactersControllerGetRequestSerializer();
+  static Serializer<CountriesControllerGetRequestCharactersInner> get serializer => _$CountriesControllerGetRequestCharactersInnerSerializer();
 }
 
-class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<CharactersControllerGetRequest> {
+class _$CountriesControllerGetRequestCharactersInnerSerializer implements PrimitiveSerializer<CountriesControllerGetRequestCharactersInner> {
   @override
-  final Iterable<Type> types = const [CharactersControllerGetRequest, _$CharactersControllerGetRequest];
+  final Iterable<Type> types = const [CountriesControllerGetRequestCharactersInner, _$CountriesControllerGetRequestCharactersInner];
 
   @override
-  final String wireName = r'CharactersControllerGetRequest';
+  final String wireName = r'CountriesControllerGetRequestCharactersInner';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    CharactersControllerGetRequest object, {
+    CountriesControllerGetRequestCharactersInner object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.id != null) {
-      yield r'id';
-      yield serializers.serialize(
-        object.id,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.name != null) {
-      yield r'name';
-      yield serializers.serialize(
-        object.name,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'id';
+    yield serializers.serialize(
+      object.id,
+      specifiedType: const FullType(String),
+    );
+    yield r'name';
+    yield serializers.serialize(
+      object.name,
+      specifiedType: const FullType(String),
+    );
     if (object.description != null) {
       yield r'description';
       yield serializers.serialize(
@@ -128,13 +124,11 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
         specifiedType: const FullType.nullable(String),
       );
     }
-    if (object.iconUrl != null) {
-      yield r'icon_url';
-      yield serializers.serialize(
-        object.iconUrl,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'icon_url';
+    yield serializers.serialize(
+      object.iconUrl,
+      specifiedType: const FullType(String),
+    );
     if (object.element != null) {
       yield r'element';
       yield serializers.serialize(
@@ -224,7 +218,7 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
   @override
   Object serialize(
     Serializers serializers,
-    CharactersControllerGetRequest object, {
+    CountriesControllerGetRequestCharactersInner object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -235,7 +229,7 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required CharactersControllerGetRequestBuilder result,
+    required CountriesControllerGetRequestCharactersInnerBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -375,12 +369,12 @@ class _$CharactersControllerGetRequestSerializer implements PrimitiveSerializer<
   }
 
   @override
-  CharactersControllerGetRequest deserialize(
+  CountriesControllerGetRequestCharactersInner deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = CharactersControllerGetRequestBuilder();
+    final result = CountriesControllerGetRequestCharactersInnerBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

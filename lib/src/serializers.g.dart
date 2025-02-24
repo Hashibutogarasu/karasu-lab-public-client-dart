@@ -23,6 +23,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
           .serializer)
       ..add(CharactersControllerGetRequestWeaponVersionRegionsInner.serializer)
       ..add(CountriesControllerGetRequest.serializer)
+      ..add(CountriesControllerGetRequestCharactersInner.serializer)
       ..add(Country.serializer)
       ..add(GICharacter.serializer)
       ..add(GalleriesControllerGetRequest.serializer)
@@ -33,6 +34,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(HI3WeaponsEntity.serializer)
       ..add(Hi3CharactersControllerGetOneRequest.serializer)
       ..add(Hi3CharactersControllerGetRequest.serializer)
+      ..add(VersionsControllerGetRequest.serializer)
       ..add(VersionsEntity.serializer)
       ..add(Weapon.serializer)
       ..add(WeaponsControllerGetRequest.serializer)
@@ -52,10 +54,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(GICharacter)]),
           () => new ListBuilder<GICharacter>())
       ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(CharactersControllerGetRequest)]),
-          () => new ListBuilder<CharactersControllerGetRequest>())
-      ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
                 CharactersControllerGetRequestWeaponVersionArtifactSetsInner)
@@ -97,6 +95,25 @@ Serializers _$serializers = (new Serializers().toBuilder()
           ]),
           () => new ListBuilder<
               CharactersControllerGetRequestWeaponVersionRegionsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                CharactersControllerGetRequestWeaponVersionArtifactSetsInner)
+          ]),
+          () => new ListBuilder<
+              CharactersControllerGetRequestWeaponVersionArtifactSetsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(
+                CharactersControllerGetRequestWeaponVersionRegionsInner)
+          ]),
+          () => new ListBuilder<
+              CharactersControllerGetRequestWeaponVersionRegionsInner>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(CountriesControllerGetRequestCharactersInner)
+          ]),
+          () => new ListBuilder<CountriesControllerGetRequestCharactersInner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(GICharacter)]),
           () => new ListBuilder<GICharacter>())
@@ -127,6 +144,20 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(HI3WeaponsEntity)]),
           () => new ListBuilder<HI3WeaponsEntity>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(
+                CharactersControllerGetRequestGalleriesInner)
+          ]),
+          () =>
+              new ListBuilder<CharactersControllerGetRequestGalleriesInner?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(
+                CharactersControllerGetRequestArtifactSetInner)
+          ]),
+          () => new ListBuilder<
+              CharactersControllerGetRequestArtifactSetInner?>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType.nullable(

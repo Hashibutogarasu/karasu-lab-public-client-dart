@@ -1,4 +1,4 @@
-# karasu_lab_public_client.model.CharactersControllerGetRequest
+# karasu_lab_public_client.model.CountriesControllerGetRequestCharactersInner
 
 ## Load the model package
 ```dart
@@ -8,10 +8,10 @@ import 'package:karasu_lab_public_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**id** | **String** |  | 
+**name** | **String** |  | 
 **description** | **String** |  | [optional] 
-**iconUrl** | **String** |  | [optional] 
+**iconUrl** | **String** |  | 
 **element** | **String** |  | [optional] 
 **rarity** | **int** |  | [optional] 
 **headerImgUrl** | **String** |  | [optional] 

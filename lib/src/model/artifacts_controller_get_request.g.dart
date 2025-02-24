@@ -8,38 +8,23 @@ part of 'artifacts_controller_get_request.dart';
 
 class _$ArtifactsControllerGetRequest extends ArtifactsControllerGetRequest {
   @override
-  final String id;
+  final String? id;
   @override
-  final String name;
+  final String? name;
   @override
-  final String description;
+  final String? description;
   @override
-  final String iconUrl;
+  final String? iconUrl;
   @override
-  final ArtifactsControllerGetRequestVersion version;
+  final ArtifactsControllerGetRequestVersion? version;
 
   factory _$ArtifactsControllerGetRequest(
           [void Function(ArtifactsControllerGetRequestBuilder)? updates]) =>
       (new ArtifactsControllerGetRequestBuilder()..update(updates))._build();
 
   _$ArtifactsControllerGetRequest._(
-      {required this.id,
-      required this.name,
-      required this.description,
-      required this.iconUrl,
-      required this.version})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        id, r'ArtifactsControllerGetRequest', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        name, r'ArtifactsControllerGetRequest', 'name');
-    BuiltValueNullFieldError.checkNotNull(
-        description, r'ArtifactsControllerGetRequest', 'description');
-    BuiltValueNullFieldError.checkNotNull(
-        iconUrl, r'ArtifactsControllerGetRequest', 'iconUrl');
-    BuiltValueNullFieldError.checkNotNull(
-        version, r'ArtifactsControllerGetRequest', 'version');
-  }
+      {this.id, this.name, this.description, this.iconUrl, this.version})
+      : super._();
 
   @override
   ArtifactsControllerGetRequest rebuild(
@@ -124,7 +109,7 @@ class ArtifactsControllerGetRequestBuilder
       _name = $v.name;
       _description = $v.description;
       _iconUrl = $v.iconUrl;
-      _version = $v.version.toBuilder();
+      _version = $v.version?.toBuilder();
       _$v = null;
     }
     return this;
@@ -149,20 +134,16 @@ class ArtifactsControllerGetRequestBuilder
     try {
       _$result = _$v ??
           new _$ArtifactsControllerGetRequest._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'ArtifactsControllerGetRequest', 'id'),
-              name: BuiltValueNullFieldError.checkNotNull(
-                  name, r'ArtifactsControllerGetRequest', 'name'),
-              description: BuiltValueNullFieldError.checkNotNull(
-                  description, r'ArtifactsControllerGetRequest', 'description'),
-              iconUrl: BuiltValueNullFieldError.checkNotNull(
-                  iconUrl, r'ArtifactsControllerGetRequest', 'iconUrl'),
-              version: version.build());
+              id: id,
+              name: name,
+              description: description,
+              iconUrl: iconUrl,
+              version: _version?.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'version';
-        version.build();
+        _version?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'ArtifactsControllerGetRequest', _$failedField, e.toString());

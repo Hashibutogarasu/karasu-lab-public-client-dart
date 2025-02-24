@@ -22,28 +22,28 @@ part 'artifact_sets_controller_get_request.g.dart';
 @BuiltValue()
 abstract class ArtifactSetsControllerGetRequest implements Built<ArtifactSetsControllerGetRequest, ArtifactSetsControllerGetRequestBuilder> {
   @BuiltValueField(wireName: r'id')
-  String get id;
+  String? get id;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String? get name;
 
   @BuiltValueField(wireName: r'description')
-  String get description;
+  String? get description;
 
   @BuiltValueField(wireName: r'icon_url')
-  String get iconUrl;
+  String? get iconUrl;
 
   @BuiltValueField(wireName: r'rarity')
-  int get rarity;
+  int? get rarity;
 
   @BuiltValueField(wireName: r'one_set_effect')
-  String get oneSetEffect;
+  String? get oneSetEffect;
 
   @BuiltValueField(wireName: r'two_set_effect')
-  String get twoSetEffect;
+  String? get twoSetEffect;
 
   @BuiltValueField(wireName: r'four_set_effect')
-  String get fourSetEffect;
+  String? get fourSetEffect;
 
   ArtifactSetsControllerGetRequest._();
 
@@ -68,46 +68,62 @@ class _$ArtifactSetsControllerGetRequestSerializer implements PrimitiveSerialize
     ArtifactSetsControllerGetRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
-    yield serializers.serialize(
-      object.id,
-      specifiedType: const FullType(String),
-    );
-    yield r'name';
-    yield serializers.serialize(
-      object.name,
-      specifiedType: const FullType(String),
-    );
-    yield r'description';
-    yield serializers.serialize(
-      object.description,
-      specifiedType: const FullType(String),
-    );
-    yield r'icon_url';
-    yield serializers.serialize(
-      object.iconUrl,
-      specifiedType: const FullType(String),
-    );
-    yield r'rarity';
-    yield serializers.serialize(
-      object.rarity,
-      specifiedType: const FullType(int),
-    );
-    yield r'one_set_effect';
-    yield serializers.serialize(
-      object.oneSetEffect,
-      specifiedType: const FullType(String),
-    );
-    yield r'two_set_effect';
-    yield serializers.serialize(
-      object.twoSetEffect,
-      specifiedType: const FullType(String),
-    );
-    yield r'four_set_effect';
-    yield serializers.serialize(
-      object.fourSetEffect,
-      specifiedType: const FullType(String),
-    );
+    if (object.id != null) {
+      yield r'id';
+      yield serializers.serialize(
+        object.id,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.name != null) {
+      yield r'name';
+      yield serializers.serialize(
+        object.name,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.description != null) {
+      yield r'description';
+      yield serializers.serialize(
+        object.description,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.iconUrl != null) {
+      yield r'icon_url';
+      yield serializers.serialize(
+        object.iconUrl,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.rarity != null) {
+      yield r'rarity';
+      yield serializers.serialize(
+        object.rarity,
+        specifiedType: const FullType(int),
+      );
+    }
+    if (object.oneSetEffect != null) {
+      yield r'one_set_effect';
+      yield serializers.serialize(
+        object.oneSetEffect,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.twoSetEffect != null) {
+      yield r'two_set_effect';
+      yield serializers.serialize(
+        object.twoSetEffect,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.fourSetEffect != null) {
+      yield r'four_set_effect';
+      yield serializers.serialize(
+        object.fourSetEffect,
+        specifiedType: const FullType(String),
+      );
+    }
   }
 
   @override
